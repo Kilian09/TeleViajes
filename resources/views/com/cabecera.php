@@ -10,7 +10,7 @@
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="grupos.html" style="color: var(--light);">Grupos&nbsp;</a>
                     <div class="dropdown-menu"><a class="dropdown-item" href="#">Escolares</a><a class="dropdown-item" href="#">Universitarios</a><a class="dropdown-item" href="#">Ancianos</a><a class="dropdown-item" href="#">Familia</a></div>
                 </li>
-            </ul><span class="d-inline navbar-text actions"> <a class="d-inline login" href="login.html">Iniciar Sesión</a><a class="btn btn-light d-inline action-button" role="button" href="register.html">Registrarse</a></span>
+            </ul><span class="d-inline navbar-text actions"> <a class="d-inline login" href="login">Iniciar Sesión</a><a class="btn btn-light d-inline action-button" role="button" href="register.html">Registrarse</a></span>
         </div>
     </div>
 </nav>
