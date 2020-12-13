@@ -4,13 +4,13 @@
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item"></li>
                 <li class="nav-item"></li>
-                <li class="nav-item"><a class="nav-link" href="cruceros.html" style="color: var(--light);">Cruceros</a></li>
-                <li class="nav-item"><a class="nav-link" href="paquetes.html" style="color: var(--light);">Paquetes</a></li>
-                <li class="nav-item"><a class="nav-link" href="actividades.html" style="color: var(--light);">Actividades</a></li>
-                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="grupos.html" style="color: var(--light);">Grupos&nbsp;</a>
+                <li class="nav-item"><a class="nav-link" href="cruceros" style="color: var(--light);">Cruceros</a></li>
+                <li class="nav-item"><a class="nav-link" href="paquetes" style="color: var(--light);">Paquetes</a></li>
+                <li class="nav-item"><a class="nav-link" href="actividades" style="color: var(--light);">Actividades</a></li>
+                <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="grupos" style="color: var(--light);">Grupos&nbsp;</a>
                     <div class="dropdown-menu"><a class="dropdown-item" href="#">Escolares</a><a class="dropdown-item" href="#">Universitarios</a><a class="dropdown-item" href="#">Ancianos</a><a class="dropdown-item" href="#">Familia</a></div>
                 </li>
-            </ul><span class="d-inline navbar-text actions"> <a class="d-inline login" href="login">Iniciar Sesión</a><a class="btn btn-light d-inline action-button" role="button" href="register.html">Registrarse</a></span>
+            </ul><span class="d-inline navbar-text actions"> <a class="d-inline login" href="login">Iniciar Sesión</a><a class="btn btn-light d-inline action-button" role="button" href="register">Registrarse</a></span>
         </div>
     </div>
 </nav>

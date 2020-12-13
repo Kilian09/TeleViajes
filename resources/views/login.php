@@ -48,7 +48,7 @@ include "com/cabecera.php"
             <div class="illustration"><i class="icon ion-paper-airplane" style="color: var(--cyan);"></i></div>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Correo Electrónico"></div>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Contraseña"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">IniciAR sesion</button></div><a class="forgot" href="register.php">No te has registrado aún?</a>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Iniciar sesion</button></div><a class="forgot" href="register.php">No te has registrado aún?</a>
         </form>
     </div>
 
