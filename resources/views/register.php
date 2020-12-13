@@ -37,9 +37,9 @@
 
 <body>
 
-<?php
-include "com/cabecera.php"
-?>
+    <?php
+    include "com/cabecera.php"
+    ?>
 
     <div class="row register-form" style="background: url(&quot;assets/img/Aurora-Borealis-Iceland-Skogafoss-image.jpg&quot;) center / auto;">
         <div class="col-md-8 offset-md-2">
@@ -66,9 +66,9 @@ include "com/cabecera.php"
         </div>
     </div>
 
-<?php
-include "com/pieDePagina.php";
-?>
+    <?php
+    include "com/pieDePagina.php";
+    ?>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -79,5 +79,4 @@ include "com/pieDePagina.php";
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
 </body>
-
 </html>

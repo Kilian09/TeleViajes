@@ -38,9 +38,9 @@
 
 <body>
 
-<?php
-include "com/cabecera.php"
-?>
+    <?php
+    include "com/cabecera.php"
+    ?>
 
     <div class="login-dark" style="background: url(&quot;assets/img/bledd.jpg&quot;) center / cover;">
         <form method="post">
@@ -52,9 +52,9 @@ include "com/cabecera.php"
         </form>
     </div>
 
-<?php
-include "com/pieDePagina.php";
-?>
+    <?php
+    include "com/pieDePagina.php";
+    ?>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

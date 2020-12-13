@@ -39,9 +39,9 @@
 
 <body id="page-top">
 
-<?php
-include "com/cabecera.php"
-?>
+    <?php
+    include "com/cabecera.php"
+    ?>
 
     <header class="masthead" style="background: url(&quot;assets/img/ini.jpg&quot;) left / auto repeat;">
         <div id="inicio" class="intro-body">
@@ -163,9 +163,9 @@ include "com/cabecera.php"
     </section>
     <div class="map-clean"><iframe allowfullscreen="" frameborder="0" src="https://cdn.bootstrapstudio.io/placeholders/map.html" width="100%" height="450"></iframe></div>
 
-<?php
-include "com/pieDePagina.php";
-?>
+    <?php
+    include "com/pieDePagina.php";
+    ?>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
