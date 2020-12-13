@@ -4,18 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <?php include "com/estilos.php" ?>
+    <?php include "com/scripts.php" ?>
 
     <title>Inicio</title>
 
 </head>
 
-
-
 <body id="page-top">
 
-    <?php
-    include "com/cabecera.php"
-    ?>
+    <?php include "com/cabecera.php" ?>
 
     <header class="masthead" style="background: url(&quot;assets/img/ini.jpg&quot;) left / auto repeat;">
         <div id="inicio" class="intro-body">
@@ -138,8 +135,6 @@
     <div class="map-clean"><iframe allowfullscreen="" frameborder="0" src="https://cdn.bootstrapstudio.io/placeholders/map.html" width="100%" height="450"></iframe></div>
 
     <?php include "com/pieDePagina.php"; ?>
-
-
 </body>
 
 </html>
