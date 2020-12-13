@@ -10,11 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
+    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Separada cabecera  pieDePagina en dos archivos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pruebbba.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +170,7 @@
       <workItem from="1605381578825" duration="118000" />
       <workItem from="1605381747688" duration="430000" />
       <workItem from="1605464148538" duration="44000" />
-      <workItem from="1607862879532" duration="1279000" />
+      <workItem from="1607862879532" duration="1899000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
@@ -182,7 +179,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607863512525</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Añadido el index.php, eliminado pruebba.php y welcome.blade.php">
+      <created>1607864363476</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607864363476</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Separada cabecera  pieDePagina en dos archivos">
+      <created>1607864493736</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607864493736</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +213,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets" />
+    <MESSAGE value="Añadido el index.php, eliminado pruebba.php y welcome.blade.php" />
+    <MESSAGE value="Separada cabecera  pieDePagina en dos archivos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separada cabecera  pieDePagina en dos archivos" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605464207035">
@@ -221,9 +234,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864084262" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607863518546">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607864495827">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607863518546" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864495827" />
   </component>
 </project>
