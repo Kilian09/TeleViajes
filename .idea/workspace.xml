@@ -10,7 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadida ruta a login.php, cambios en la cabecera.php para que fuera a login.php" />
+    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadido register.html">
+      <change beforePath="$PROJECT_DIR$/resources/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/register.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +171,7 @@
       <workItem from="1605381578825" duration="118000" />
       <workItem from="1605381747688" duration="430000" />
       <workItem from="1605464148538" duration="44000" />
-      <workItem from="1607862879532" duration="3152000" />
+      <workItem from="1607862879532" duration="3237000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
@@ -212,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607865339217</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Añadido register.html">
+      <created>1607867392659</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607867392659</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +247,8 @@
     <MESSAGE value="Añadido login.php" />
     <MESSAGE value="Implementado cabecera y pieDePagina" />
     <MESSAGE value="Añadida ruta a login.php, cambios en la cabecera.php para que fuera a login.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadida ruta a login.php, cambios en la cabecera.php para que fuera a login.php" />
+    <MESSAGE value="Añadido register.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido register.html" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605464207035">
@@ -256,9 +267,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864084262" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607865350783">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607867394901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607865350783" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607867394901" />
   </component>
 </project>
