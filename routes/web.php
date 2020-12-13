@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/contacto', function () {
+    return view('contacto');
+});
+
 Route::get('/login', 'userController@login');
 
 Route::get('/register', 'userController@register');

@@ -154,7 +154,7 @@
                     <p>En caso de cualquier sugerencia o dudas contacte con nosotros. En el siguiente link podrá encontrar toda la información.</p>
                     <ul class="list-inline banner-social-buttons">
                         <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><span class="network-name">portfolio</span></button></li>
-                        <li class="list-inline-item">&nbsp;<a class="btn btn-primary btn-lg btn-default" role="button" href="contacto.html"><span class="network-name">IR a contacto</span></a></li>
+                        <li class="list-inline-item">&nbsp;<a class="btn btn-primary btn-lg btn-default" role="button" href="contacto.php"><span class="network-name">IR a contacto</span></a></li>
                         <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-github fa-fw"></i><span class="network-name">&nbsp;github&nbsp;</span></button></li>
                     </ul>
                 </div>

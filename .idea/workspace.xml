@@ -10,8 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Cambios de register.php, login.php e index.php">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadido contacto.html y pequeño cambio en cabecera.php">
+      <change beforePath="$PROJECT_DIR$/resources/views/contacto.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,12 +139,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1kIHVZdhHXnkhm0IGwtGX7zMl2f" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -175,7 +179,7 @@
       <workItem from="1605381578825" duration="118000" />
       <workItem from="1605381747688" duration="430000" />
       <workItem from="1605464148538" duration="44000" />
-      <workItem from="1607862879532" duration="8128000" />
+      <workItem from="1607862879532" duration="8523000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
@@ -247,7 +251,28 @@
       <option name="project" value="LOCAL" />
       <updated>1607871359680</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Añadido el userController">
+      <created>1607874793247</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1607874793247</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Cambios en el web.php y en el userController.php">
+      <created>1607874950699</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1607874950699</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Añadido contacto.html y pequeño cambio en cabecera.php">
+      <created>1607875084567</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607875084567</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +291,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets" />
     <MESSAGE value="Añadido el index.php, eliminado pruebba.php y welcome.blade.php" />
     <MESSAGE value="Separada cabecera  pieDePagina en dos archivos" />
@@ -275,7 +301,10 @@
     <MESSAGE value="Añadido register.html" />
     <MESSAGE value="Cambios de register.php" />
     <MESSAGE value="Cambios de register.php, login.php e index.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios de register.php, login.php e index.php" />
+    <MESSAGE value="Añadido el userController" />
+    <MESSAGE value="Cambios en el web.php y en el userController.php" />
+    <MESSAGE value="Añadido contacto.html y pequeño cambio en cabecera.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido contacto.html y pequeño cambio en cabecera.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605464207035">
@@ -294,9 +323,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864084262" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607871375982">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607875085832">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607871375982" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607875085832" />
   </component>
 </project>
