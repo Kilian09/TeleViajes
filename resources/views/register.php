@@ -12,32 +12,32 @@
 
 <body>
 
-    <?php
-    include "com/cabecera.php"
-    ?>
+    <?php include "com/cabecera.php" ?>
 
     <div class="row register-form" style="background: url(&quot;assets/img/Aurora-Borealis-Iceland-Skogafoss-image.jpg&quot;) center / auto;">
         <div class="col-md-8 offset-md-2">
-            <form class="custom-form">
+
+            <form class="custom-form" action="procesar_registro">
                 <h1>Formulario de Registro</h1>
                 <div class="form-row form-group">
                     <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Nombre*</label></div>
-                    <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
+                    <div class="col-sm-6 input-column"><input class="form-control" type="text" name="nombre" required></div>
                 </div>
                 <div class="form-row form-group">
-                    <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Email *</label></div>
-                    <div class="col-sm-6 input-column"><input class="form-control" type="email"></div>
+                    <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Email*</label></div>
+                    <div class="col-sm-6 input-column"><input class="form-control" type="email" name="email" required></div>
                 </div>
                 <div class="form-row form-group">
                     <div class="col-sm-4 label-column"><label class="col-form-label" for="pawssword-input-field">Contraseña</label></div>
-                    <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
+                    <div class="col-sm-6 input-column"><input class="form-control" type="password" name="contra" required></div>
                 </div>
                 <div class="form-row form-group">
                     <div class="col-sm-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Repetir Contraseña</label></div>
-                    <div class="col-sm-6 input-column"><input class="form-control" type="password"></div>
+                    <div class="col-sm-6 input-column"><input class="form-control" type="password" name="contra2" required></div>
                 </div><label>Los campos marcados con * son obligatorios</label>
                 <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">He leido y acepto las condiciones</label></div><button class="btn btn-light submit-button" type="button">Enviar Registro</button>
             </form>
+
         </div>
     </div>
     <?php include "com/pieDePagina.php"; ?>

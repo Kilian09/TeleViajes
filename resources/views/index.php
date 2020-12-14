@@ -20,7 +20,8 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <h1 class="brand-heading">TELEVIAJES</h1>
-                        <p class="intro-text">En 2020 todo tiene que tener tele delante.</p><a class="btn btn-link btn-circle" role="button" href="#carousel"><i class="fa fa-angle-double-down animated"></i></a>
+                        <p class="intro-text">En 2020 todo tiene que tener tele delante.</p>
+                        <a class="btn btn-link btn-circle" role="button" href="#carousel"><i class="fa fa-angle-double-down animated"></i></a>
                     </div>
                 </div>
             </div>
@@ -32,6 +33,7 @@
                 <h2 class="text-center" style="font-size: 30px;text-align: center;color: var(--danger);">Últimas Ofertas y novedades</h2>
                 <p class="text-center">Recopilatorio de nuestras últimas novedades y productos en oferta de nuestra web.</p>
             </div>
+
             <div class="row articles">
                 <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
                     <h3 class="name">Article Title</h3>
@@ -46,6 +48,7 @@
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
                 </div>
             </div>
+
             <div class="row articles">
                 <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
                     <h3 class="name">Article Title</h3>
@@ -60,6 +63,7 @@
                     <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
                 </div>
             </div>
+
             <div class="row articles">
                 <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
                     <h3 class="name">Article Title</h3>
@@ -76,6 +80,7 @@
             </div>
         </div>
     </div>
+
     <section id="carousel">
         <div class="carousel slide" data-ride="carousel" id="carousel-1">
             <div class="carousel-inner">
@@ -117,6 +122,7 @@
             </ol>
         </div>
     </section>
+
     <section id="contact" class="content-section text-center">
         <div class="container">
             <div class="row">
@@ -125,16 +131,18 @@
                     <p>En caso de cualquier sugerencia o dudas contacte con nosotros. En el siguiente link podrá encontrar toda la información.</p>
                     <ul class="list-inline banner-social-buttons">
                         <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><span class="network-name">portfolio</span></button></li>
-                        <li class="list-inline-item">&nbsp;<a class="btn btn-primary btn-lg btn-default" role="button" href="contacto.php"><span class="network-name">IR a contacto</span></a></li>
+                        <li class="list-inline-item">&nbsp;<a class="btn btn-primary btn-lg btn-default" role="button" href="contacto.php"><span class="network-name">Contacte</span></a></li>
                         <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-github fa-fw"></i><span class="network-name">&nbsp;github&nbsp;</span></button></li>
                     </ul>
                 </div>
             </div>
         </div><a class="btn btn-link btn-circle" role="button" href="#inicio"><i class="fa fa-angle-double-up animated"></i></a>
     </section>
+
     <div class="map-clean"><iframe allowfullscreen="" frameborder="0" src="https://cdn.bootstrapstudio.io/placeholders/map.html" width="100%" height="450"></iframe></div>
 
-    <?php include "com/pieDePagina.php"; ?>
-</body>
 
+    <?php include "com/pieDePagina.php"; ?>
+
+</body>
 </html>
