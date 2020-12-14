@@ -15,7 +15,19 @@
             <?php
             if(session()->has("user") == true){
                 ?>
-                <span class="d-inline navbar-text actions"> <a class="d-inline login" href="login"><?php echo strtoupper(session("nombre"))?></a>
+                <span class="d-inline navbar-text actions">
+
+                    <!--  OTRA OPCION PARA LA CABECERA
+                    <li class="nav-item dropdown">
+                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="login" style="color: var(--light);"><?php echo strtoupper(session("nombre"))?></a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="miCarrito">Carrito</a>
+                        <a class="dropdown-item" href="cerrar_session">Cerrar Sesión</a>
+                    </div>
+                </li>
+                    -->
+
+                <a class="d-inline login" href="login"><?php echo strtoupper(session("nombre"))?></a>
                 <a class="btn btn-light d-inline action-button" role="button" href="miCarrito"> <e class="fa fa-shopping-cart"></a>
                 <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="cerrar_session">Cerrar Sesión</a>
                 </span>
