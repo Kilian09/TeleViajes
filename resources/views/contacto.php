@@ -19,10 +19,11 @@
 
             <form id="contactForm" action="javascript:void(0);" method="get" name="procesar_contacto">
 
-                <!– cossitas que no comprendo –>
+                <!--  cossitas que no comprendo
                 <input class="form-control" type="hidden" name="Introduction" value="This email was sent from www.awebsite.com">
                 <input class="form-control" type="hidden" name="subject" value="Awebsite.com Contact Form">
                 <input class="form-control" type="hidden" name="to" value="email@awebsite.com">
+                -->
 
                 <div class="form-row">
                     <div class="col-md-6">
