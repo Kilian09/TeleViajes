@@ -16,6 +16,7 @@
             if(session()->has("user") == true){
                 ?>
                 <span class="d-inline navbar-text actions"> <a class="d-inline login" href="login"><?php echo strtoupper(session("nombre"))?></a>
+                <a class="btn btn-light d-inline action-button" role="button" href="miCarrito"> <e class="fa fa-shopping-cart"></a>
                 <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="cerrar_session">Cerrar Sesión</a>
                 </span>
             <?php }else{  ?>
