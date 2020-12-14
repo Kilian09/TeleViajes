@@ -1,10 +1,3 @@
-#rojo{
-    background: var(--red);
-}
-#rojo:hover{
-    background: var(--danger);
-}
-
 .navigation-clean-button {
   background: #fff;
   padding-top: .75rem;

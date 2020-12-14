@@ -10,9 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadido contacto.html y pequeño cambio en cabecera.php">
-      <change beforePath="$PROJECT_DIR$/resources/views/contacto.html" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/contacto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.php" afterDir="false" />
+    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadida el route a contacto.php">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +179,11 @@
       <workItem from="1605381578825" duration="118000" />
       <workItem from="1605381747688" duration="430000" />
       <workItem from="1605464148538" duration="44000" />
-      <workItem from="1607862879532" duration="8523000" />
+      <workItem from="1607862879532" duration="9845000" />
+      <workItem from="1607898903356" duration="1181000" />
+      <workItem from="1607901551447" duration="250000" />
+      <workItem from="1607933190821" duration="948000" />
+      <workItem from="1607942965197" duration="1102000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
@@ -272,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607875084567</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Añadida el route a contacto.php">
+      <created>1607875492728</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607875492728</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,13 +315,14 @@
     <MESSAGE value="Añadido el userController" />
     <MESSAGE value="Cambios en el web.php y en el userController.php" />
     <MESSAGE value="Añadido contacto.html y pequeño cambio en cabecera.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadido contacto.html y pequeño cambio en cabecera.php" />
+    <MESSAGE value="Añadida el route a contacto.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadida el route a contacto.php" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605464207035">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607901833336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1605464207035" />
+    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607901833336" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1605381796037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -323,9 +335,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864084262" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607875085832">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607898981035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607875085832" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607898981035" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607901597436">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607901597436" />
   </component>
 </project>
