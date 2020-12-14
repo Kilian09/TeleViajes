@@ -10,7 +10,19 @@
                     <div class="dropdown-menu"><a class="dropdown-item" href="#">Escolares</a><a class="dropdown-item" href="#">Universitarios</a><a class="dropdown-item" href="#">Ancianos</a><a class="dropdown-item" href="#">Familia</a></div>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="contacto" style="color: var(--light);">Contactos</a></li>
-            </ul><span class="d-inline navbar-text actions"> <a class="d-inline login" href="login">Iniciar Sesión</a><a class="btn btn-light d-inline action-button" role="button" href="register">Registrarse</a></span>
+            </ul>
+
+            <?php
+            if(session()->has("user") == true){
+                ?>
+                <span class="d-inline navbar-text actions"> <a class="d-inline login" href="login"><?php echo session("nombre")?></a>
+                <a class="btn btn-light d-inline action-button" role="button" href="cerrar_session">Cerrar Sesión</a>
+                </span>
+            <?php }else{  ?>
+                <span class="d-inline navbar-text actions"> <a class="d-inline login" href="login">Iniciar Sesión</a>
+                <a class="btn btn-light d-inline action-button" role="button" href="register">Registrarse</a>
+                </span>
+            <?php } ?>
         </div>
     </div>
 </nav>

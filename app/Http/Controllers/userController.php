@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Usuario;
+
 
 use Illuminate\Http\Request;
 
@@ -53,7 +55,7 @@ class userController extends Controller
         //creamos 2 sesiones user y nombre. con el id y con el nombre del usuario.
         session(['user' => $usuario[0]['id']]);
         session(['nombre' => $usuario[0]['nombre']]);
-        return redirect()->to("/index");
+        return redirect()->to("/");
     }
 
     /**
@@ -80,7 +82,9 @@ class userController extends Controller
                     session(['user' => $usuario[0]['id']]);
                     session(['nombre' => $usuario[0]['nombre']]);
 
-                    return redirect()->to("/index");
+                    //PODRIAMOS HACER UNA SESION CON EL EMAIL????????????????????????
+
+                    return redirect()->to("/");
                 } else {
                     return view('login', ['contraseñaIncorrecta' => true]);
                 }
