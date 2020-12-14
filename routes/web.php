@@ -17,10 +17,20 @@ Route::get('/', function () {
     return view('index');
 });
 
+
+
+//REDIRECCIONAMIENTO DE VISTAS
+Route::get('/login', 'userController@login');
+Route::get('/register', 'userController@register');
+
+
+//PROCESADO DE FORMULARIOS
+Route::post('/procesar_login', 'userController@procesar_login');
+Route::post('/procesar_registro', 'userController@procesar_registro');
+
+//YO LO PONDRIA EN OTRO CONTROLADOR SOLO PARA CONTACTO
 Route::get('/contacto', function () {
     return view('contacto');
 });
+Route::post('/procesar_contacto', 'userController@procesar_contacto');
 
-Route::get('/login', 'userController@login');
-
-Route::get('/register', 'userController@register');

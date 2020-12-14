@@ -73,7 +73,7 @@
 
                         <div class="form-row">
                             <div class="col-12">
-                                <div class="static-map"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCLGmO09UHo8NQHdplzSQ6E2LpHE0IWaaI&amp;q=Eite+ulpgc&amp;zoom=16" width="100%" height="400"></iframe></div>
+                                <div class="static-map"><iframe allowfullscreen=""  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCLGmO09UHo8NQHdplzSQ6E2LpHE0IWaaI&amp;q=Eite+ulpgc&amp;zoom=16" width="100%" height="400"></iframe></div>
                             </div>
 
                             <div class="col-sm-6 col-md-12 col-lg-6">

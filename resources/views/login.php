@@ -16,10 +16,21 @@
     <div class="login-dark" style="background: url(&quot;assets/img/bledd.jpg&quot;) center / cover;">
 
         <form method="post" action="procesar_login">
+            <?= csrf_field() ?>
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-paper-airplane" style="color: var(--cyan);"></i></div>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Correo Electrónico" required></div>
+            <?php
+            if(isset($usuarioInexistente)) {
+                echo "<script>window.alert('Usuario inexistente, inténtelo de nuevo.')</script>";
+            }
+            ?>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Contraseña" required></div>
+            <?php
+            if(isset($contraseñaIncorrecta)) {
+                echo "<script>window.alert('Contraseña incorrecta, inténtelo de nuevo.')</script>";
+            }
+            ?>
             <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Iniciar sesion</button></div><a class="forgot" href="register">No te has registrado aún?</a>
         </form>
 
