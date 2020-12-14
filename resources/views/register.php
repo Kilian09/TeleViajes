@@ -17,7 +17,7 @@
     <div class="row register-form" style="background: url(&quot;assets/img/Aurora-Borealis-Iceland-Skogafoss-image.jpg&quot;) center / auto;">
         <div class="col-md-8 offset-md-2">
 
-            <form class="custom-form" action="procesar_registro">
+            <form method="post" class="custom-form" action="procesar_registro">
                 <?= csrf_field() ?>
                 <h1>Formulario de Registro</h1>
                 <div class="form-row form-group">
@@ -30,7 +30,7 @@
                 </div>
                 <?php
                 if(isset($emailExistente)) {
-                    echo "<script>window.alert('Email existente, regístrese en la ventana de Login.')</script>";
+                    echo "<script>window.alert('Email existente, inténtelo de nuevo.')</script>";
                 }
                 ?>
                 <div class="form-row form-group">
@@ -48,7 +48,8 @@
                 ?>
 
                 <label>Los campos marcados con * son obligatorios</label>
-                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">He leido y acepto las condiciones</label></div><button class="btn btn-light submit-button" type="button">Enviar Registro</button>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">He leido y acepto las condiciones</label></div>
+                <button class="btn btn-light submit-button" type="submit">Enviar Registro</button>
             </form>
 
         </div>

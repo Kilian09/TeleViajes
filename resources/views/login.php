@@ -31,7 +31,8 @@
                 echo "<script>window.alert('Contraseña incorrecta, inténtelo de nuevo.')</script>";
             }
             ?>
-            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Iniciar sesion</button></div><a class="forgot" href="register">No te has registrado aún?</a>
+            <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Iniciar sesion</button></div>
+            <a class="forgot" href="register">No te has registrado aún?</a>
         </form>
 
     </div>
