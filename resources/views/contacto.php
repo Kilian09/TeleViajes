@@ -12,7 +12,7 @@
     <?php include "com/cabecera.php" ?>
 
     <div class="bg-secondary">
-        <div class="container-fluid text-light bg-dark">
+        <div class="container-fluid text-light">
             <h1 class="text-capitalize bg-dark shadow" style="text-align: center;margin-bottom: 0;padding-top: 20px;">Información de contacto</h1>
             <hr>
 

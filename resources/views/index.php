@@ -132,7 +132,7 @@
         </div>
     </section>
 
-    <section class="content-section text-center bg-warning">
+    <section class="text-center bg-warning">
      <a class="btn btn-link btn-circle" role="button" href="#inicio"><i class="fa fa-angle-double-up animated"></i></a>
     </section>
 
