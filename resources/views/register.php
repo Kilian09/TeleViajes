@@ -7,7 +7,6 @@
     <title>Registro</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <?php include "com/estilos.php" ?>
-    <?php include "com/scripts.php" ?>
 </head>
 
 <body>
@@ -54,6 +53,7 @@
 
         </div>
     </div>
+    <?php include "com/scripts.php" ?>
     <?php include "com/pieDePagina.php"; ?>
 </body>
 </html>

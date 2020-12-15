@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Contacto</title>
     <?php include "com/estilos.php" ?>
-    <?php include "com/scripts.php" ?>
 </head>
 
 <body>
@@ -96,6 +95,7 @@
             </form>
         </div>
 
+        <?php include "com/scripts.php" ?>
     <?php include "com/pieDePagina.php"; ?>
 </body>
 
