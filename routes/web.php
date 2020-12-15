@@ -22,6 +22,8 @@ Route::get('/', function () {
 //REDIRECCIONAMIENTO DE VISTAS
 Route::get('/login', 'userController@login');
 Route::get('/register', 'userController@register');
+Route::get('/cruceros', 'userController@cruceros');
+
 
 
 //PROCESADO DE FORMULARIOS
