@@ -6,16 +6,13 @@
 <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
 <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
 <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-<link rel="stylesheet" href="assets/css/404-NOT-FOUND-animated.css">
 <link rel="stylesheet" href="assets/css/Article-Cards.css">
 <link rel="stylesheet" href="assets/css/Article-List.css">
-<link rel="stylesheet" href="assets/css/Beautiful-Footer.css">
 <link rel="stylesheet" href="assets/css/best-carousel-slide.css">
 <link rel="stylesheet" href="assets/css/Bold-BS4-Cards-with-Hover-Effect-50-1.css">
 <link rel="stylesheet" href="assets/css/Bold-BS4-Cards-with-Hover-Effect-50.css">
 <link rel="stylesheet" href="assets/css/Carousel-Hero.css">
 <link rel="stylesheet" href="assets/css/Contact-Form-v2-Modal--Full-with-Google-Map.css">
-<link rel="stylesheet" href="assets/css/Dark-footer-with-social-media-icons.css">
 <link rel="stylesheet" href="assets/css/featured-products-slider-1.css">
 <link rel="stylesheet" href="assets/css/featured-products-slider.css">
 <link rel="stylesheet" href="assets/css/Hover-Effect-Style-Demo---3.css">
