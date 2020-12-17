@@ -8,7 +8,10 @@
                 <li class="nav-item"><a class="nav-link" href="paquetes" style="color: var(--light);">Paquetes</a></li>
                 <li class="nav-item"><a class="nav-link" href="actividades" style="color: var(--light);">Actividades</a></li>
                 <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="grupos" style="color: var(--light);">Grupos&nbsp;</a>
-                    <div class="dropdown-menu"><a class="dropdown-item" href="#">Escolares</a><a class="dropdown-item" href="#">Universitarios</a><a class="dropdown-item" href="#">Ancianos</a><a class="dropdown-item" href="#">Familia</a></div>
+                    <div class="dropdown-menu"><a class="dropdown-item" href="escolares">Escolares</a>
+                        <a class="dropdown-item" href="universitarios">Universitari@s</a>
+                        <a class="dropdown-item" href="ancianos">Ancianos</a>
+                        <a class="dropdown-item" href="familia">Familia</a></div>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="contacto" style="color: var(--light);">Contactos</a></li>
             </ul>

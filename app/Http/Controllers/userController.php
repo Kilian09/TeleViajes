@@ -24,6 +24,10 @@ class userController extends Controller
     public function actividades(){
         return view('/actividades');
     }
+    public function universitarios(){
+        return view('/universitarios');
+    }
+
 
 
     /**

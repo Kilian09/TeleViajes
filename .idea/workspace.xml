@@ -10,7 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Implimentada la ruta para poder acceder a actividades.php" />
+    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadido la cabecera y pieDePagina a el universitarios.php">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/userController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/userController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/universitarios.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/universitarios.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,7 +188,7 @@
       <workItem from="1608020272235" duration="374000" />
       <workItem from="1608021071012" duration="708000" />
       <workItem from="1608058784970" duration="479000" />
-      <workItem from="1608219053405" duration="6260000" />
+      <workItem from="1608219053405" duration="6598000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
@@ -382,7 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608229170709</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Añadido el universitarios.php">
+      <created>1608229256918</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1608229256918</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Añadido la cabecera y pieDePagina a el universitarios.php">
+      <created>1608229406658</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1608229406658</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,8 +420,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Separada cabecera  pieDePagina en dos archivos" />
-    <MESSAGE value="Añadido login.php" />
     <MESSAGE value="Implementado cabecera y pieDePagina" />
     <MESSAGE value="Añadida ruta a login.php, cambios en la cabecera.php para que fuera a login.php" />
     <MESSAGE value="Añadido register.html" />
@@ -427,7 +443,9 @@
     <MESSAGE value="Añadido actvidades.php" />
     <MESSAGE value="Incluida cabecera y pieDePagina en actividades.php" />
     <MESSAGE value="Implimentada la ruta para poder acceder a actividades.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implimentada la ruta para poder acceder a actividades.php" />
+    <MESSAGE value="Añadido el universitarios.php" />
+    <MESSAGE value="Añadido la cabecera y pieDePagina a el universitarios.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido la cabecera y pieDePagina a el universitarios.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608223219848">
@@ -450,10 +468,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864084262" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608229177575">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608229407760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608229177575" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608229407760" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607901597436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
