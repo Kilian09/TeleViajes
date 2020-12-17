@@ -12,10 +12,10 @@
 </head>
 
 <body>
+
+<?php include "com/cabecera.php"?>
+
     <div class="container" style="padding-top: 30px;">
-
-        <?php include "com/cabecera.php"?>
-
         <h1>las actividades más vendidas</h1>
         <div class="row">
             <div class="col-sm-6 col-md-4">
