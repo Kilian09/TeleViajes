@@ -10,10 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadido a paquetes.php la cabecera y el pieDePagina">
-      <change beforePath="$PROJECT_DIR$/resources/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/paquetes.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/paquetes.php" afterDir="false" />
-    </list>
+    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Implimentada la ruta para poder acceder a actividades.php" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +184,7 @@
       <workItem from="1608020272235" duration="374000" />
       <workItem from="1608021071012" duration="708000" />
       <workItem from="1608058784970" duration="479000" />
-      <workItem from="1608219053405" duration="5948000" />
+      <workItem from="1608219053405" duration="6260000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
@@ -357,7 +354,35 @@
       <option name="project" value="LOCAL" />
       <updated>1608228871723</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Añadida ruta a paquetes a traves del web.php y el userController.php">
+      <created>1608228959375</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1608228959375</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Añadido actvidades.php">
+      <created>1608229003571</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1608229003571</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Incluida cabecera y pieDePagina en actividades.php">
+      <created>1608229073520</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1608229073520</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Implimentada la ruta para poder acceder a actividades.php">
+      <created>1608229170709</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1608229170709</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,8 +402,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets" />
-    <MESSAGE value="Añadido el index.php, eliminado pruebba.php y welcome.blade.php" />
     <MESSAGE value="Separada cabecera  pieDePagina en dos archivos" />
     <MESSAGE value="Añadido login.php" />
     <MESSAGE value="Implementado cabecera y pieDePagina" />
@@ -400,7 +423,11 @@
     <MESSAGE value="Cambios en contacto.php" />
     <MESSAGE value="Añadido paquetes.php" />
     <MESSAGE value="Añadido a paquetes.php la cabecera y el pieDePagina" />
-    <option name="LAST_COMMIT_MESSAGE" value="Añadido a paquetes.php la cabecera y el pieDePagina" />
+    <MESSAGE value="Añadida ruta a paquetes a traves del web.php y el userController.php" />
+    <MESSAGE value="Añadido actvidades.php" />
+    <MESSAGE value="Incluida cabecera y pieDePagina en actividades.php" />
+    <MESSAGE value="Implimentada la ruta para poder acceder a actividades.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implimentada la ruta para poder acceder a actividades.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608223219848">
@@ -423,10 +450,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864084262" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608228875618">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608229177575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608228875618" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608229177575" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607901597436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
