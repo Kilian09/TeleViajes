@@ -13,7 +13,7 @@
 
 <body id="page-top">
 
-<?php include "com/cabecera.php"?>
+    <?php include "com/cabecera.php"?>
 
     <header class="masthead" style="background: url(&quot;assets/img/ini.jpg&quot;) left / auto repeat;">
         <div id="inicio" class="intro-body">
