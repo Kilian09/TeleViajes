@@ -10,8 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Cambios en cruceros.php">
-      <change afterPath="$PROJECT_DIR$/resources/views/contacto.html" afterDir="false" />
+    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadido a paquetes.php la cabecera y el pieDePagina">
+      <change beforePath="$PROJECT_DIR$/resources/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/paquetes.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/paquetes.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +187,7 @@
       <workItem from="1608020272235" duration="374000" />
       <workItem from="1608021071012" duration="708000" />
       <workItem from="1608058784970" duration="479000" />
-      <workItem from="1608219053405" duration="5614000" />
+      <workItem from="1608219053405" duration="5948000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
@@ -335,7 +336,28 @@
       <option name="project" value="LOCAL" />
       <updated>1608228199219</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Cambios en contacto.php">
+      <created>1608228707223</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1608228707223</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Añadido paquetes.php">
+      <created>1608228761661</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1608228761661</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Añadido a paquetes.php la cabecera y el pieDePagina">
+      <created>1608228871723</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1608228871723</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +397,10 @@
     <MESSAGE value="Cambiado register.php y añadido varios campos necesarios para la base de datos" />
     <MESSAGE value="Cambios en userController.php para que introduzca en la base de datos" />
     <MESSAGE value="Cambios en cruceros.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en cruceros.php" />
+    <MESSAGE value="Cambios en contacto.php" />
+    <MESSAGE value="Añadido paquetes.php" />
+    <MESSAGE value="Añadido a paquetes.php la cabecera y el pieDePagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido a paquetes.php la cabecera y el pieDePagina" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608223219848">
@@ -398,10 +423,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864084262" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608228203302">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608228875618">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608228203302" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608228875618" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607901597436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

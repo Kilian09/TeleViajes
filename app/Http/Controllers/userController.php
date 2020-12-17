@@ -18,6 +18,9 @@ class userController extends Controller
     public function cruceros(){
         return view('/cruceros');
     }
+    public function paquetes(){
+        return view('/paquetes');
+    }
 
 
     /**

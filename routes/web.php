@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::get('/login', 'userController@login');
 Route::get('/register', 'userController@register');
 Route::get('/cruceros', 'userController@cruceros');
+Route::get('/paquetes', 'userController@paquetes');
 
 
 
