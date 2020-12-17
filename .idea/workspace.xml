@@ -10,8 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Cambios en userController.php para que introduzca en la base de datos">
-      <change beforePath="$PROJECT_DIR$/resources/views/cruceros.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cruceros.php" afterDir="false" />
+    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Cambios en cruceros.php">
+      <change afterPath="$PROJECT_DIR$/resources/views/contacto.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +186,7 @@
       <workItem from="1608020272235" duration="374000" />
       <workItem from="1608021071012" duration="708000" />
       <workItem from="1608058784970" duration="479000" />
-      <workItem from="1608219053405" duration="5102000" />
+      <workItem from="1608219053405" duration="5614000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
@@ -328,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608227945027</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Cambios en cruceros.php">
+      <created>1608228199219</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1608228199219</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,7 +374,8 @@
     <MESSAGE value="Cambios en login.php" />
     <MESSAGE value="Cambiado register.php y añadido varios campos necesarios para la base de datos" />
     <MESSAGE value="Cambios en userController.php para que introduzca en la base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en userController.php para que introduzca en la base de datos" />
+    <MESSAGE value="Cambios en cruceros.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en cruceros.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608223219848">
@@ -390,10 +398,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864084262" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608227947001">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608228203302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608227947001" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608228203302" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607901597436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
