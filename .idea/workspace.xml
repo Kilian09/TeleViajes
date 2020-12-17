@@ -10,11 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Cambios en el assets, exportado con minimo css y jss, además de usar las librerias de CDN">
-      <change beforePath="$PROJECT_DIR$/resources/views/com/estilos.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/com/estilos.php" afterDir="false" />
+    <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Cambios en index.php, scripts.php,pieDePagina, cabecera y estilos para utilizar el CDN para las librerias">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/com/cabecera.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/com/cabecera.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/com/pieDePagina.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/com/pieDePagina.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/com/scripts.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/com/scripts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +189,7 @@
       <workItem from="1608020272235" duration="374000" />
       <workItem from="1608021071012" duration="708000" />
       <workItem from="1608058784970" duration="479000" />
-      <workItem from="1608219053405" duration="2352000" />
+      <workItem from="1608219053405" duration="3007000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
@@ -303,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608225210326</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Cambios en index.php, scripts.php,pieDePagina, cabecera y estilos para utilizar el CDN para las librerias">
+      <created>1608225350141</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1608225350141</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +345,8 @@
     <MESSAGE value="Añadida el route a contacto.php" />
     <MESSAGE value="Cambios en el assets" />
     <MESSAGE value="Cambios en el assets, exportado con minimo css y jss, además de usar las librerias de CDN" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambios en el assets, exportado con minimo css y jss, además de usar las librerias de CDN" />
+    <MESSAGE value="Cambios en index.php, scripts.php,pieDePagina, cabecera y estilos para utilizar el CDN para las librerias" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cambios en index.php, scripts.php,pieDePagina, cabecera y estilos para utilizar el CDN para las librerias" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608223219848">
@@ -361,10 +369,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1607864084262" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608225212324">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1608225352744">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608225212324" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1608225352744" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607901597436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
