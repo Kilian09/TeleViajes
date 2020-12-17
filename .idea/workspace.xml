@@ -11,8 +11,68 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="365c79d6-0c79-4986-beea-ecd4f98dacac" name="Default Changelist" comment="Añadida el route a contacto.php">
+      <change afterPath="$PROJECT_DIR$/public/assets/css/404-NOT-FOUND-animated.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/Beautiful-Footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/Dark-footer-with-social-media-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/Features-Boxed.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/Footer-Dark.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/timeline_12073_SaraSantos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/8903425_19e0b.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/baleares.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/balneario.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/benidorm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/carnaval-tenerife-150x150.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/carnaval.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/carnavales-de-españa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/carnavales.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/cruceromed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/fallas val.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/fallas.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/feriacaballo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/festivales.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/roma.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/sanjuan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/semana-santa-roma.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/semanasanta.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/siampark.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/bs-init.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Article-Cards.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Article-Cards.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Article-List.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Article-List.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Bold-BS4-Cards-with-Hover-Effect-50-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Bold-BS4-Cards-with-Hover-Effect-50-1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Bold-BS4-Cards-with-Hover-Effect-50.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Bold-BS4-Cards-with-Hover-Effect-50.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Carousel-Hero.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Carousel-Hero.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Contact-Form-v2-Modal--Full-with-Google-Map.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Contact-Form-v2-Modal--Full-with-Google-Map.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Hover-Effect-Style-Demo---3.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Hover-Effect-Style-Demo---3.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Login-Form-Dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Login-Form-Dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Navigation-with-Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Navigation-with-Button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Pretty-Footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Pretty-Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Pretty-Registration-Form.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Pretty-Registration-Form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Product-Carousel-V11-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Product-Carousel-V11-1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Product-Carousel-V11.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Product-Carousel-V11.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/Simple-Slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/Simple-Slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/best-carousel-slide.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/best-carousel-slide.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/featured-products-slider-1.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/featured-products-slider-1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/featured-products-slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/featured-products-slider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/fa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/fa-regular-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/fa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome-all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/fontawesome-all.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ionicons.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/ionicons.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/fonts/ionicons.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/fonts/ionicons.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/muppers/404.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/muppers/404.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/muppers/astronaut.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/muppers/astronaut.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/muppers/earth.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/muppers/earth.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/muppers/moon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/muppers/moon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/muppers/rocket.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/muppers/rocket.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/Simple-Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/Simple-Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/featured-products-slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/featured-products-slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/grayscale.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/grayscale.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/jquery.min.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +244,10 @@
       <workItem from="1607901551447" duration="250000" />
       <workItem from="1607933190821" duration="948000" />
       <workItem from="1607942965197" duration="1102000" />
+      <workItem from="1608020272235" duration="374000" />
+      <workItem from="1608021071012" duration="708000" />
+      <workItem from="1608058784970" duration="479000" />
+      <workItem from="1608219053405" duration="673000" />
     </task>
     <task id="LOCAL-00001" summary="Añadido el index.php, cambios en el web.php y por ultimo añadida la carpeta assets">
       <created>1607863512525</created>
