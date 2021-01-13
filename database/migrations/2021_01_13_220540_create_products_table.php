@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateContactFormTable extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateContactFormTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact_form', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('usuarios')->onDelete("cascade");
             $table->string('name');
-            $table->string('email');
-            $table->string('phone');
-            $table->bigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->string('comments');
+            $table->string('descripction');
+            $table->string('type_product');
+            $table->string('price');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ class CreateContactFormTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contact_form');
+        Schema::dropIfExists('products');
     }
 }
