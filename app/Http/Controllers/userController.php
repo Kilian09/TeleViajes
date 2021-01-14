@@ -27,6 +27,16 @@ class userController extends Controller
     public function universitarios(){
         return view('/universitarios');
     }
+    public function ancianos(){
+        return view('/ancianos');
+    }
+    public function escolares(){
+        return view('/escolares');
+    }
+    public function familia(){
+        return view('/familia');
+    }
+
 
 
 
