@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Usuario;
+use App\ContactForm;
+use App\User;
 
 
 use Illuminate\Http\Request;
@@ -57,7 +58,7 @@ class userController extends Controller
 
             if ($contra1 == $contra2) {
                 //si existe el email registrado envia aviso e imposibilita el registro
-                if (Usuario::where('email', $email)->exists() && Usuario::where('nombreDeUsuario', $nombreDeUsuario)->exists()) {
+                if (User::where('email', $email)->exists() && User::where('nombreDeUsuario', $nombreDeUsuario)->exists()) {
                     return view('register', ['emailExistente' => true], ['nombreDeUsuarioExistente' => true]);
                 } else {
                         //insertar en BD usando clase Eloquent
@@ -69,7 +70,7 @@ class userController extends Controller
                         $datos[4] = md5($contra1);
                         $datos[5] = md5($contra2);
 
-                        $usuario = new Usuario(); //nombre del modelo Usuario() que hace referencia a la tabla user
+                        $usuario = new User(); //nombre del modelo User() que hace referencia a la tabla user
                         $usuario->nombreDeUsuario = $datos[0];
                         $usuario->nombre = $datos[1];
                         $usuario->apellidos = $datos[2];
@@ -82,7 +83,7 @@ class userController extends Controller
             }
         }
 
-        $usuario = Usuario::where('nombreDeUsuario', $datos[0])->get();
+        $usuario = User::where('nombreDeUsuario', $datos[0])->get();
 
         //creamos 2 sesiones user y nombre. con el id y con el nombre del usuario.
         session(['user' => $usuario[0]['id']]);
@@ -106,9 +107,9 @@ class userController extends Controller
             $datos[0] = $email;
             $datos[1] = $contra;
 
-            if (Usuario::where('email', $datos[0])->exists()) {
+            if (User::where('email', $datos[0])->exists()) {
 
-                $usuario = Usuario::where('email', $datos[0])->get();
+                $usuario = User::where('email', $datos[0])->get();
 
                 if ($usuario[0]['password'] == $datos[1]) {
 
@@ -129,15 +130,67 @@ class userController extends Controller
         }
     }
 
-    /**
-     *
-     */
     public function cerrar_session()
     {
         session()->forget(['user', 'nombre','username']);  //elimina las sesiones
         session()->flush();                     //elimina todos los datos de la sesion
         return view('/');
     }
+
+
+    public function procesar_contacto(){
+        if (isset($_POST["nombre"], $_POST["email"], $_POST["telefono"], $_POST["comentario"])) {
+
+            $nombre = $_POST["nombre"];
+            $email = $_POST["email"];
+            $telefono = $_POST["telefono"];
+            $email = $_POST["email"];
+            $comentario = $_POST["comentario"];
+
+                //revisar si el usuario esta registrado
+            if (User::where('email', $email)->exists()) {
+
+                $usuario = User::where('email', $email)->first();
+
+                $datos = array();
+                $datos[0] = $usuario->id;
+                $datos[1] = $nombre;
+                $datos[2] = $email;
+                $datos[3] = $telefono;
+                $datos[4] = $comentario;
+
+                $contacto = new ContactForm(); //nombre del modelo ContactForm() que hace referencia a la tabla contact_form
+
+                $contacto->user_id = $datos[0];
+                $contacto->nombre = $datos[1];
+                $contacto->email = $datos[2];
+                $contacto->telefono = $datos[3];
+                $contacto->comentario = $datos[4];
+                $contacto->save();
+
+            } else {
+
+                $datos = array();
+                $datos[0] = 0;
+                $datos[1] = $nombre;
+                $datos[2] = $email;
+                $datos[3] = $telefono;
+                $datos[4] = $comentario;
+
+                $contacto = new ContactForm(); //nombre del modelo ContactForm() que hace referencia a la tabla contact_form
+
+                $contacto->user_id = $datos[0];
+                $contacto->nombre = $datos[1];
+                $contacto->email = $datos[2];
+                $contacto->telefono = $datos[3];
+                $contacto->comentario = $datos[4];
+                $contacto->save();
+
+            }
+        }
+        return redirect()->to("/contacto");
+    }
+
 
 
 }
