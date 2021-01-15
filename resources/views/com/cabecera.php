@@ -37,7 +37,7 @@
                     <?php
                     if(session()->has("user") == true){
                     ?>
-             <a class="btn btn-light d-inline action-button" role="button" href="#"> <e class="fa fa-shopping-cart"> <?php echo strtoupper(session("username"))?> <span class="badge">3</span></a>
+              <?php echo strtoupper(session("username"))?>
 
                 <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="cerrar_session">Cerrar Sesión</a>
             <?php
