@@ -21,10 +21,7 @@ class userController extends Controller
     public function cruceros(){
         return view('/cruceros');
     }
-    public function paquetes(){
 
-        return view('/paquetes');
-    }
     public function actividades(){
         return view('/actividades');
     }

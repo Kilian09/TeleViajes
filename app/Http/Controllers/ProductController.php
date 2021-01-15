@@ -26,13 +26,17 @@ class ProductController extends Controller
         echo $numeroProdictos;
     }
 
+    public function paquetes(){
+
+        return view('/paquetes');
+    }
+
     public function listaProductos()
     {
         $products = Products::get();
         $paquetes = Paquetes::get();
 
         return view('/shopAdmin')
-
             ->with('products', $products)
             ->with('paquetes', $paquetes);
     }
