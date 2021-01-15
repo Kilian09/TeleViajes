@@ -18,7 +18,7 @@ class CreatePaquetesTable extends Migration
             $table->bigInteger('id_product')->unsigned();
             $table->foreign('id_product')->references('id')->on('products')->onDelete("cascade");
             $table->string('name');
-            $table->string('descripction');
+            $table->string('description');
             $table->string('type');
             $table->double('price');
             $table->double('stock');
