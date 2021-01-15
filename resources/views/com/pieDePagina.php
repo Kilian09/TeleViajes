@@ -24,9 +24,10 @@
         <div class="clearfix"></div>
         <div class="col-md-4 footer-about">
             <h4>Sobre la compañia</h4>
-            <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet. </p>
-            <div class="social-links social-icons"><a href="https://sites.google.com/view/televiajes/inicio"><i class="fa fa-paperclip"></i>
-                </a><a href="https://github.com/Kilian09/TeleViajes"><i class="fa fa-github"></i></a></div>
+            <p> Proyecto de la asignatura Programación Web del GITT de la EITE 2020/2021. </p>
+            <div class="social-links social-icons" style="text-align: center">
+                <a href="https://sites.google.com/view/televiajes/inicio"><i class="fa fa-paperclip"></i> </a>
+                <a href="https://github.com/Kilian09/TeleViajes"><i class="fa fa-github"></i></a></div>
         </div>
     </div>
 </footer>
