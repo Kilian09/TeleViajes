@@ -29,12 +29,13 @@ Route::get('/universitarios', 'userController@universitarios');
 Route::get('/ancianos', 'userController@ancianos');
 Route::get('/escolares', 'userController@escolares');
 Route::get('/familia', 'userController@familia');
-Route::get('/shopAdmin', 'userController@shopAdmin');
+
 
 
 //REDIRECCIONAMIENTO DE VISTAS A PRODUCTCONTROLLER
 Route::get('/crearProducto', 'ProductController@crearProducto');
 Route::post('/addProducto', 'ProductController@addProducto');
+Route::get('/shopAdmin', 'ProductController@listaProductos');
 
 
 

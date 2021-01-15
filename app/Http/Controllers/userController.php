@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\ContactForm;
+use App\Paquetes;
+use App\Products;
 use App\User;
 
 
@@ -20,6 +22,7 @@ class userController extends Controller
         return view('/cruceros');
     }
     public function paquetes(){
+
         return view('/paquetes');
     }
     public function actividades(){
@@ -37,9 +40,7 @@ class userController extends Controller
     public function familia(){
         return view('/familia');
     }
-    public function shopAdmin(){
-        return view('/shopAdmin');
-    }
+
 
     /**
      * DONE

@@ -29,8 +29,6 @@
     </header>
     <article>
         <h1>Lista de Productos </h1>
-
-
         <table>
             <thead>
             <tr>
@@ -47,23 +45,28 @@
 
 
         <?php
-        if (isset($productos, $paquetes)){
-                foreach ($productos as $producto){
-                if($producto->type == "Paquetes"){
+        if (isset($products, $paquetes)){
+                foreach ($products as $product){
+                if($product->type == "Paquetes"){
                     foreach ($paquetes as $paquete){
+                        if($product->id == $paquete->id_product) {
                         ?>
         <tr>
 
             <td><?php echo $paquete->id_product ?></td>
-            <td><?php echo $producto->type ?></td>
+            <td><?php echo $product->type ?></td>
             <td><?php echo $paquete->name ?></td>
-            <td><?php echo $paquete->descripcion ?></td>
+            <td><?php echo $paquete->description ?></td>
             <td><?php echo $paquete->type ?></td>
-            <td><?php echo $paquete->precio ?></td>
+            <td><?php echo $paquete->price ?></td>
             <td><?php echo $paquete->stock ?></td>
 
         </tr>
-                    <?php }}}} ?>
+                    <?php }
+                }
+                }
+                }
+        } ?>
             <tbody>
         </table>
     </article>

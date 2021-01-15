@@ -11,9 +11,13 @@ class ProductController extends Controller
 
     public function crearProducto()
     {
-        return view('crearProducto');
+        return view('/crearProducto');
     }
 
+    public function shopAdmin(){
+
+        return view('/shopAdmin');
+    }
 
     public function numero_productos()
     {
@@ -24,11 +28,12 @@ class ProductController extends Controller
 
     public function listaProductos()
     {
-        $productos = Products::get();
+        $products = Products::get();
         $paquetes = Paquetes::get();
 
-        return view('shopAdmin')
-            ->with('$productos', $productos)
+        return view('/shopAdmin')
+
+            ->with('products', $products)
             ->with('paquetes', $paquetes);
     }
 

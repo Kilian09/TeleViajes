@@ -15,6 +15,8 @@
 
     <?php include "com/cabecera.php"?>
 
+
+
     <div class="container" style="margin-top: 8px;">
         <div class="carousel slide" data-ride="carousel" id="carousel-1">
             <div class="carousel-inner">
