@@ -15,6 +15,20 @@
 
 <?php include "com/cabecera.php"?>
 
+
+<aside>
+    <article>
+        <h1>Información actualizada en tiempo real:</h1>
+        <p>Número de Productos en la tienda:
+        <p id="products">
+            <script>
+                setTimeout(numero_productos,1000);
+            </script>
+        </p>
+    </article>
+</aside>
+
+
 <section>
     <header>
         Transacciones
@@ -39,6 +53,8 @@
                 <th>Subtipo</th>
                 <th>Precio</th>
                 <th>Stock</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
             </tr>
             </thead>
             <tbody>
@@ -50,9 +66,9 @@
                 if($product->type == "Paquetes"){
                     foreach ($paquetes as $paquete){
                         if($product->id == $paquete->id_product) {
-                        ?>
-        <tr>
+                            ?>
 
+        <tr>
             <td><?php echo $paquete->id_product ?></td>
             <td><?php echo $product->type ?></td>
             <td><?php echo $paquete->name ?></td>
@@ -61,12 +77,22 @@
             <td><?php echo $paquete->price ?></td>
             <td><?php echo $paquete->stock ?></td>
 
+            <form method="get">
+                <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
+                <td>
+                    <button class="basura" type="submit" formaction="shopAdmin/actualizarProducto">
+                        <img src="imagenes/editar.png" alt="editar" height="20" width="20">
+                    </button>
+                </td>
+                <td>
+                    <button class="basura" type="submit" formaction="shopAdmin/eliminarProducto">
+                        <img src="imagenes/basura.png" alt="eliminar" height="20" width="20" >
+                    </button>
+                </td>
+            </form>
         </tr>
-                    <?php }
-                }
-                }
-                }
-        } ?>
+
+                    <?php }}}}} ?>
             <tbody>
         </table>
     </article>

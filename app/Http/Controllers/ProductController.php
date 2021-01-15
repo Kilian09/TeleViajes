@@ -26,17 +26,22 @@ class ProductController extends Controller
         echo $numeroProdictos;
     }
 
-    public function paquetes(){
-
-        return view('/paquetes');
-    }
-
     public function listaProductos()
     {
         $products = Products::get();
         $paquetes = Paquetes::get();
 
         return view('/shopAdmin')
+            ->with('products', $products)
+            ->with('paquetes', $paquetes);
+    }
+
+    public function listaPaquetes()
+    {
+        $products = Products::get();
+        $paquetes = Paquetes::get();
+
+        return view('/paquetes')
             ->with('products', $products)
             ->with('paquetes', $paquetes);
     }
@@ -86,5 +91,49 @@ class ProductController extends Controller
         }
     }
 
+    public function eliminarProducto()
+    {
+        if (isset($_GET['idProducto'])) {
+            Products::where('id', $_GET['idProducto'])->first()->delete();
+            return redirect('/shopAdmin')->with('exito','Se ha eliminado el producto correctamente');
+        }
+    }
+
+    /**
+     *
+     * TODO: FER ECHALE UN OJO PELOTUDO
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function actualizarProducto()
+    {
+        if (isset($_GET['idProducto'])) {
+            return view('actualizarProducto', ['id' => $_GET['idProducto']]);
+        }
+    }
+
+    /**
+     * TODO: FER ECHALE UN OJO PELOTUDO
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function procesar_producto_actualizado(){
+        if(isset($_POST['idProducto'])) {
+            $producto = Products::where('id',$_POST['idProducto'])->first();
+
+            if ($_POST['nombreProducto'] != "") {
+                $producto->nombreProducto = $_POST['nombreProducto'];
+            }
+            if ($_POST['descripcionProducto'] != "") {
+                $producto->descripcionProducto = $_POST['descripcionProducto'];
+            }
+            if ($_POST['precioProducto'] != "") {
+                $producto->precioProducto = doubleval($_POST['precioProducto']);
+            }
+            if ($_POST['stockProducto'] != "") {
+                $producto->stockProducto = doubleval($_POST['stockProducto']);
+            }
+            $producto->save();
+            return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $producto->nombreProducto . ' correctamente');
+        }
+    }
 
 }
