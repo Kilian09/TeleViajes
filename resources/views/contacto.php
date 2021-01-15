@@ -66,8 +66,7 @@
                                 <div class="static-map"><iframe allowfullscreen="" frameborder="0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyCLGmO09UHo8NQHdplzSQ6E2LpHE0IWaaI&amp;q=Eite+ulpgc&amp;zoom=16" width="100%" height="400"></iframe></div>
                             </div>
                             <div class="col-sm-6 col-md-12 col-lg-6">
-                                <h2 class="h4"><i class="fa fa-user"></i> Nuestra pagina</h2>
-                                <div></div>
+                                <h2 class="h4"><i class="fa fa-user"></i> Nuestra página</h2>
                                 <div><span>www.PONER UNA DIRECCION.com</span></div>
                                 <hr class="d-sm-none d-md-block d-lg-none">
                             </div>
@@ -75,8 +74,6 @@
                                 <h2 class="h4"><i class="fa fa-location-arrow"></i>Nuestra dirección</h2>
                                 <div><span><strong>EITE-ULPGC</strong></span></div>
                                 <div><span>Aulario, 35017 Tafira Baja, Las Palmas</span></div>
-                                <div></div>
-                                <div></div>
                                 <hr class="d-sm-none">
                             </div>
                         </div>
