@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
 
+    public function crearProducto()
+    {
+        return view('crearProducto');
+    }
+
+
     public function numero_productos()
     {
         $productos = Products::all();
