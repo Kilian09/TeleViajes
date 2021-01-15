@@ -15,11 +15,11 @@ class CreatePaquetesTable extends Migration
     {
         Schema::create('paquetes', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_user')->unsigned();
-            $table->foreign('id_user')->references('id')->on('users')->onDelete("cascade");
+            $table->bigInteger('id_product')->unsigned();
+            $table->foreign('id_product')->references('id')->on('products')->onDelete("cascade");
             $table->string('name');
             $table->string('descripction');
-            $table->string('type_product');
+            $table->string('type');
             $table->string('price');
             $table->timestamps();
         });
