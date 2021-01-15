@@ -28,34 +28,34 @@
         <section class="text-center" style="margin-top: 20px;">
             <div class="d-flex flex-row multiple-item-slider">
                 <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="https://www.infobae.com/new-resizer/9wTGCi4jxLodKixo8s4vwELYNks=/768x432/filters:format(jpg):quality(85)/arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/W4MUYOMH3RH2LOTWDWBCQNRDBU.jpg" width="2000" alt="alt text here">
+                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/ultra.jpg" width="2000" alt="alt text here">
                         <figcaption class="figure-caption">Ultra  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
 
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img mx-auto d-block" src="https://www.dodmagazine.es/wp-content/uploads/2020/06/arenal-sound.jpg" width="1700" alt="alt text here">
+                    <figure class="figure"><img class="img-fluid figure-img mx-auto d-block" src="assets/img/arenasound.jpg" width="1700" alt="alt text here">
                         <figcaption class="figure-caption">Arenal  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="https://www.tomorrowland.com/src/Frontend/Themes/tomorrowland/Core/Layout/images/timeline/2019-1.jpg" width="2000" alt="alt text here">
+                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/tomorrowland2.jpg" width="2000" alt="alt text here">
                         <figcaption class="figure-caption">Tomorrowland  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="https://d1bvpoagx8hqbg.cloudfront.net/originals/sunblast-el-festival-barra-libre-mas-grande-mundo-6e3d93e1b251ddb15b6cd48df661c2d9.jpg" width="1900" alt="alt text here">
+                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/sunblast.jpg" width="1900" alt="alt text here">
                         <figcaption class="figure-caption">Sunblast  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="https://cdn.shortpixel.ai/client/q_lossy,ret_img/https://farraworld.com/wp-content/uploads/2015/03/ritmos-del-mundo-farra-1000x563.jpg" width="2000" alt="alt text here">
+                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/ritmosmundo.jpg" width="2000" alt="alt text here">
                         <figcaption class="figure-caption">Ritmos del mundo  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
                     </figure>
                 </div>
 
                 <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2019/07/12/15629280384856.jpg" width="2000" alt="alt text here">
+                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/madcool.jpg" width="2000" alt="alt text here">
                         <figcaption class="figure-caption">Mad Cool <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
                     </figure>
                 </div>
