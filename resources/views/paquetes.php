@@ -18,18 +18,19 @@
     <div class="container" style="margin-top: 8px;">
         <div class="carousel slide" data-ride="carousel" id="carousel-1">
             <div class="carousel-inner">
-                <div class="carousel-item active"><img class="img-thumbnail w-100 d-block" src="assets/img/el-origen-de-las-auroras-boreales-183012-1.jpg" alt="Slide Image"></div>
-                <div class="carousel-item"><img class="w-100 d-block" src="disneyland.jpg" alt="Slide Image"></div>
-                <div class="carousel-item"><img class="w-100 d-block" src="assets/img/praga.jpg" alt="Slide Image"></div>
+                <div class="carousel-item active"><img class="img-thumbnail w-100 d-block" src="assets/img/el-origen-de-las-auroras-boreales-183012-1.jpg" alt="Auroras"></div>
+                <div class="carousel-item"><img class="img-thumbnail w-100 d-block" src="assets/img/disney.jpg" alt="Disney"></div>
+                <div class="carousel-item"><img class="img-thumbnail w-100 d-block" src="assets/img/praga.jpg" alt="Praga"></div>
             </div>
             <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
-            <ol class="carousel-indicators">
+            <ol class="carousel-indicators" style="width: 100%; text-align: center; margin-left: 0; padding-top: 2em">
                 <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-1" data-slide-to="1"></li>
                 <li data-target="#carousel-1" data-slide-to="2"></li>
             </ol>
         </div>
     </div>
+
     <div class="container" style="margin-top: 100px;">
         <h1>Los paquetes más populares</h1>
         <div class="card-group">

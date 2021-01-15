@@ -135,35 +135,35 @@
             <div class="carousel-inner">
                 <div class="carousel-item">
                     <div class="jumbotron pulse animated hero-nature carousel-hero" style="background: url(&quot;assets/img/snorkeling-buceo-playa.jpg&quot;) repeat;background-size: contain;">
-                        <h1 class="hero-title">Actividades</h1>
+                        <h1 class="hero-title" style="display: block">Actividades</h1>
                         <p class="hero-subtitle" style="font-size: 20px;">Actividades de todo tipo y para todos.</p>
                         <p><a class="btn btn-primary hero-button plat" role="button" href="#">Ver actividades</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="jumbotron pulse animated hero-photography carousel-hero" style="background: url(&quot;assets/img/el-origen-de-las-auroras-boreales-183012-1.jpg&quot;) center / cover;">
-                        <h1 class="hero-title">Paquetes</h1>
+                        <h1 class="hero-title" style="display: block">Paquetes</h1>
                         <p class="hero-subtitle" style="font-size: 20px;">Gran cantidad de viajes con temáticas variadas para todos los gustos y todas las edades.</p>
                         <p><a class="btn btn-primary hero-button plat" role="button" href="#">ver paquetes</a></p>
                     </div>
                 </div>
                 <div class="carousel-item active">
                     <div class="jumbotron pulse animated hero-technology carousel-hero" id="carousel" style="background: url(&quot;assets/img/cruce.jpg&quot;) center / auto;">
-                        <h1 class="hero-title">Cruceros</h1>
+                        <h1 class="hero-title" style="display: block">Cruceros</h1>
                         <p class="hero-subtitle" style="font-size: 20px;color: var(--dark);">Cruceros por todo el mundo con las compañías más prestigiosas.</p>
                         <p><a class="btn btn-primary hero-button plat" role="button" href="#">Ver cruceros</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="jumbotron pulse animated hero-technology carousel-hero" style="background: url(&quot;assets/img/grupo.jpg&quot;) center;">
-                        <h1 class="hero-title">Grupos</h1>
+                        <h1 class="hero-title" style="display: block">Grupos</h1>
                         <p class="hero-subtitle">Viajes organizados especializados para cada tipo de grupo.&nbsp;</p>
                         <p><a class="btn btn-primary hero-button plat" role="button" href="#">Ver grupos</a></p>
                     </div>
                 </div>
             </div>
             <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><i class="fa fa-chevron-right"></i><span class="sr-only">Next</span></a></div>
-            <ol class="carousel-indicators">
+            <ol class="carousel-indicators" style="width: 100%; text-align: center; margin-left: 0;">
                 <li data-target="#carousel-1" data-slide-to="0"></li>
                 <li data-target="#carousel-1" data-slide-to="1"></li>
                 <li data-target="#carousel-1" data-slide-to="2" class="active"></li>
