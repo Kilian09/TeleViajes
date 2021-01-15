@@ -37,6 +37,9 @@ class userController extends Controller
     public function familia(){
         return view('/familia');
     }
+    public function paquetes(){
+        return view('/paquetes');
+    }
 
 
     /**
