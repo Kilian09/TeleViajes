@@ -22,6 +22,7 @@ class CreatePaquetesTable extends Migration
             $table->string('type');
             $table->double('price');
             $table->double('stock');
+            $table->string('date');
             $table->timestamps();
         });
     }
