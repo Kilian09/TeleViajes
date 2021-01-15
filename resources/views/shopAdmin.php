@@ -31,7 +31,7 @@
         Lista de Productos
     </article>
     <article>
-        Crear Productos
+        <a href="crearProducto">Crear Productos</a>
     </article>
 </section>
 
