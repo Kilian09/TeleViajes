@@ -37,6 +37,9 @@ class userController extends Controller
     public function familia(){
         return view('/familia');
     }
+    public function shopAdmin(){
+        return view('/shopAdmin');
+    }
 
 
 
@@ -85,7 +88,7 @@ class userController extends Controller
 
         $usuario = User::where('nombreDeUsuario', $datos[0])->get();
 
-        //creamos 2 sesiones user y nombre. con el id y con el nombre del usuario.
+        //creamos 3 sesiones user, nombre, username. con el id, el nombre y nombre de usuario del usuario.
         session(['user' => $usuario[0]['id']]);
         session(['nombre' => $usuario[0]['nombre']]);
         session(['username' => $usuario[0]['nombreDeUsuario']]);
@@ -113,10 +116,10 @@ class userController extends Controller
 
                 if ($usuario[0]['password'] == $datos[1]) {
 
-                    //creamos 2 sesiones user y nombre. con el id y con el nombre del usuario.
+                    //creamos 3 sesiones user, nombre, username. con el id, el nombre y nombre de usuario del usuario.
                     session(['user' => $usuario[0]['id']]);
                     session(['nombre' => $usuario[0]['nombre']]);
-                    session(['nombreDeUsuario' => $usuario[0]['nombreDeUsuario']]);
+                    session(['username' => $usuario[0]['nombreDeUsuario']]);
 
                     //PODRIAMOS HACER UNA SESION CON EL EMAIL????????????????????????
 
@@ -134,7 +137,7 @@ class userController extends Controller
     {
         session()->forget(['user', 'nombre','username']);  //elimina las sesiones
         session()->flush();                     //elimina todos los datos de la sesion
-        return view('/');
+        return view('index');
     }
 
 

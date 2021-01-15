@@ -26,10 +26,11 @@ Route::get('/cruceros', 'userController@cruceros');
 Route::get('/paquetes', 'userController@paquetes');
 Route::get('/actividades', 'userController@actividades');
 Route::get('/universitarios', 'userController@universitarios');
-
 Route::get('/ancianos', 'userController@ancianos');
 Route::get('/escolares', 'userController@escolares');
 Route::get('/familia', 'userController@familia');
+Route::get('/shopAdmin', 'userController@shopAdmin');
+
 
 
 
