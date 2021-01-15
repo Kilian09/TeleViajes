@@ -20,8 +20,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
-                        <h1 class="brand-heading">TELEVIAJES</h1>
-                        <p class="intro-text">En esta época todo tiene que tener tele delante.</p><a class="btn btn-link btn-circle" role="button" href="#carousel"><i class="fa fa-angle-double-down animated"></i></a>
+                        <h1 class="brand-heading" style="display: block">TELEVIAJES</h1>
+                        <p class="intro-text">En esta época todo tiene que tener tele delante</p><a class="btn btn-link btn-circle" role="button" href="#carousel"><i class="fa fa-angle-double-down animated"></i></a>
                     </div>
                 </div>
             </div>
