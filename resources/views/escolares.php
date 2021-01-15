@@ -17,26 +17,44 @@
 
 
 <div data-bs-parallax-bg="true" style="height: 500px;background: url(&quot;assets/img/xiquillos.jpg&quot;) center / cover;"></div>
-<div class="blog-slider">
-    <div class="blog-slider__wrp swiper-wrapper">
-        <div class="blog-slider__item swiper-slide">
-            <div></div>
-            <div class="blog-slider__img"><img src="assets/img/estaciones-esqui-ninos.jpg"></div>
-            <div class="blog-slider__content"><span class="blog-slider__code">15 - 23 Diciembre 2021</span><div class="blog-slider__title">Viaje a la Nieve en los Pirineos </div><div class="blog-slider__text">Celebra las navidades con la mayor adrenalina posible. Tus amigos y la adrenalina por 1000€. </div><a class="class=&quot;blog-slider__button" href="#">Comprar</a></div>
+
+
+<section id="carousel">
+    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                    <div class="jumbotron pulse animated hero-technology carousel-hero" style="background: url(&quot;assets/img/estaciones-esqui-ninos.jpg&quot;) center;">
+                        <h1 class="hero-title" style="display: block">Viaje a la Nieve en los Pirineos </h1>
+                        <p class="hero-subtitle">Celebra las navidades con la mayor adrenalina posible. Tus amigos y la adrenalina por 1000€. 15 - 23 Diciembre 2021.</p>
+                        <p><a class="btn btn-primary hero-button plat" role="button" href="#">Comprar</a></p>
+                    </div>
+            </div>
+            <div class="carousel-item">
+                <div class="jumbotron pulse animated hero-photography carousel-hero" style="background: url(&quot;assets/img/algrve.jpg&quot;) center / cover;">
+                    <h1 class="hero-title" style="display: block">Algarve</h1>
+                    <p class="hero-subtitle" style="font-size: 20px;">Cuevas, playa, kayaks y amigos para comenzar el curso. 2 - 16 Septiembre 2021</p>
+                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Comprar</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="jumbotron pulse animated hero-technology carousel-hero" id="carousel" style="background: url(&quot;assets/img/buda.jpg&quot;) center / auto;">
+                    <h1 class="hero-title" style="display: block">Sorpéndete con Budapest</h1>
+                    <p class="hero-subtitle" style="font-size: 20px;">Comienza el verano con tus amigos en una de las ciudades mas sorprendentes y entrenidas de Europa. 600€ por persona. 18-24 Junio 2021.</p>
+                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Comprar</a></p>
+                </div>
+            </div>
         </div>
-        <div class="blog-slider__item swiper-slide">
-            <div></div>
-            <div class="blog-slider__img"><img src="assets/img/buda.jpg"></div>
-            <div class="blog-slider__content"><span class="blog-slider__code">18-24 Junio 2021</span><div class="blog-slider__title">Sorpéndete con Budapest</div><div class="blog-slider__text">Comienza el verano con tus amigos en una de las ciudades mas sorprendentes y entrenidas de Europa. 600€ por persona. </div><a class="class=&quot;blog-slider__button" href="#">Comprar</a></div>
-        </div>
-        <div class="blog-slider__item swiper-slide">
-            <div></div>
-            <div class="blog-slider__img"><img src="assets/img/algrve.jpg"></div>
-            <div class="blog-slider__content"><span class="blog-slider__code">2 - 16 Septiembre 2021</span><div class="blog-slider__title">Algarve Portugés</div><div class="blog-slider__text">Cuevas, playa, kayaks y amigos para comenzar el curso. </div><a class="class=&quot;blog-slider__button" href="#">Comprar</a></div>
-        </div>
-        <div class="blog-slider__pagination"></div>
+        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><i class="fa fa-chevron-right"></i><span class="sr-only">Next</span></a></div>
+        <ol class="carousel-indicators" style="width: 100%; text-align: center; margin-left: 0;">
+            <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-1" data-slide-to="1"></li>
+            <li data-target="#carousel-1" data-slide-to="2"></li>
+        </ol>
     </div>
-</div><div class="shopping-grid">
+</section>
+
+
+<div class="shopping-grid">
     <div class="container">
         <h3 class="" align="center">Últimos Productos</h3>
         <div class="row">
