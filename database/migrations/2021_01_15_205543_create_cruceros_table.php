@@ -15,6 +15,14 @@ class CreateCrucerosTable extends Migration
     {
         Schema::create('cruceros', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('id_product')->unsigned();
+            $table->foreign('id_product')->references('id')->on('products')->onDelete("cascade");
+            $table->string('name');
+            $table->string('description');
+            $table->string('type');
+            $table->double('price');
+            $table->double('stock');
+            $table->string('date');
             $table->timestamps();
         });
     }
