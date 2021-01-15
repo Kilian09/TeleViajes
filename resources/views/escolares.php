@@ -15,19 +15,15 @@
 <body>
 <?php include "com/cabecera.php"?>
 
-
-<div data-bs-parallax-bg="true" style="height: 500px;background: url(&quot;assets/img/xiquillos.jpg&quot;) center / cover;"></div>
-
-
 <section id="carousel">
     <div class="carousel slide" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                    <div class="jumbotron pulse animated hero-technology carousel-hero" style="background: url(&quot;assets/img/estaciones-esqui-ninos.jpg&quot;) center;">
-                        <h1 class="hero-title" style="display: block">Viaje a la Nieve en los Pirineos </h1>
-                        <p class="hero-subtitle">Celebra las navidades con la mayor adrenalina posible. Tus amigos y la adrenalina por 1000€. 15 - 23 Diciembre 2021.</p>
-                        <p><a class="btn btn-primary hero-button plat" role="button" href="#">Comprar</a></p>
-                    </div>
+                <div class="jumbotron pulse animated hero-technology carousel-hero" style="background: url(&quot;assets/img/estaciones-esqui-ninos.jpg&quot;) center;">
+                    <h1 class="hero-title" style="display: block">Viaje a la Nieve en los Pirineos </h1>
+                    <p class="hero-subtitle">Celebra las navidades con la mayor adrenalina posible. Tus amigos y la adrenalina por 1000€. 15 - 23 Diciembre 2021.</p>
+                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Comprar</a></p>
+                </div>
             </div>
             <div class="carousel-item">
                 <div class="jumbotron pulse animated hero-photography carousel-hero" style="background: url(&quot;assets/img/algrve.jpg&quot;) center / cover;">
@@ -53,6 +49,7 @@
     </div>
 </section>
 
+<div data-bs-parallax-bg="true" style="height: 500px;background: url(&quot;assets/img/xiquillos.jpg&quot;) center / cover;"></div>
 
 <div class="shopping-grid">
     <div class="container">
@@ -62,18 +59,16 @@
                 <div class="product-grid7">
                     <div class="product-image7">
                         <a href="#">
-                            <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-1.jpg">
-                            <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-2.jpg">
+                            <img class="pic-1" src="assets/img/amsterdam.jpg">
+                            <img class="pic-2" src="assets/img/barriorojo.jpg">
                         </a>
                         <ul class="social">
-                            <li><a href="" class="fa fa-search"></a></li>
-                            <li><a href="" class="fa fa-shopping-bag"></a></li>
                             <li><a href="" class="fa fa-shopping-cart"></a></li>
                         </ul>
                         <span class="product-new-label">New</span>
                     </div>
                     <div class="product-content">
-                        <h3 class="title"><a href="#">Berlin</a></h3>
+                        <h3 class="title"><a href="#">Amsterdam</a></h3>
                         <ul class="rating">
                             <li class="fa fa-star"></li>
                             <li class="fa fa-star"></li>
@@ -91,12 +86,10 @@
                 <div class="product-grid7">
                     <div class="product-image7">
                         <a href="#">
-                            <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-3.jpg">
-                            <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-4.jpg">
+                            <img class="pic-1" src="assets/img/London.jpg">
+                            <img class="pic-2" src="assets/img/london2.jpg">
                         </a>
                         <ul class="social">
-                            <li><a href="" class="fa fa-search"></a></li>
-                            <li><a href="" class="fa fa-shopping-bag"></a></li>
                             <li><a href="" class="fa fa-shopping-cart"></a></li>
                         </ul>
                         <span class="product-new-label">New</span>
@@ -118,18 +111,16 @@
                 <div class="product-grid7">
                     <div class="product-image7">
                         <a href="#">
-                            <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-5.jpg">
-                            <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-6.jpg">
+                            <img class="pic-1" src="assets/img/madrid.jpg">
+                            <img class="pic-2" src="assets/img/berna.jpg">
                         </a>
                         <ul class="social">
-                            <li><a href="" class="fa fa-search"></a></li>
-                            <li><a href="" class="fa fa-shopping-bag"></a></li>
                             <li><a href="" class="fa fa-shopping-cart"></a></li>
                         </ul>
                         <span class="product-new-label">New</span>
                     </div>
                     <div class="product-content">
-                        <h3 class="title"><a href="#">Amsterdam</a></h3>
+                        <h3 class="title"><a href="#">Madrid</a></h3>
                         <ul class="rating">
                             <li class="fa fa-star"></li>
                             <li class="fa fa-star"></li>
@@ -147,12 +138,10 @@
                 <div class="product-grid7">
                     <div class="product-image7">
                         <a href="#">
-                            <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-7.jpg">
-                            <img class="pic-2" src="http://bestjquery.com/tutorial/product-grid/demo8/images/img-8.jpg">
+                            <img class="pic-1" src="assets/img/varsovia.jpg">
+                            <img class="pic-2" src="assets/img/warsaw.jpg">
                         </a>
                         <ul class="social">
-                            <li><a href="" class="fa fa-search"></a></li>
-                            <li><a href="" class="fa fa-shopping-bag"></a></li>
                             <li><a href="" class="fa fa-shopping-cart"></a></li>
                         </ul>
                         <span class="product-new-label">New</span>
