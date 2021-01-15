@@ -41,11 +41,8 @@ class userController extends Controller
         return view('/shopAdmin');
     }
 
-
-
-
     /**
-     *
+     * DONE
      */
     public function procesar_registro()
     {
@@ -97,7 +94,7 @@ class userController extends Controller
     }
 
     /**
-     *  NOT DONE
+     *
      */
     public function procesar_login()
     {
@@ -140,7 +137,9 @@ class userController extends Controller
         return view('index');
     }
 
-
+    /**
+     * Comprobar
+     */
     public function procesar_contacto(){
         if (isset($_POST["nombre"], $_POST["email"], $_POST["telefono"], $_POST["comentario"])) {
 
