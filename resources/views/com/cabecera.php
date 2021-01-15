@@ -21,20 +21,15 @@
                 ?>
                 <span class="d-inline navbar-text actions" >
 
-                    <!--  OTRA OPCION PARA LA CABECERA
-                    <li class="nav-item dropdown">
-                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="login" style="color: var(--light);"><?php echo strtoupper(session("nombreDeUsuario"))?></a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="miCarrito">Carrito</a>
-                        <a class="dropdown-item" href="cerrar_session">Cerrar Sesión</a>
-                    </div>
-                </li>
-                    -->
-
-                <a class="d-inline login"><?php echo strtoupper(session("nombre"))?></a> <!-- Problema cuando pongo la session username no la pilla -->
+                <a class="d-inline login"><?php echo strtoupper(session("username"))?></a> <!-- Problema cuando pongo la session username no la pilla -->
                 <a class="btn btn-light d-inline action-button" role="button" href="miCarrito"> <e class="fa fa-shopping-cart"></a>
                 <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="cerrar_session">Cerrar Sesión</a>
+            <?php
+            if(session("username") == "admin" ){?>
+                <a class="btn btn-light d-inline action-button" role="button" href="shopAdmin"><e class="fa fa-cog"> </a>
+            <?php } ?>
                 </span>
+
             <?php }else{  ?>
                 <span class="d-inline navbar-text actions"> <a class="d-inline login" href="login" >Iniciar Sesión</a>
                 <a class="btn btn-light d-inline action-button" role="button" href="register">Registrarse</a>
