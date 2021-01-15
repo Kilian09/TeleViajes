@@ -23,31 +23,39 @@ if(session('username') == "admin"){
             <tr>
                 <p>
                 <th><label>Nombre del producto:</label></th>
-                <th><input type="text" name="nombreProducto"  class="inputText"> </th>
+                <th><input type="text" name="name"  class="inputText"> </th>
                 </p>
             </tr>
             <tr>
                 <p>
                 <th><label>Descripción:</label></th>
-                <th><input type="text" name="descripcionProducto"  class="inputText"></th>
+                <th><input type="text" name="description"  class="inputText"></th>
                 </p>
             </tr>
             <tr>
                 <th><label>Precio del Producto en €: </label></th>
-                <th><input type="number" name="precioDelProducto" class="inputText"></th>
+                <th><input type="number" name="price" class="inputText"></th>
             </tr>
             <tr>
                 <th><label>Stock: </label></th>
-                <th><input type="number" name="stockDelProducto"  class="inputText"></th>
+                <th><input type="number" name="stock"  class="inputText"></th>
             </tr>
-
             <tr>
                 <th><label>Tipo de Producto: </label></th>
                 <th>
-                    <input type="radio" id="Cruceros" name="Cruceros" value="Cruceros">
+                    <input type="radio" id="Cruceros" name="tipo" value="Cruceros">
                     <label for="Cruceros">Cruceros</label>
-                    <input type="radio" id="Paquetes" name="Paquetes" value="Paquetes">
+                    <input type="radio" id="Paquetes" name="tipo" value="Paquetes">
                     <label for="Paquetes">Paquetes</label><br>
+                </th>
+            </tr>
+            <tr>
+                <th><label>Subtipo de Producto: </label></th>
+                <th>
+                    <input type="radio" id="Popular" name="subtype" value="Popular">
+                    <label for="Popular">Popular</label>
+                    <input type="radio" id="Magicos" name="subtype" value="Magicos">
+                    <label for="Magicos">Magicos</label><br>
                 </th>
             </tr>
             </tbody>

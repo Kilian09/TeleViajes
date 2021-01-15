@@ -34,6 +34,7 @@ Route::get('/shopAdmin', 'userController@shopAdmin');
 
 //REDIRECCIONAMIENTO DE VISTAS A PRODUCTCONTROLLER
 Route::get('/crearProducto', 'ProductController@crearProducto');
+Route::post('/addProducto', 'ProductController@addProducto');
 
 
 
