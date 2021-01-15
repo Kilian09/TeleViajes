@@ -20,7 +20,7 @@
             <h1 class="text-capitalize bg-dark shadow" style="text-align: center;margin-bottom: 0;padding-top: 20px; display: block">Información de contacto</h1>
             <hr>
             <form id="contactForm" action="procesar_contacto" method="post">
-
+                <?= csrf_field() ?>
                 <div class="form-row">
                     <div class="col-12 col-md-6" id="message" style="border-color: var(--blue);">
                         <h2 class="h4"><i class="fa fa-envelope"></i> Contáctenos</h2>

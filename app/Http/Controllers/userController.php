@@ -146,49 +146,26 @@ class userController extends Controller
             $nombre = $_POST["nombre"];
             $email = $_POST["email"];
             $telefono = $_POST["telefono"];
-            $email = $_POST["email"];
             $comentario = $_POST["comentario"];
 
                 //revisar si el usuario esta registrado
-            if (User::where('email', $email)->exists()) {
 
-                $usuario = User::where('email', $email)->first();
 
                 $datos = array();
-                $datos[0] = $usuario->id;
-                $datos[1] = $nombre;
-                $datos[2] = $email;
-                $datos[3] = $telefono;
-                $datos[4] = $comentario;
+                $datos[0] = $nombre;
+                $datos[1] = $email;
+                $datos[2] = $telefono;
+                $datos[3] = $comentario;
 
                 $contacto = new ContactForm(); //nombre del modelo ContactForm() que hace referencia a la tabla contact_form
 
-                $contacto->user_id = $datos[0];
-                $contacto->nombre = $datos[1];
-                $contacto->email = $datos[2];
-                $contacto->telefono = $datos[3];
-                $contacto->comentario = $datos[4];
+                $contacto->nombre = $datos[0];
+                $contacto->email = $datos[1];
+                $contacto->telefono = $datos[2];
+                $contacto->comentario = $datos[3];
                 $contacto->save();
 
-            } else {
 
-                $datos = array();
-                $datos[0] = 0;
-                $datos[1] = $nombre;
-                $datos[2] = $email;
-                $datos[3] = $telefono;
-                $datos[4] = $comentario;
-
-                $contacto = new ContactForm(); //nombre del modelo ContactForm() que hace referencia a la tabla contact_form
-
-                $contacto->user_id = $datos[0];
-                $contacto->nombre = $datos[1];
-                $contacto->email = $datos[2];
-                $contacto->telefono = $datos[3];
-                $contacto->comentario = $datos[4];
-                $contacto->save();
-
-            }
         }
         return redirect()->to("/contacto");
     }

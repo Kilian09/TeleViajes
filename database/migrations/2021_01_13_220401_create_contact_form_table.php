@@ -15,8 +15,6 @@ class CreateContactFormTable extends Migration
     {
         Schema::create('contact_form', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
             $table->string('nombre');
             $table->string('email');
             $table->string('telefono');
