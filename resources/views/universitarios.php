@@ -29,42 +29,42 @@
             <div class="d-flex flex-row multiple-item-slider">
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img" src="https://picsum.photos/1080/1335?image=0" alt="alt text here">
-                        <figcaption class="figure-caption">Caption</figcaption>
+                        <figcaption class="figure-caption">Ultra</figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img mx-auto d-block" src="https://picsum.photos/1080/1335?image=1083" alt="alt text here">
-                        <figcaption class="figure-caption">Caption</figcaption>
+                        <figcaption class="figure-caption">Arenal</figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img" src="https://picsum.photos/1080/1335?image=1076" alt="alt text here">
-                        <figcaption class="figure-caption">Caption</figcaption>
+                        <figcaption class="figure-caption">Tomorrowland</figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img" src="https://picsum.photos/1080/1335?image=1075" alt="alt text here">
-                        <figcaption class="figure-caption">Caption</figcaption>
+                        <figcaption class="figure-caption">Sunblast</figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img" src="https://picsum.photos/1080/1335?image=1074" alt="alt text here">
-                        <figcaption class="figure-caption">Caption</figcaption>
+                        <figcaption class="figure-caption">Ritmos del mundo</figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img" src="https://picsum.photos/1080/1335?image=1071" alt="alt text here">
-                        <figcaption class="figure-caption">Caption</figcaption>
+                        <figcaption class="figure-caption">Rock Fest</figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img" src="https://picsum.photos/1080/1335?image=1060" alt="alt text here">
-                        <figcaption class="figure-caption">Caption</figcaption>
+                        <figcaption class="figure-caption">Mad Cool</figcaption>
                     </figure>
                 </div>
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img d-flex" src="https://picsum.photos/1080/1335?image=1045" alt="alt text here">
-                        <figcaption class="figure-caption">Caption</figcaption>
+                        <figcaption class="figure-caption">Elrow</figcaption>
                     </figure>
                 </div>
             </div>
@@ -82,25 +82,25 @@
                 <div class="carousel-item">
                     <div class="col-9 offset-xl-1 text-center mx-auto testimonial-content"><img class="rounded-circle" src="assets/img/test-woman.jpg" width="100">
                         <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
-                        <p class="text-center" style="color: var(--gray);"><em>"Lorem ipsum dolor sit amet, nec cu omnium ponderum instructior, eligendi gubergren."</em><br></p>
+                        <p class="text-center" style="color: var(--gray);"><em>¡El mejor festival de mi vida sin duda repetire!.</em><br></p>
                         <p class="signature" style="color: var(--gray);">Mery Jane&nbsp;</p>
                         <p class="text-center date" style="color: var(--gray);">Viaje a Tomorrowland, April&nbsp; 2012<br></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="col-9 text-center mx-auto testimonial-content"><img class="rounded-circle" src="assets/img/test-male-pic.jpg" width="100">
+                    <div class="col-9 text-center mx-auto testimonial-content"><img class="rounded-circle" src="assets/img/test-man.jpg" width="100">
                         <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
-                        <p class="text-center"><em>"Lorem ipsum dolor sit amet, nec cu omnium ponderum instructior, eligendi gubergren cotidieque te eam. Sed ceteros salutatus definiebas eu, ut modo argumentum reprimique quo. Per te convenire facilisis. Eu vel noster scaevola molestiae.&nbsp;Lorem ipsum dolor sit amet, nec cu omnium ponderum instructior, eligendi gubergren cotidieque te eam. Sed ceteros salutatus definiebas eu, ut modo argumentum reprimique quo. Per te convenire facilisis. Eu vel noster scaevola molestiae."</em><br></p>
+                        <p class="text-center" style="color: var(--gray);"><em>"El agua era tan transparente que no hacia falta gafas de buceo"</em><br></p>
                         <p class="signature">John D.</p>
-                        <p class="text-center date">April 21, 2014<br></p>
+                        <p class="text-center date">Viajo a Cancún, April 21, 2016<br></p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="col-9 offset-xl-1 text-center mx-auto testimonial-content"><img class="rounded-circle" src="assets/img/test-female-pic.jpg" width="100">
+                    <div class="col-9 offset-xl-1 text-center mx-auto testimonial-content"><img class="rounded-circle" src="assets/img/test-woman.jpg" width="100">
                         <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
-                        <p class="text-center"><em>"Lorem ipsum dolor sit amet, nec cu omnium ponderum instructior, eligendi gubergren cotidieque te eam. Sed ceteros salutatus definiebas eu, ut modo argumentum reprimique quo. Per te convenire facilisis. Eu vel noster scaevola molestiae.&nbsp;Lorem ipsum dolor sit amet, nec cu omnium ponderum instructior, eligendi gubergren cotidieque te eam. Sed ceteros salutatus definiebas eu, ut modo argumentum reprimique quo. Per te convenire facilisis. Eu vel noster scaevola molestiae."</em><br></p>
+                        <p class="text-center" style="color: var(--gray);"><em>"El mejor clima del mundo"</em><br></p>
                         <p class="signature">Jane D.</p>
-                        <p class="text-center date">April 21, 2014<br></p>
+                        <p class="text-center date">Viajo a Canarias, Junio 21, 2014<br></p>
                     </div>
                 </div>
             </div>

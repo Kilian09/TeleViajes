@@ -18,7 +18,7 @@
                 <p class="footer-center-info email text-left">+34 630 267876&nbsp;</p>
             </div>
             <div><i class="fa fa-envelope footer-contacts-icon"></i>
-                <p> <a href="#" target="_blank">support@company.com</a></p>
+                <p> <a href="#" target="_blank">televiajes@ulpgc.com</a></p>
             </div>
         </div>
         <div class="clearfix"></div>
