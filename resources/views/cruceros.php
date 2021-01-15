@@ -17,7 +17,7 @@
     <section>
         <div id="w_shop_105" class="carousel slide w_shop_105_indicators w_shop_105_control_button thumb_scroll_x swipe_x ps_easeOutInCubic" data-ride="carousel" data-pause="hover" data-interval="8000" data-duration="2000">
             <div class="w_shop_105_main_header">
-                <h1><span>Cruceros</span><span>Destacados</span></h1>
+                <h1 style="display: inline"><span>Cruceros Destacados</span></h1>
             </div>
             <ol class="carousel-indicators">
                 <li class="active" data-target="#w_shop_105" data-slide-to="0" style="filter: blur(0px);"></li>

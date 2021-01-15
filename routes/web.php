@@ -41,7 +41,6 @@ Route::post('/procesar_registro', 'userController@procesar_registro');
 Route::get("/cerrar_session","UserController@cerrar_session");
 
 
-//YO LO PONDRIA EN OTRO CONTROLADOR SOLO PARA CONTACTO
 Route::get('/contacto', function () {
     return view('contacto');
 });
