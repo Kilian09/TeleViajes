@@ -25,49 +25,52 @@ class ProductController extends Controller
     public function listaProductos()
     {
         $productos = Products::get();
+        $paquetes = Paquetes::get();
 
-        return view('shopAdmin')->with('products', $productos);
+        return view('shopAdmin')
+            ->with('$productos', $productos)
+            ->with('paquetes', $paquetes);
     }
 
 
     public function addProducto(){
-        if (isset($_POST["id_user"],$_POST["tipo"], $_POST["name"], $_POST["descripcion"], $_POST["type"], $_POST["precio"], $_POST["stock"])) {
+        if (isset($_POST["type"], $_POST["name"], $_POST["description"], $_POST["subtype"], $_POST["price"], $_POST["stock"])) {
 
-            $id_user = $_POST["id_user"];
-            $tipo = $_POST["tipo"];
+            $type = $_POST["type"];
 
-            $datosProducto = array();
-            $datosProducto[0] = $id_user;
-            $datosProducto[1] = $tipo;
+            $productsData = array();
+            $productsData[0] = session('user');
+            $productsData[1] = $type;
 
-            $producto = new Products();
-            $producto->id_user = $datosProducto[0];
-            $producto->tipo = $datosProducto[1];
-            $producto->save();
+            $product = new Products();
+            $product->id_user = $productsData[0];
+            $product->type = $productsData[1];
+            $product->save();
 
 
-            $tipoProducto = array();
+            $productType = array();
 
-            $tipoProducto[0] = $_POST["name"];
-            $tipoProducto[1] = $_POST["descripcion"];
-            $tipoProducto[2] = $_POST["type"];
-            $tipoProducto[3] = $_POST["precio"];
-            $tipoProducto[4] = $_POST["stock"];
+            $productType[0] = $_POST["name"];
+            $productType[1] = $_POST["description"];
+            $productType[2] = $_POST["subtype"];
+            $productType[3] = $_POST["price"];
+            $productType[4] = $_POST["stock"];
 
-            if($datosProducto[1] == "Paquete"){
+            if($productsData[1] == "Paquetes"){
                 $paquete = new Paquetes();
             } else{
                 return redirect('/shopAdmin')->with('error', 'Tipo no disponible');
             }
 
-            $paquete->id_producto = $producto->id;
-            $paquete->name = $tipoProducto[0];
-            $paquete->descripcion = $tipoProducto[1];
-            $paquete->type = $tipoProducto[2];
-            $paquete->precio = $tipoProducto[3];
-            $paquete->stock = $tipoProducto[4];
+            $paquete->id_product = $product->id;
+            $paquete->name = $productType[0];
+            $paquete->description = $productType[1];
+            $paquete->type = $productType[2];
+            $paquete->price = $productType[3];
+            $paquete->stock = $productType[4];
 
             $paquete->save();
+
             return redirect('/shopAdmin')->with('exito','Se ha añadido el producto ' . $_POST['name']);
         }else{
             return redirect('/shopAdmin')->with('error','No se ha añadido el producto ' . $_POST['name']);

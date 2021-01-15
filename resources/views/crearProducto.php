@@ -43,9 +43,9 @@ if(session('username') == "admin"){
             <tr>
                 <th><label>Tipo de Producto: </label></th>
                 <th>
-                    <input type="radio" id="Cruceros" name="tipo" value="Cruceros">
+                    <input type="radio" id="Cruceros" name="type" value="Cruceros">
                     <label for="Cruceros">Cruceros</label>
-                    <input type="radio" id="Paquetes" name="tipo" value="Paquetes">
+                    <input type="radio" id="Paquetes" name="type" value="Paquetes">
                     <label for="Paquetes">Paquetes</label><br>
                 </th>
             </tr>
