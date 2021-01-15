@@ -28,7 +28,44 @@
         Productos
     </header>
     <article>
-        Lista de Productos
+        <h1>Lista de Productos </h1>
+
+
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tipo</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Subtipo</th>
+                <th>Precio</th>
+                <th>Stock</th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+        <?php
+        if (isset($productos, $paquetes)){
+                foreach ($productos as $producto){
+                if($producto->type == "Paquetes"){
+                    foreach ($paquetes as $paquete){
+                        ?>
+        <tr>
+
+            <td><?php echo $paquete->id_product ?></td>
+            <td><?php echo $producto->type ?></td>
+            <td><?php echo $paquete->name ?></td>
+            <td><?php echo $paquete->descripcion ?></td>
+            <td><?php echo $paquete->type ?></td>
+            <td><?php echo $paquete->precio ?></td>
+            <td><?php echo $paquete->stock ?></td>
+
+        </tr>
+                    <?php }}}} ?>
+            <tbody>
+        </table>
     </article>
     <article>
         <a href="crearProducto">Crear Productos</a>

@@ -39,8 +39,6 @@ Route::post('/addProducto', 'ProductController@addProducto');
 
 
 
-
-
 //PROCESADO DE FORMULARIOS
 Route::post('/procesar_login', 'userController@procesar_login');
 Route::post('/procesar_registro', 'userController@procesar_registro');
@@ -52,4 +50,6 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 Route::post('/procesar_contacto', 'userController@procesar_contacto');
+
+//PRODUCTO
 
