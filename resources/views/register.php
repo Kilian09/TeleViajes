@@ -64,8 +64,8 @@
                     }
                     ?>
 
-                </div><label>Los campos marcados con * son obligatorios</label>
-                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">He leido y acepto las condiciones</label></div>
+                </div>
+                <label style="display: inline">Los campos marcados con * son obligatorios</label>
                 <button class="btn btn-light submit-button" type="submit">Enviar Registro</button>
             </form>
         </div>
