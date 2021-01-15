@@ -91,16 +91,16 @@
                     <div class="col-9 text-center mx-auto testimonial-content"><img class="rounded-circle" src="assets/img/test-man.jpg" width="100">
                         <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
                         <p class="text-center" style="color: var(--gray);"><em>"El agua era tan transparente que no hacia falta gafas de buceo"</em><br></p>
-                        <p class="signature">John D.</p>
-                        <p class="text-center date">Viajo a Cancún, April 21, 2016<br></p>
+                        <p class="signature" style="color: var(--gray);">John D.</p>
+                        <p class="text-center date" style="color: var(--gray);">Viajo a Cancún, April 21, 2016<br></p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="col-9 offset-xl-1 text-center mx-auto testimonial-content"><img class="rounded-circle" src="assets/img/test-woman.jpg" width="100">
                         <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
                         <p class="text-center" style="color: var(--gray);"><em>"El mejor clima del mundo"</em><br></p>
-                        <p class="signature">Jane D.</p>
-                        <p class="text-center date">Viajo a Canarias, Junio 21, 2014<br></p>
+                        <p class="signature" style="color: var(--gray);">Jane D.</p>
+                        <p class="text-center date" style="color: var(--gray);">Viajo a Canarias, Junio 21, 2014<br></p>
                     </div>
                 </div>
             </div>
