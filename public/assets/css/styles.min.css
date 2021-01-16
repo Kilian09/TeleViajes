@@ -147,3 +147,14 @@
     display: inline;
 
 }
+
+.ventanaExito{
+    padding: 20px;
+    background-color: #11d432;
+    color: white;
+}
+.ventanaDanger{
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}

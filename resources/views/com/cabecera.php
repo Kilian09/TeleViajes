@@ -216,3 +216,16 @@ if (session()->has('product_id') == true) {
 </nav>
 
 
+<?php if(session('error') != null){?>
+    <div class="ventanaDanger">
+        <p class="closebtn" onclick="this.parentElement.style.display='none';">&times;</p>
+        <?php echo session('error') ?>
+    </div>
+<?php } ?>
+
+<?php if(session('exito') != null){?>
+    <div class="ventanaExito">
+        <p class="closebtn" onclick="this.parentElement.style.display='none';">&times;</p>
+        <?php echo session('exito') ?>
+    </div>
+<?php } ?>
