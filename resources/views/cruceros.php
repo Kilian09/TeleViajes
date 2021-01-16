@@ -27,11 +27,13 @@
                                 if($product->id == $cruise->id_product) {
                                     ?>
 
+            <form method="get" action="/addCart/<?php echo $product->id ?>">
             <div class="carousel-inner" role="listbox" style="margin-top: 2em">
                 <div class="carousel-item active"><img src="assets/img/medi.jpg" alt="w_shop_105_01" height="350" width="500">
                     <div class="w_shop_105_left_box"><span data-animation="animated fadeInLeft" style="font-family: roboto;"> <?php echo $cruise->price ?>€ <br></span>
                         <h1 class="left-h" data-animation="animated fadeInLeft"><?php echo $cruise->name ?></h1>
-                        <p data-animation="animated fadeInLeft"> <?php echo $cruise->description ?>.</p><a href="#" data-animation="animated fadeInLeft">Comprar</a>
+                        <p data-animation="animated fadeInLeft"> <?php echo $cruise->description ?>.</p>
+                        <button type="submit" href="#" data-animation="animated fadeInLeft">Comprar</button>
                     </div>
                     <div class="w_shop_105_right_box" data-animation="animated fadeInRight">
                         <ul>
@@ -42,6 +44,7 @@
                     </div>
                 </div>
             </div>
+            </form>
 
             <?php }}}}} ?>
 
