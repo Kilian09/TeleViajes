@@ -32,22 +32,26 @@ Route::get('/familia', 'userController@familia');
 
 
 
-//REDIRECCIONAMIENTO DE VISTAS A PRODUCTCONTROLLER
+//PRODUCTCONTROLLER
 Route::get('/crearProducto', 'ProductController@crearProducto');
 Route::post('/addProducto', 'ProductController@addProducto');
 Route::get('/shopAdmin', 'ProductController@listaProductos');
-
-Route::get('/getnumProduct', 'ProductController@getnumProduct');
-
-
+Route::get('/numero_productos', 'ProductController@numero_productos');
+Route::get('/shopAdmin/eliminarProducto', 'ProductController@eliminarProducto');
 
 
 
-//PROCESADO DE FORMULARIOS
+Route::get('/shopAdmin/actualizarProducto', 'ShopController@actualizarProducto');
+Route::post('/procesar_producto_actualizado', 'ShopController@procesar_producto_actualizado');
+
+
+
+//USERCONTROLLER
 Route::post('/procesar_login', 'userController@procesar_login');
 Route::post('/procesar_registro', 'userController@procesar_registro');
-
 Route::get("/cerrar_session","UserController@cerrar_session");
+Route::post('/procesar_contacto', 'userController@procesar_contacto');
+
 
 
 Route::get('/contacto', function () {
@@ -57,7 +61,6 @@ Route::get('/contacto', function () {
 Route::get('/usuario', function () {
     return view('usuario');
 });
-Route::post('/procesar_contacto', 'userController@procesar_contacto');
 
 //PRODUCTO
 

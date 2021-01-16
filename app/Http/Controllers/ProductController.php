@@ -19,11 +19,9 @@ class ProductController extends Controller
         return view('/shopAdmin');
     }
 
-    public function numero_productos()
-    {
-        $productos = Products::all();
-        $numeroProdictos = count($productos);
-        echo $numeroProdictos;
+    public function numero_productos() {
+        $getnumProduct = count(Products::all());
+        return $getnumProduct;
     }
 
     public function listaProductos()
@@ -95,6 +93,7 @@ class ProductController extends Controller
     {
         if (isset($_GET['idProducto'])) {
             Products::where('id', $_GET['idProducto'])->first()->delete();
+
             return redirect('/shopAdmin')->with('exito','Se ha eliminado el producto correctamente');
         }
     }
@@ -135,9 +134,6 @@ class ProductController extends Controller
             return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $producto->nombreProducto . ' correctamente');
         }
     }
-    public function getnumProduct() {
-        $getnumProduct = count(Products::all());
-        return $getnumProduct;
-    }
+
 
 }
