@@ -13,7 +13,7 @@
                         <a class="dropdown-item" href="ancianos">Ancianos</a>
                         <a class="dropdown-item" href="familia">Familia</a></div>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="contacto" style="color: var(--light);">Contactos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto" style="color: var(--light);">Contacto</a></li>
             </ul>
 
                 <span class="d-inline navbar-text actions">
