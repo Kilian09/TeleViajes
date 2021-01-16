@@ -41,10 +41,11 @@
 
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img" src="assets/img/ultra.jpg" width="2000" alt="alt text here">
+
                         <form method="get" action="/addCart/<?php echo $product->id ?>">
                         <figcaption class="figure-caption"><?php echo $universitario->name ?>
-                            <input type="number" name="amount" value="1">
                            <button class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></button>
+                            <input type="number" name="amount" value="1" min="1">
                         </figcaption>
                         </form>
 
@@ -91,14 +92,13 @@
                 </div>
             </div>
             <div><a class="carousel-control-prev" href="#carousel-t" role="button" data-slide="prev"><i class="icon ion-android-arrow-dropleft-circle d-flex d-lg-flex justify-content-center align-items-center"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-t" role="button" data-slide="next"><i class="icon ion-android-arrow-dropright-circle d-flex d-lg-flex justify-content-center align-items-center"></i><span class="sr-only">Next</span></a></div>
-            <ol class="carousel-indicators">
+            <ol class="carousel-indicators" style="margin-right: 0; margin-left: 0">
                 <li data-target="#carousel-t" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-t" data-slide-to="1"></li>
                 <li data-target="#carousel-t" data-slide-to="2"></li>
                 <li data-target="#carousel-t" data-slide-to="3"></li>
             </ol>
         </div>
-    </div>
 
     <?php include "com/pieDePagina.php"?>
 

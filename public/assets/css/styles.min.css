@@ -136,17 +136,13 @@
 }
 
 .form{
-    margin: 0 auto;
+    margin: 2em auto 2em auto;
     width:500px;
     border: 3px solid powderblue;
     background-color: #494f54;
 
 }
 
-.radio-inline{
-    display: inline;
-
-}
 
 .ventanaExito{
     padding: 20px;

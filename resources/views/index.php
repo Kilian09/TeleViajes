@@ -97,10 +97,12 @@
                 <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
                     <h3 class="name"><?php echo $vuelo->name ?></h3>
                     <p class="description"><?php echo $vuelo->description ?>. Desde <?php echo $vuelo->date?>. Por <?php echo $vuelo->price?>. Quedan <?php echo $vuelo->stock ?> plazas. </p>
+
                     <form method="get" action="/addCart/<?php echo $product->id ?>">
-                    <input type="number" name="amount" value="1">
+                    <input type="number" name="amount" min="1" value="1">
                     <button type="submit" class="fas fa-shopping-cart" style="color: var(--danger);"></button>
                     </form>
+
                 </div>
 
             <?php }}}}} ?>
@@ -120,7 +122,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="jumbotron pulse animated hero-photography carousel-hero" style="background: url(&quot;assets/img/el-origen-de-las-auroras-boreales-183012-1.jpg&quot;) center / cover;">
+                    <div class="jumbotron pulse animated hero-photography carousel-hero" style="background: url(&quot;assets/img/aurora4.jpg&quot;) center / cover;">
                         <h1 class="hero-title" style="display: block">Paquetes</h1>
                         <p class="hero-subtitle" style="font-size: 20px;">Gran cantidad de viajes con temáticas variadas para todos los gustos y todas las edades.</p>
                         <p><a class="btn btn-primary hero-button plat" role="button" href="paquetes">ver paquetes</a></p>
