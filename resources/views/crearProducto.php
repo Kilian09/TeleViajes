@@ -12,9 +12,44 @@ if(session('username') == "admin"){
     <?php include "com/scripts.php"?>
 
 </head>
-<body>
+<body class="fondo">
 
 <?php include "com/cabecera.php"; ?>
+
+<nav id="vertical">
+    <ul>
+        <li><a href="shopAdmin">Productos</a></li>
+        <li><a href="listatransaciones" >Transacciones</a></li>
+        <li><a href="crearProducto" class="active">Crear Productos</a></li>
+
+    </ul>
+</nav>
+<aside id="derecha">
+    <p>  Información actualizada en tiempo real:</p>
+
+    <p> Productos:
+    <p id="products">
+        <script>
+            numero_productos();
+            setTimeout(numero_productos,1000);
+        </script>
+    </p>
+    </p>
+
+    <p>Ventas:
+    <p id="numTransc">
+        <script>
+            get_numTransc();
+            setTimeout(getnumTransc,1000);
+        </script>
+    </p>
+    </p>
+</aside>
+
+<section class="main">
+
+    <article>
+        <h1 class="titulo">Añade un Producto</h1>
 
     <form method="post" name="crearProductform" action="addProducto">
         <?= csrf_field() ?>
@@ -90,6 +125,9 @@ if(session('username') == "admin"){
             </tfoot>
         </table>
     </form>
+
+    </article>
+</section>
 
 <?php include "com/pieDePagina.php"; ?>
 

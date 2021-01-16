@@ -11,52 +11,46 @@
 
 </head>
 
-<body>
+<body class="fondo">
 
 <?php include "com/cabecera.php"?>
 
-<script>
-    function get_numTransc() {
-        $('#numTransc').load('getnumTransc');
-        setTimeout(get_numTransc, 3000);
-    }
-</script>
+<nav id="vertical">
+    <ul>
+        <li><a class="active" href="shopAdmin">Productos</a></li>
+        <li><a href="listatransaciones">Transacciones</a></li>
+        <li><a href="crearProducto">Crear Productos</a></li>
 
+    </ul>
+</nav>
 
-<aside id="lateralShop">
-    <article>
-        <h5>  Información actualizada en tiempo real:</h5>
+<aside id="derecha">
+        <p>  Información actualizada en tiempo real:</p>
 
-            <header>
-                Productos:
+            <p> Productos:
+               <p id="products">
                 <script>
                     numero_productos();
                     setTimeout(numero_productos,1000);
                 </script>
-                <p id="products">
-            </header>
+                </p>
+            </p>
 
-        <header>
-            Ventas:
+        <p>Ventas:
+            <p id="numTransc">
             <script>
                 get_numTransc();
                 setTimeout(getnumTransc,1000);
             </script>
-            <p id="numTransc">
-        </header>
-
-
-
+            </p>
         </p>
-    </article>
 </aside>
 
-
-
-<section>
+<section class="main">
         <article>
-        <h1>Lista de Productos </h1>
-            <a href="crearProducto" style="border:none;width:151px;height:58px;margin-left:14px;background-color:#4ddb94;color:rgb(255,255,255);margin-top:12px;">Crear Productos</a>
+
+        <h1 class="titulo">Lista de Productos </h1>
+
             <table id="example"  class="table table-striped  table-bordered" width="100%" bgcolor="#a9a9a9">
             <thead>
             <tr>
@@ -324,13 +318,8 @@
 
             <tbody>
         </table>
+
     </article>
-
-
-    <article>
-        <h1> Lista de Transacciones </h1>
-    </article>
-
 </section>
 
 <?php include "com/pieDePagina.php"?>

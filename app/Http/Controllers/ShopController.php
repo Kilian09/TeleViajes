@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
+
+    public function listaTransaciones()
+    {
+        return view('/listatransaciones');
+    }
+
     public function obtenerId($id)
     {
         if (isset($_GET["amount"])) {

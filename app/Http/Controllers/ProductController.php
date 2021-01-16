@@ -21,6 +21,7 @@ class ProductController extends Controller
         return view('/crearProducto');
     }
 
+
     public function shopAdmin(){
 
         return view('/shopAdmin');
@@ -35,6 +36,7 @@ class ProductController extends Controller
 
         return  'Transacciones';
     }
+
 
     public function listaProductos()
     {
