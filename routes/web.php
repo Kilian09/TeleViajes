@@ -22,13 +22,6 @@ Route::get('/', function () {
 //REDIRECCIONAMIENTO DE VISTAS A USERCONTROLLER
 Route::get('/login', 'userController@login');
 Route::get('/register', 'userController@register');
-Route::get('/cruceros', 'userController@cruceros');
-Route::get('/paquetes', 'userController@paquetes');
-Route::get('/actividades', 'userController@actividades');
-Route::get('/universitarios', 'userController@universitarios');
-Route::get('/ancianos', 'userController@ancianos');
-Route::get('/escolares', 'userController@escolares');
-Route::get('/familia', 'userController@familia');
 
 
 
@@ -45,6 +38,12 @@ Route::get('/paquetes', 'ProductController@listaPaquetes');
 Route::get('/cruceros', 'ProductController@listaCruceros');
 Route::get('/actividades', 'ProductController@listaActividades');
 Route::get('/escolares', 'ProductController@listaEscolares');
+Route::get('/universitarios', 'ProductController@listaUniversitarios');
+Route::get('/vuelos', 'ProductController@listaVuelos');
+Route::get('/ancianos', 'ProductController@listaAncianos');
+Route::get('/familia', 'ProductController@listaFamilias');
+
+
 
 Route::get('/shopAdmin/eliminarProducto', 'ProductController@eliminarProducto');
 Route::get('/shopAdmin/actualizarProducto', 'ProductController@actualizarProducto');
