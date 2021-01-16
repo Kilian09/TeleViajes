@@ -33,7 +33,7 @@
 
             <form method="get" action="/addCart/<?php echo $product->id ?>">
                 <input type="number" name="amount" value="1" min="1">
-                <button class="btn btn-primary btn-sm text-white" type="button" style="border-color: var(--cyan);margin-top: 17px;">Comprar</button>
+                <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
             </form>
 
         </div>
@@ -47,7 +47,7 @@
 
                 <form method="get" action="/addCart/<?php echo $product->id ?>">
                     <input type="number" name="amount" value="1" min="1">
-                    <button class="btn btn-primary btn-sm text-white" type="button" style="border-color: var(--cyan);margin-top: 17px;">Comprar</button>
+                    <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
                 </form>
 
             </div>
