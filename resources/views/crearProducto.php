@@ -84,30 +84,29 @@ if(session('username') == "admin"){
             <tr>
                 <th><label>Tipo de Producto: </label></th>
                 <th>
-                    <input type="radio" id="Cruceros" name="type" value="Cruceros" required>
-                    <label for="Cruceros" class="radio-inline" >Cruceros</label>
+                    <input class="btn-check" type="radio" id="Cruceros" name="type" value="Cruceros" required>
+                    <label class="btn btn-secondary" for="Cruceros" >Cruceros</label><br>
 
-                    <input type="radio" id="Paquetes" name="type" value="Paquetes">
-                    <label for="Paquetes"class="radio-inline">Paquetes</label><br>
+                    <input class="btn-check" type="radio" id="Paquetes" name="type" value="Paquetes">
+                    <label class="btn btn-secondary" for="Paquetes">Paquetes</label><br>
 
-                    <input type="radio" id="Actividades" name="type" value="Actividades">
-                    <label for="Actividades"class="radio-inline">Actividades</label><br>
+                    <input class="btn-check" type="radio" id="Actividades" name="type" value="Actividades">
+                    <label class="btn btn-secondary" for="Actividades">Actividades</label><br>
 
-                    <input type="radio" id="Escolares" name="type" value="Escolares">
-                    <label for="Escolares"class="radio-inline">Escolares</label><br>
+                    <input class="btn-check" type="radio" id="Escolares" name="type" value="Escolares">
+                    <label class="btn btn-secondary" for="Escolares">Escolares</label><br>
 
-                    <input type="radio" id="Universitarios" name="type" value="Universitarios">
-                    <label for="Universitarios"class="radio-inline">Universitarios</label><br>
+                    <input class="btn-check" type="radio" id="Universitarios" name="type" value="Universitarios">
+                    <label class="btn btn-secondary" for="Universitarios">Universitarios</label><br>
 
-                    <input type="radio" id="Vuelos" name="type" value="Vuelos">
-                    <label for="Vuelos"class="radio-inline">Vuelos</label><br>
+                    <input class="btn-check" type="radio" id="Vuelos" name="type" value="Vuelos">
+                    <label class="btn btn-secondary" for="Vuelos">Vuelos</label><br>
 
-                    <input type="radio" id="Ancianos" name="type" value="Ancianos">
-                    <label for="Ancianos"class="radio-inline">Ancianos</label><br>
+                    <input class="btn-check" type="radio" id="Ancianos" name="type" value="Ancianos">
+                    <label class="btn btn-secondary" for="Ancianos">Ancianos</label><br>
 
-                    <input type="radio" id="Familias" name="type" value="Familias">
-                    <label for="Familias"class="radio-inline">Familias</label><br>
-
+                    <input class="btn-check" type="radio" id="Familias" name="type" value="Familias">
+                    <label class="btn btn-secondary" for="Familias">Familias</label><br>
                 </th>
             </tr>
             <tr>
