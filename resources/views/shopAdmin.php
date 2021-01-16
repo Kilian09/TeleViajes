@@ -73,10 +73,11 @@
             <tbody>
 
         <?php
-        if (isset($products, $paquetes)){
+        if (isset($products)){
                 foreach ($products as $product){
                 if($product->type == "Paquetes"){
-                    foreach ($paquetes as $paquete){
+        if (isset($paquetes)){
+            foreach ($paquetes as $paquete){
                         if($product->id == $paquete->id_product) {
                             ?>
 
@@ -104,7 +105,43 @@
                 </td>
             </form>
         </tr>
-                    <?php }}}}} ?>
+
+                        <?php }}}}
+
+                if($product->type == "Cruceros"){
+        if (isset($cruises)){
+        foreach ($cruises as $cruise){
+            if($product->id == $cruise->id_product) {   ?>
+        <tr>
+            <td><?php echo $cruise->id_product ?></td>
+            <td><?php echo $product->type ?></td>
+            <td><?php echo $cruise->name ?></td>
+            <td><?php echo $cruise->description ?></td>
+            <td><?php echo $cruise->type ?></td>
+            <td><?php echo $cruise->price ?> €</td>
+            <td><?php echo $cruise->stock ?></td>
+            <td><?php echo $cruise->date ?></td>
+
+            <form method="get">
+                <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
+                <td>
+                    <button class="basura" type="submit" formaction="shopAdmin/actualizarProducto">
+                        <img src="assets/img/editar.png" alt="editar" height="30" width="30"> Editar
+                    </button>
+                </td>
+                <td>
+                    <button class="basura" type="submit" formaction="shopAdmin/eliminarProducto">
+                        <img src="assets/img/basura.png" alt="eliminar" height="30" width="30" > Eliminar
+                    </button>
+                </td>
+                <?php }}}}}} ?>
+            </form>
+
+        </tr>
+
+
+
+
             <tbody>
         </table>
     </article>

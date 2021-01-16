@@ -29,13 +29,14 @@ if(isset($id)){
     <form method="post" action="procesar_producto_actualizado">
         <?= csrf_field() ?>
         <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
+        <input type="hidden" name="typeProducto" value="<?php echo $product->type ?>">
+
         <table>
             <tbody>
 
             <?php if($tipoControlador == 'Paquetes'){
             $paquete = \App\Paquetes::where('id_product', $id)->first();
             ?>
-
             <tr>
                 <p>
                 <th><label>Nombre del producto:</label></th>
@@ -61,16 +62,49 @@ if(isset($id)){
                 <th><input type="number" name="stock"  class="inputText" value="<?php echo $paquete->stock?>"></th>
             </tr>
             <tr>
-                <th><label>Subtipo de Producto: </label></th>
-                <th>
-                    <input type="radio" id="Popular" name="subtype" value="Popular" required>
-                    <label for="Popular">Popular</label>
-                    <input type="radio" id="Magicos" name="subtype" value="Magicos">
-                    <label for="Magicos">Magicos</label><br>
-                </th>
+                <tr>
+                    <th><label>Subtipo de Producto: </label></th>
+                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $paquete->stock?>"></th>
+                </tr>
             </tr>
 
-            <?php }} ?>
+            <?php }elseif($tipoControlador == 'Cruceros'){
+                $cruise = \App\Cruceros::where('id_product', $id)->first(); ?>
+            <tr>
+                <p>
+                <th><label>Nombre del producto:</label></th>
+                <th><input type="text" name="name"  class="inputText" value="<?php echo $cruise->name?>"> </th>
+                </p>
+            </tr>
+            <tr>
+                <p>
+                <th><label>Descripción:</label></th>
+                <th><input type="text" name="description"  class="inputText" value="<?php echo $cruise->description?>"></th>
+                </p>
+            </tr>
+            <tr>
+                <th><label>Precio del Producto en €: </label></th>
+                <th><input type="number" name="price" class="inputText" value="<?php echo $cruise->price?>"></th>
+            </tr>
+            <tr>
+                <th><label>Fecha: </label></th>
+                <th><input type="text" name="date" class="inputText" value="<?php echo $cruise->date?>"></th>
+            </tr>
+            <tr>
+                <th><label>Stock: </label></th>
+                <th><input type="number" name="stock"  class="inputText" value="<?php echo $cruise->stock?>"></th>
+            </tr>
+            <tr>
+            <tr>
+                <th><label>Subtipo de Producto: </label></th>
+                <th><input type="text" name="subtype" class="inputText" value="<?php echo $cruise->stock?>"></th>
+            </tr>
+            </tr>
+            <?php }?>
+
+
+
+            <?php    } ?>
 
             </tbody>
             <tfoot>

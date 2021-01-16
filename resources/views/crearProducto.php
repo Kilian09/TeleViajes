@@ -20,6 +20,7 @@ if(session('username') == "admin"){
         <?= csrf_field() ?>
         <table>
             <tbody>
+
             <tr>
                 <p>
                 <th><label>Nombre del producto:</label></th>
@@ -55,13 +56,9 @@ if(session('username') == "admin"){
             </tr>
             <tr>
                 <th><label>Subtipo de Producto: </label></th>
-                <th>
-                    <input type="radio" id="Popular" name="subtype" value="Popular" required>
-                    <label for="Popular">Popular</label>
-                    <input type="radio" id="Magicos" name="subtype" value="Magicos">
-                    <label for="Magicos">Magicos</label><br>
-                </th>
+                <th><input type="text" name="subtype" class="inputText" required></th>
             </tr>
+
             </tbody>
             <tfoot>
             <th>
