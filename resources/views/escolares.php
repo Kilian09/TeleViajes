@@ -15,31 +15,25 @@
 <body>
 <?php include "com/cabecera.php"?>
 
+<?php
+if (isset($products, $escolares)){
+    foreach ($products as $product){
+        if($product->type == "Escolares"){
+            foreach ($escolares as $escolar){
+                if($product->id == $escolar->id_product) { ?>
+
 <section id="carousel">
     <div class="carousel slide" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item">
                 <div class="jumbotron pulse animated hero-technology carousel-hero" style="background: url(&quot;assets/img/estaciones-esqui-ninos.jpg&quot;) center;">
-                    <h1 class="hero-title" style="display: block">Viaje a la Nieve en los Pirineos </h1>
-                    <p class="hero-subtitle">Celebra las navidades con la mayor adrenalina posible. Tus amigos y la adrenalina por 1000€. 15 - 23 Diciembre 2021.</p>
-                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Comprar</a></p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="jumbotron pulse animated hero-photography carousel-hero" style="background: url(&quot;assets/img/algrve.jpg&quot;) center / cover;">
-                    <h1 class="hero-title" style="display: block">Algarve</h1>
-                    <p class="hero-subtitle" style="font-size: 20px;">Cuevas, playa, kayaks y amigos para comenzar el curso. 2 - 16 Septiembre 2021</p>
-                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Comprar</a></p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="jumbotron pulse animated hero-technology carousel-hero" id="carousel" style="background: url(&quot;assets/img/buda.jpg&quot;) center / auto;">
-                    <h1 class="hero-title" style="display: block">Sorpéndete con Budapest</h1>
-                    <p class="hero-subtitle" style="font-size: 20px;">Comienza el verano con tus amigos en una de las ciudades mas sorprendentes y entrenidas de Europa. 600€ por persona. 18-24 Junio 2021.</p>
+                    <h1 class="hero-title" style="display: block"><?php echo $escolar->name ?> </h1>
+                    <p class="hero-subtitle"><?php echo $escolar->description ?> </p>
                     <p><a class="btn btn-primary hero-button plat" role="button" href="#">Comprar</a></p>
                 </div>
             </div>
         </div>
+
         <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><i class="fa fa-chevron-right"></i><span class="sr-only">Next</span></a></div>
         <ol class="carousel-indicators" style="width: 100%; text-align: center; margin-left: 0;">
             <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
@@ -48,6 +42,8 @@
         </ol>
     </div>
 </section>
+
+<?php }}}}} ?>
 
 <div data-bs-parallax-bg="true" style="height: 500px;background: url(&quot;assets/img/xiquillos.jpg&quot;) center / cover;"></div>
 
