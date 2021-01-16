@@ -70,8 +70,8 @@ class ShopController extends Controller
     {
         $data = session()->all();
 
-        session()->forget(['total', 'totalAnterior', 'carrito']);
-        session()->flush();
+        session()->forget(['total', 'cantidadTotal','totalAnterior','cantidadAnterior', 'carrito']);
+
 
         foreach ($data as $key => $valor) {
             if ($key[0] == 'P') {

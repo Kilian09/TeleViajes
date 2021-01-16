@@ -108,23 +108,28 @@ if (session()->has('product_id') == true) {
                                 }
                                 ?>
                                    </tr>
-
-                    <a href="#" class="badge badge-danger text-white">-</a></li>
-
+                        <form method="get" action="eliminarProductoCarrito">
+                    <button type="submit"  class="badge badge-danger text-white">-</button></li>
+                        </form>
+                         </tbody>
                         <?php
                         }
                         }
                         ?>
+
 <tfoot>
 
                                    <tr> <th><hr><form method='get' action='vaciarCarrito'>
                     <input type='submit' name='Vaciar' value='Vaciar Carrito'>
                    </form>
                           </th>
-                    <th><hr><form method='get' action='eliminarProductoCarrito'>
-                    <input type='submit' name='Vaciar' value='Checkout Paypal'>
+                                       <?php if(session()->has("user") == true){ ?>
+                    <th><hr><form method='get' action=''>
+                    <input type='submit' name='checkoutPaypal' value='Checkout Paypal'>
                    </form>
                                        </th>
+
+                                       <?php } ?>
                                    </tr>
                 <?php
 
