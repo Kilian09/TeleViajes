@@ -38,7 +38,7 @@ if(session('username') == "admin"){
             </tr>
             <tr>
                 <th><label>Fecha </label></th>
-                <th><input type="date" name="date" class="inputText"></th>
+                <th><input type="text" name="date" class="inputText"></th>
             </tr>
             <tr>
                 <th><label>Stock: </label></th>
@@ -68,7 +68,7 @@ if(session('username') == "admin"){
                 <button class="buttonCancelar" >
                     <a href="shopAdmin" class="noDecoration">Cancelar</a>
                 </button></th>
-            <th><button type="submit" value="Editar" class="registrarOLogin">Editar</button></th>
+            <th><button type="submit" value="Editar" class="registrarOLogin">Crear</button></th>
 
             </tfoot>
         </table>
