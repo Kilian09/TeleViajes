@@ -39,7 +39,7 @@ Route::get('/cruceros', 'ProductController@listaCruceros');
 Route::get('/actividades', 'ProductController@listaActividades');
 Route::get('/escolares', 'ProductController@listaEscolares');
 Route::get('/universitarios', 'ProductController@listaUniversitarios');
-Route::get('/vuelos', 'ProductController@listaVuelos');
+Route::get('/', 'ProductController@listaVuelos');
 Route::get('/ancianos', 'ProductController@listaAncianos');
 Route::get('/familia', 'ProductController@listaFamilias');
 
@@ -54,7 +54,8 @@ Route::get('/addCart/{id}','ShopController@obtenerId');
 Route::get('/vaciarCarrito','ShopController@vaciarCarrito');
 Route::get('/eliminarProductoCarrito/{id}','ShopController@eliminarProductoCarrito');
 
-
+//PAYPALCONTROLLER
+Route::get('/paypal/pay','paypalController@payWithPayPal');
 
 //USERCONTROLLER
 Route::post('/procesar_login', 'userController@procesar_login');

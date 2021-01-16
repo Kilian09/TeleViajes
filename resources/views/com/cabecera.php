@@ -71,13 +71,12 @@ if (session()->has('product_id') == true) {
                     <ul role="menu" class="dropdown-menu" style="left:auto;">
                         <li class="p-2 text-nowrap text-right">
                             <span class="badge badge-pill badge-warning align-text-top mr-1 mt-1"></span>
-                            <a href="#" class="badge badge-danger text-white">-</a></li>
                          <?php echo "El carrito está vacío";  ?>
                     </ul>
 
                        <?php } else if(session('carrito')!=null){
                        $data = session()->all();
-                       print_r($data);
+                      // print_r($data);
 
                        ?>
 
@@ -96,13 +95,12 @@ if (session()->has('product_id') == true) {
                                <tr>
                     <span class="badge badge-pill badge-warning align-text-top mr-1 mt-1"><?php echo $valor ?></span>
 
-                    <?php
-                    if($producto[0]['type'] == "Paquetes") {
+                                <?php
+                                if($producto[0]['type'] == "Paquetes") {
+                                    $paquete = \App\Paquetes::where('id_product',$prodID)->get();
 
-                    $paquete = \App\Paquetes::where('id_product',$prodID)->get();
-
-                    echo $paquete[0]['name'];
-                    ?>
+                                     echo $paquete[0]['name'];
+                                ?>
                             </tr>
                               <tr>
                                 <?php
@@ -111,6 +109,66 @@ if (session()->has('product_id') == true) {
                                     $cruceros = \App\Cruceros::where('id_product',$prodID)->get();
 
                                     echo $cruceros[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Actividades"){
+
+                                    $actividades = \App\Actividades::where('id_product',$prodID)->get();
+
+                                    echo $actividades[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Escolares"){
+
+                                    $escolares = \App\Escolares::where('id_product',$prodID)->get();
+
+                                    echo $escolares[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Universitarios"){
+
+                                    $universitarios = \App\Universitarios::where('id_product',$prodID)->get();
+
+                                    echo $universitarios[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Vuelos"){
+
+                                    $vuelos = \App\Vuelos::where('id_product',$prodID)->get();
+
+                                    echo $vuelos[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Ancianos"){
+
+                                    $ancianos = \App\Ancianos::where('id_product',$prodID)->get();
+
+                                    echo $ancianos[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Familia"){
+
+                                    $familia = \App\Familia::where('id_product',$prodID)->get();
+
+                                    echo $familia[0]['name'];
                                 }
                                 ?>
                                    </tr>
@@ -133,7 +191,7 @@ if (session()->has('product_id') == true) {
                           </th>
                                        <?php if(session()->has("user") == true){ ?>
                     <th>
-                        <hr><form method='get' action=''>
+                        <hr><form method='get' action='paypal/pay'>
                     <input type='submit' name='checkoutPaypal' value='Checkout Paypal'>
                    </form>
                     </th>

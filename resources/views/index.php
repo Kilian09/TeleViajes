@@ -82,50 +82,26 @@
     <div class="article-list" id="novedadesIndex">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center" style="font-size: 30px;text-align: center;color: var(--danger);">Vuelos Calientes (PONER VUELOS Y ORDENAR LO MAS BARATO PRIMERO)</h2>
+                <h2 class="text-center" style="font-size: 30px;text-align: center;color: var(--danger);">Vuelos Calientes</h2>
                 <p class="text-center">Recopilatorio de los vuelos mas económicos actualmente.</p>
             </div>
             <div class="row articles">
+
+            <?php
+            if (isset($products, $vuelos)){
+            foreach ($products as $product){
+            if($product->type == "Vuelos"){
+            foreach ($vuelos as $vuelo){
+            if($product->id == $vuelo->id_product) {
+            ?>
                 <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
+                    <h3 class="name"><?php echo $vuelo->name ?></h3>
+                    <p class="description"><?php echo $vuelo->description ?>. Desde <?php echo $vuelo->date?>. Por <?php echo $vuelo->price?>. Quedan <?php echo $vuelo->stock ?> plazas. </p>
+                    <a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
                 </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/building.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
-                </div>
-            </div>
-            <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/building.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
-                </div>
-            </div>
-            <div class="row articles">
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/building.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
-                </div>
-                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/loft.jpg"></a>
-                    <h3 class="name">Article Title</h3>
-                    <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a class="action" href="#"><i class="fas fa-shopping-cart" style="color: var(--danger);"></i></a>
-                </div>
+
+            <?php }}}}} ?>
+
             </div>
         </div>
     </div>

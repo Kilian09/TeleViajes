@@ -27,18 +27,23 @@
             if($product->id == $activity->id_product) {
                 if($activity->type == "Populares") {  ?>
 
+
             <div class="col-sm-6 col-md-4">
                 <div class="box">
                     <div class="box-img"><img src="assets/img/esqui.jpg" alt="Montañismo" style="text-align: center;"></div>
                     <div class="box-content">
                         <h4 class="title"><?php echo $activity->name ?></h4>
-                        <p class="description"><?php echo $activity->description ?>. Por <?php echo $activity->price?>. <?php echo $activity->date?>. Quedan <?php echo $activity->stock?> plazas libres.</p>
+                        <p class="description"><?php echo $activity->description ?>. Por <?php echo $activity->price?>€ . <?php echo $activity->date?>. Quedan <?php echo $activity->stock?> plazas libres.</p>
                         <ul class="social-links" style="text-align: center;">
-                            <li><a href="#"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></a></li>
+                            <form method="get" action="/addCart/<?php echo $product->id ?>">
+                                <input type="number" name="amount" value="1">
+                            <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
+                            </form>
                         </ul>
                     </div>
                 </div>
             </div>
+
 
             <?php }}}}}} ?>
 
@@ -62,7 +67,10 @@
                             <h4 class="title"><?php echo $activity->name ?></h4>
                             <p class="description"><?php echo $activity->description ?>. Por <?php echo $activity->price?>. <?php echo $activity->date?>. Quedan <?php echo $activity->stock?> plazas libres.</p>
                             <ul class="social-links" style="text-align: center;">
-                                <li><a href="#"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></a></li>
+                                <form method="get" action="/addCart/<?php echo $product->id ?>">
+                                    <input type="number" name="amount" value="1">
+                                    <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
+                                </form>
                             </ul>
                         </div>
                     </div>
@@ -90,7 +98,10 @@
                                                 <h4 class="title"><?php echo $activity->name ?></h4>
                                                 <p class="description"><?php echo $activity->description ?>. Por <?php echo $activity->price?>. <?php echo $activity->date?>. Quedan <?php echo $activity->stock?> plazas libres.</p>
                                                 <ul class="social-links" style="text-align: center;">
-                                                    <li><a href="#"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></a></li>
+                                                    <form method="get" action="/addCart/<?php echo $product->id ?>">
+                                                        <input type="number" name="amount" value="1">
+                                                        <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
+                                                    </form>
                                                 </ul>
                                             </div>
                                         </div>

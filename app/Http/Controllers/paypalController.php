@@ -39,7 +39,7 @@ class paypalController extends Controller
         $payer = new Payer();
         $payer->setPaymentMethod('paypal');
 
-        $cantidad = $_GET['cantidad'];
+        $cantidad = session('total');
         $amount = new Amount();
         $amount->setTotal($cantidad);
         $amount->setCurrency('EUR');
