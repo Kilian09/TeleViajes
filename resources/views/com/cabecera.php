@@ -71,7 +71,6 @@ if (session()->has('product_id') == true) {
                     <ul role="menu" class="dropdown-menu" style="left:auto;">
                         <li class="p-2 text-nowrap text-right">
                             <span class="badge badge-pill badge-warning align-text-top mr-1 mt-1"></span>
-                            <a href="#" class="badge badge-danger text-white">-</a></li>
                          <?php echo "El carrito está vacío";  ?>
                     </ul>
 
