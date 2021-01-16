@@ -19,23 +19,25 @@
         $('#numProduct').load('getnumProduct');
         setTimeout(get_numProduct, 3000);
     }
+
+    function get_numTransc() {
+        $('#numTransc').load('getnumTransc');
+        setTimeout(get_numTransc, 3000);
+    }
 </script>
 
 
-<aside>
+<aside id="lateralShop">
     <article>
-        <h1>Información actualizada en tiempo real:</h1>
-        <p>Número de Productos en la tienda:
+        <h5>  Información actualizada en tiempo real:</h5>
+
             <header>
-                <div id="numProduct">numProduct</div>
+                Número de Productos en la tienda:   <p id="numProduct">numProduct</p>
             </header>
 
 
-        <p id="products">
-            <script>
-                get_numProduct();
-                setTimeout(numero_productos,1000);
-            </script>
+
+
         </p>
     </article>
 </aside>
@@ -53,6 +55,11 @@
     <header>
         Productos
     </header>
+    <script>
+        get_numProduct();
+        setTimeout(numero_productos,1000);
+    </script>
+    <p id="products">
     <article>
         <h1>Lista de Productos </h1>
         <table id="example"  class="table table-striped  table-bordered" width="100%" bgcolor="#a9a9a9">
@@ -70,11 +77,6 @@
             </tr>
             </thead>
             <tbody>
-
-
-
-
-
 
         <?php
         if (isset($products, $paquetes)){

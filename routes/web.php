@@ -53,6 +53,10 @@ Route::get("/cerrar_session","UserController@cerrar_session");
 Route::get('/contacto', function () {
     return view('contacto');
 });
+
+Route::get('/usuario', function () {
+    return view('usuario');
+});
 Route::post('/procesar_contacto', 'userController@procesar_contacto');
 
 //PRODUCTO

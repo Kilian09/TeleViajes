@@ -37,7 +37,8 @@
                     <?php
                     if(session()->has("user") == true){
                     ?>
-              <?php echo strtoupper(session("username"))?>
+
+                <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="usuario"><?php echo strtoupper(session("username")) ?></a>
 
                 <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="cerrar_session">Cerrar Sesión</a>
             <?php
