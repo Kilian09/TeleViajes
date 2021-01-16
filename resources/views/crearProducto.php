@@ -2,6 +2,7 @@
 if(session('username') == "admin"){
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +52,7 @@ if(session('username') == "admin"){
     <article>
         <h1 class="titulo">Añade un Producto</h1>
 
-    <form method="post" name="crearProductform" action="addProducto">
+    <form method="post" name="crearProductform" action="addProducto"  class="form">
         <?= csrf_field() ?>
         <table>
             <tbody>
@@ -84,28 +85,28 @@ if(session('username') == "admin"){
                 <th><label>Tipo de Producto: </label></th>
                 <th>
                     <input type="radio" id="Cruceros" name="type" value="Cruceros" required>
-                    <label for="Cruceros">Cruceros</label>
+                    <label for="Cruceros" class="radio-inline" >Cruceros</label>
 
                     <input type="radio" id="Paquetes" name="type" value="Paquetes">
-                    <label for="Paquetes">Paquetes</label><br>
+                    <label for="Paquetes"class="radio-inline">Paquetes</label><br>
 
                     <input type="radio" id="Actividades" name="type" value="Actividades">
-                    <label for="Actividades">Actividades</label><br>
+                    <label for="Actividades"class="radio-inline">Actividades</label><br>
 
                     <input type="radio" id="Escolares" name="type" value="Escolares">
-                    <label for="Escolares">Escolares</label><br>
+                    <label for="Escolares"class="radio-inline">Escolares</label><br>
 
                     <input type="radio" id="Universitarios" name="type" value="Universitarios">
-                    <label for="Universitarios">Universitarios</label><br>
+                    <label for="Universitarios"class="radio-inline">Universitarios</label><br>
 
                     <input type="radio" id="Vuelos" name="type" value="Vuelos">
-                    <label for="Vuelos">Vuelos</label><br>
+                    <label for="Vuelos"class="radio-inline">Vuelos</label><br>
 
                     <input type="radio" id="Ancianos" name="type" value="Ancianos">
-                    <label for="Ancianos">Ancianos</label><br>
+                    <label for="Ancianos"class="radio-inline">Ancianos</label><br>
 
                     <input type="radio" id="Familias" name="type" value="Familias">
-                    <label for="Familias">Familias</label><br>
+                    <label for="Familias"class="radio-inline">Familias</label><br>
 
                 </th>
             </tr>
