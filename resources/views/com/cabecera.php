@@ -10,11 +10,15 @@ if (session()->has('product_id') == true) {
             $cantidad = session('PROD_' . session('product_id')) + session('amount');
             session(['PROD_' . session('product_id') => $cantidad]);
 
+            session(['amountProducto' => session('PROD_'.session('product_id'))]);
+
             session()->forget(['product_id','amount']);
 
 
         } else
             session(['PROD_' . session('product_id') => session('amount')]);
+
+        session(['amountProducto' => session('PROD_'.session('product_id'))]);
 
         session()->forget(['product_id','amount']);
 
@@ -216,16 +220,3 @@ if (session()->has('product_id') == true) {
 </nav>
 
 
-<?php if(session('error') != null){?>
-    <div class="ventanaDanger">
-        <p class="closebtn" onclick="this.parentElement.style.display='none';">&times;</p>
-        <?php echo session('error') ?>
-    </div>
-<?php } ?>
-
-<?php if(session('exito') != null){?>
-    <div class="ventanaExito">
-        <p class="closebtn" onclick="this.parentElement.style.display='none';">&times;</p>
-        <?php echo session('exito') ?>
-    </div>
-<?php } ?>

@@ -56,6 +56,7 @@ Route::get('/eliminarProductoCarrito/{id}','ShopController@eliminarProductoCarri
 
 //PAYPALCONTROLLER
 Route::get('/paypal/pay','paypalController@payWithPayPal');
+Route::get('/paypal/status','paypalController@payPalStatus');
 
 //USERCONTROLLER
 Route::post('/procesar_login', 'userController@procesar_login');
