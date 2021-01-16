@@ -45,8 +45,8 @@ Route::get('/shopAdmin/eliminarProducto', 'ProductController@eliminarProducto');
 
 
 
-Route::get('/shopAdmin/actualizarProducto', 'ShopController@actualizarProducto');
-Route::post('/procesar_producto_actualizado', 'ShopController@procesar_producto_actualizado');
+Route::get('/shopAdmin/actualizarProducto', 'ProductController@actualizarProducto');
+Route::post('/procesar_producto_actualizado', 'ProductController@procesar_producto_actualizado');
 
 
 

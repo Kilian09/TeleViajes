@@ -23,6 +23,10 @@ class ProductController extends Controller
         $getnumProduct = count(Products::all());
         return $getnumProduct;
     }
+    public function get_numTransc() {
+
+        return  'Transacciones';
+    }
 
     public function listaProductos()
     {
@@ -98,11 +102,7 @@ class ProductController extends Controller
         }
     }
 
-    /**
-     *
-     * TODO: FER ECHALE UN OJO PELOTUDO
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
+
     public function actualizarProducto()
     {
         if (isset($_GET['idProducto'])) {
@@ -116,22 +116,23 @@ class ProductController extends Controller
      */
     public function procesar_producto_actualizado(){
         if(isset($_POST['idProducto'])) {
-            $producto = Products::where('id',$_POST['idProducto'])->first();
+            $product = Products::where('id',$_POST['idProducto'])->first();
 
             if ($_POST['nombreProducto'] != "") {
-                $producto->nombreProducto = $_POST['nombreProducto'];
+                $product->nombreProducto = $_POST['nombreProducto'];
             }
             if ($_POST['descripcionProducto'] != "") {
-                $producto->descripcionProducto = $_POST['descripcionProducto'];
+                $product->descripcionProducto = $_POST['descripcionProducto'];
             }
             if ($_POST['precioProducto'] != "") {
-                $producto->precioProducto = doubleval($_POST['precioProducto']);
+                $product->precioProducto = doubleval($_POST['precioProducto']);
             }
             if ($_POST['stockProducto'] != "") {
-                $producto->stockProducto = doubleval($_POST['stockProducto']);
+                $product->stockProducto = doubleval($_POST['stockProducto']);
             }
-            $producto->save();
-            return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $producto->nombreProducto . ' correctamente');
+
+            $product->save();
+            return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $product->name . ' correctamente');
         }
     }
 
