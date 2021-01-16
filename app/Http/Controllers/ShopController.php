@@ -135,7 +135,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/vuelos');
+                return redirect('/');
 
             }else if ($producto[0]['type'] == "Ancianos") {
 
@@ -327,7 +327,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/vuelos');
+            return redirect('/');
 
         }else if ($producto[0]['type'] == "Ancianos") {
 
