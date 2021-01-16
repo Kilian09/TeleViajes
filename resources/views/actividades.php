@@ -35,18 +35,20 @@
                         <h4 class="title"><?php echo $activity->name ?></h4>
                         <p class="description"><?php echo $activity->description ?>. Por <?php echo $activity->price?>€ . <?php echo $activity->date?>. Quedan <?php echo $activity->stock?> plazas libres.</p>
                         <ul class="social-links" style="text-align: center;">
+
                             <form method="get" action="/addCart/<?php echo $product->id ?>">
-                                <input type="number" name="amount" value="1">
+                                <input type="number" name="amount" value="1" min="1">
                             <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
                             </form>
+
                         </ul>
                     </div>
                 </div>
             </div>
 
-
             <?php }}}}}} ?>
 
+        </div>
     </div>
 
     <div class="container" style="padding-top: 30px;">
@@ -67,16 +69,19 @@
                             <h4 class="title"><?php echo $activity->name ?></h4>
                             <p class="description"><?php echo $activity->description ?>. Por <?php echo $activity->price?>. <?php echo $activity->date?>. Quedan <?php echo $activity->stock?> plazas libres.</p>
                             <ul class="social-links" style="text-align: center;">
+
                                 <form method="get" action="/addCart/<?php echo $product->id ?>">
-                                    <input type="number" name="amount" value="1">
+                                    <input type="number" name="amount" value="1" min="1">
                                     <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
                                 </form>
+
                             </ul>
                         </div>
                     </div>
                 </div>
 
             <?php }}}}}} ?>
+        </div>
     </div>
 
     <div class="container" style="padding-top: 30px;">
@@ -98,16 +103,19 @@
                                                 <h4 class="title"><?php echo $activity->name ?></h4>
                                                 <p class="description"><?php echo $activity->description ?>. Por <?php echo $activity->price?>. <?php echo $activity->date?>. Quedan <?php echo $activity->stock?> plazas libres.</p>
                                                 <ul class="social-links" style="text-align: center;">
+
                                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
-                                                        <input type="number" name="amount" value="1">
+                                                        <input type="number" name="amount" value="1" min="1">
                                                         <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
                                                     </form>
+
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
 
                                 <?php }}}}}} ?>
+        </div>
     </div>
 
     <?php include "com/pieDePagina.php"?>
