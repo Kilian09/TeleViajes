@@ -64,7 +64,7 @@ if(isset($id)){
             <tr>
                 <tr>
                     <th><label>Subtipo de Producto: </label></th>
-                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $paquete->stock?>"></th>
+                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $paquete->type?>"></th>
                 </tr>
             </tr>
 
@@ -97,7 +97,7 @@ if(isset($id)){
             <tr>
             <tr>
                 <th><label>Subtipo de Producto: </label></th>
-                <th><input type="text" name="subtype" class="inputText" value="<?php echo $cruise->stock?>"></th>
+                <th><input type="text" name="subtype" class="inputText" value="<?php echo $cruise->type?>"></th>
             </tr>
             </tr>
             <?php }elseif($tipoControlador == 'Actividades'){
@@ -129,7 +129,7 @@ if(isset($id)){
                 <tr>
                 <tr>
                     <th><label>Subtipo de Producto: </label></th>
-                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $activity->stock?>"></th>
+                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $activity->type?>"></th>
                 </tr>
                 </tr>
             <?php }?>
