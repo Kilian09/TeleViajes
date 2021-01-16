@@ -106,41 +106,70 @@
             </form>
         </tr>
 
-                        <?php }}}}
+                <?php }}}}?>
 
-                if($product->type == "Cruceros"){
-        if (isset($cruises)){
-        foreach ($cruises as $cruise){
-            if($product->id == $cruise->id_product) {   ?>
-        <tr>
-            <td><?php echo $cruise->id_product ?></td>
-            <td><?php echo $product->type ?></td>
-            <td><?php echo $cruise->name ?></td>
-            <td><?php echo $cruise->description ?></td>
-            <td><?php echo $cruise->type ?></td>
-            <td><?php echo $cruise->price ?> €</td>
-            <td><?php echo $cruise->stock ?></td>
-            <td><?php echo $cruise->date ?></td>
+                    <?php if($product->type == "Cruceros"){
+                    if (isset($cruises)){
+                    foreach ($cruises as $cruise){
+                        if($product->id == $cruise->id_product) {   ?>
+                    <tr>
+                        <td><?php echo $cruise->id_product ?></td>
+                        <td><?php echo $product->type ?></td>
+                        <td><?php echo $cruise->name ?></td>
+                        <td><?php echo $cruise->description ?></td>
+                        <td><?php echo $cruise->type ?></td>
+                        <td><?php echo $cruise->price ?> €</td>
+                        <td><?php echo $cruise->stock ?></td>
+                        <td><?php echo $cruise->date ?></td>
 
-            <form method="get">
-                <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
-                <td>
-                    <button class="basura" type="submit" formaction="shopAdmin/actualizarProducto">
-                        <img src="assets/img/editar.png" alt="editar" height="30" width="30"> Editar
-                    </button>
-                </td>
-                <td>
-                    <button class="basura" type="submit" formaction="shopAdmin/eliminarProducto">
-                        <img src="assets/img/basura.png" alt="eliminar" height="30" width="30" > Eliminar
-                    </button>
-                </td>
-                <?php }}}}}} ?>
-            </form>
+                        <form method="get">
+                            <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
+                            <td>
+                                <button class="basura" type="submit" formaction="shopAdmin/actualizarProducto">
+                                    <img src="assets/img/editar.png" alt="editar" height="30" width="30"> Editar
+                                </button>
+                            </td>
+                            <td>
+                                <button class="basura" type="submit" formaction="shopAdmin/eliminarProducto">
+                                    <img src="assets/img/basura.png" alt="eliminar" height="30" width="30" > Eliminar
+                                </button>
+                            </td>
+                        </form>
+                    </tr>
+            <?php }}}} ?>
 
-        </tr>
+                    <?php if($product->type == "Actividades"){
+                        if (isset($activities)){
+                            foreach ($activities as $activity){
+                                if($product->id == $activity->id_product) {   ?>
+                                    <tr>
+                                        <td><?php echo $activity->id_product ?></td>
+                                        <td><?php echo $product->type ?></td>
+                                        <td><?php echo $activity->name ?></td>
+                                        <td><?php echo $activity->description ?></td>
+                                        <td><?php echo $activity->type ?></td>
+                                        <td><?php echo $activity->price ?> €</td>
+                                        <td><?php echo $activity->stock ?></td>
+                                        <td><?php echo $activity->date ?></td>
+
+                                        <form method="get">
+                                            <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
+                                            <td>
+                                                <button class="basura" type="submit" formaction="shopAdmin/actualizarProducto">
+                                                    <img src="assets/img/editar.png" alt="editar" height="30" width="30"> Editar
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button class="basura" type="submit" formaction="shopAdmin/eliminarProducto">
+                                                    <img src="assets/img/basura.png" alt="eliminar" height="30" width="30" > Eliminar
+                                                </button>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                <?php }}}} ?>
 
 
-
+                <?php }} ?>
 
             <tbody>
         </table>

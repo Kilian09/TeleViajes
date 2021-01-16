@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Actividades;
 use App\Cruceros;
 use App\Paquetes;
 use App\Products;
@@ -34,11 +35,13 @@ class ProductController extends Controller
         $products = Products::get();
         $paquetes = Paquetes::get();
         $cruises = Cruceros::get();
+        $activities = Actividades::get();
 
         return view('/shopAdmin')
             ->with('products', $products)
             ->with('paquetes', $paquetes)
-            ->with('cruises', $cruises);
+            ->with('cruises', $cruises)
+            ->with('activities', $activities);
     }
 
     public function listaPaquetes()
@@ -58,6 +61,16 @@ class ProductController extends Controller
         return view('/cruceros')
             ->with('products', $products)
             ->with('cruises', $cruises);
+    }
+
+    public function listaActividades()
+    {
+        $products = Products::get();
+        $activities = Actividades::get();
+
+        return view('/actividades')
+            ->with('products', $products)
+            ->with('activities', $activities);
     }
 
 
@@ -108,6 +121,17 @@ class ProductController extends Controller
                 $cruise->date = $productType[5];
                 $cruise->save();
 
+            }elseif ($productsData[1] == "Actividades") {
+                $activity = new Actividades();
+                $activity->id_product = $product->id;
+                $activity->name = $productType[0];
+                $activity->description = $productType[1];
+                $activity->type = $productType[2];
+                $activity->price = $productType[3];
+                $activity->stock = $productType[4];
+                $activity->date = $productType[5];
+                $activity->save();
+
             }else{
                 return redirect('/shopAdmin')->with('error', 'Tipo de Producto no disponible');
             }
@@ -127,7 +151,6 @@ class ProductController extends Controller
         }
     }
 
-
     public function actualizarProducto()
     {
         if (isset($_GET['idProducto'])) {
@@ -135,10 +158,7 @@ class ProductController extends Controller
         }
     }
 
-    /**
-     * Apdaptar para otro producto
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
-     */
+
     public function procesar_producto_actualizado(){
         if(isset($_POST['idProducto'],$_POST['typeProducto'])) {
 
@@ -190,6 +210,30 @@ class ProductController extends Controller
                 }
                 $cruise->save();
                 return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $cruise->name . ' correctamente');
+
+            }elseif ($_POST['typeProducto'] == 'Actividades') {
+                $activities = Actividades::where('id_product', $_POST['idProducto'])->first();
+
+                if ($_POST['name'] != "") {
+                    $activities->name = $_POST['name'];
+                }
+                if ($_POST['description'] != "") {
+                    $activities->description = $_POST['description'];
+                }
+                if ($_POST['price'] != "") {
+                    $activities->price = doubleval($_POST['price']);
+                }
+                if ($_POST['date'] != "") {
+                    $activities->date = $_POST['date'];
+                }
+                if ($_POST['stock'] != "") {
+                    $activities->stock = $_POST['stock'];
+                }
+                if ($_POST['subtype'] != "") {
+                    $activities->type = $_POST['subtype'];
+                }
+                $activities->save();
+                return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $activities->name . ' correctamente');
             }
         }
     }
