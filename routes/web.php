@@ -32,11 +32,15 @@ Route::get('/familia', 'userController@familia');
 
 
 
+//PRODUCTCONTROLLER AJAX
+
+Route::get('/numero_productos', 'ProductController@numero_productos');
+Route::get('/get_numTransc', 'ProductController@get_numTransc');
+
 //PRODUCTCONTROLLER
 Route::get('/crearProducto', 'ProductController@crearProducto');
 Route::post('/addProducto', 'ProductController@addProducto');
 Route::get('/shopAdmin', 'ProductController@listaProductos');
-Route::get('/numero_productos', 'ProductController@numero_productos');
 Route::get('/shopAdmin/eliminarProducto', 'ProductController@eliminarProducto');
 
 

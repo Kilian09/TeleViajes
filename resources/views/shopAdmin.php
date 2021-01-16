@@ -14,12 +14,8 @@
 <body>
 
 <?php include "com/cabecera.php"?>
-<script>
-    function get_numProduct() {
-        $('#numProduct').load('getnumProduct');
-        setTimeout(get_numProduct, 3000);
-    }
 
+<script>
     function get_numTransc() {
         $('#numTransc').load('getnumTransc');
         setTimeout(get_numTransc, 3000);
@@ -32,9 +28,22 @@
         <h5>  Información actualizada en tiempo real:</h5>
 
             <header>
-                Número de Productos en la tienda:   <p id="numProduct">numProduct</p>
+                Productos:
+                <script>
+                    numero_productos();
+                    setTimeout(numero_productos,1000);
+                </script>
+                <p id="products">
             </header>
 
+        <header>
+            Ventas:
+            <script>
+                get_numTransc();
+                setTimeout(getnumTransc,1000);
+            </script>
+            <p id="numTransc">
+        </header>
 
 
 
@@ -43,26 +52,12 @@
 </aside>
 
 
+
 <section>
-    <header>
-        Transacciones
-    </header>
-    <article>
-        Lista de Transacciones
-    </article>
-</section>
-<section>
-    <header>
-        Productos
-    </header>
-    <script>
-        get_numProduct();
-        setTimeout(numero_productos,1000);
-    </script>
-    <p id="products">
-    <article>
+        <article>
         <h1>Lista de Productos </h1>
-        <table id="example"  class="table table-striped  table-bordered" width="100%" bgcolor="#a9a9a9">
+            <a href="crearProducto" style="border:none;width:151px;height:58px;margin-left:14px;background-color:#4ddb94;color:rgb(255,255,255);margin-top:12px;">Crear Productos</a>
+            <table id="example"  class="table table-striped  table-bordered" width="100%" bgcolor="#a9a9a9">
             <thead>
             <tr>
                 <th>Id</th>
@@ -73,7 +68,6 @@
                 <th>Precio €</th>
                 <th>Stock</th>
                 <th>Fecha</th>
-
             </tr>
             </thead>
             <tbody>
@@ -110,14 +104,16 @@
                 </td>
             </form>
         </tr>
-
                     <?php }}}}} ?>
             <tbody>
         </table>
     </article>
+
+
     <article>
-        <a href="crearProducto" style="border:none;width:151px;height:58px;margin-left:14px;background-color:#4ddb94;color:rgb(255,255,255);margin-top:12px;">Crear Productos</a>
+        <h1> Lista de Transacciones </h1>
     </article>
+
 </section>
 
 <?php include "com/pieDePagina.php"?>
