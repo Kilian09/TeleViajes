@@ -50,12 +50,28 @@ if(session('username') == "admin"){
                 <th>
                     <input type="radio" id="Cruceros" name="type" value="Cruceros" required>
                     <label for="Cruceros">Cruceros</label>
+
                     <input type="radio" id="Paquetes" name="type" value="Paquetes">
                     <label for="Paquetes">Paquetes</label><br>
+
                     <input type="radio" id="Actividades" name="type" value="Actividades">
                     <label for="Actividades">Actividades</label><br>
+
                     <input type="radio" id="Escolares" name="type" value="Escolares">
                     <label for="Escolares">Escolares</label><br>
+
+                    <input type="radio" id="Universitarios" name="type" value="Universitarios">
+                    <label for="Universitarios">Universitarios</label><br>
+
+                    <input type="radio" id="Vuelos" name="type" value="Vuelos">
+                    <label for="Vuelos">Vuelos</label><br>
+
+                    <input type="radio" id="Ancianos" name="type" value="Ancianos">
+                    <label for="Ancianos">Ancianos</label><br>
+
+                    <input type="radio" id="Familia" name="type" value="Familia">
+                    <label for="Familia">Familia</label><br>
+
                 </th>
             </tr>
             <tr>
