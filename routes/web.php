@@ -49,6 +49,11 @@ Route::get('/shopAdmin/eliminarProducto', 'ProductController@eliminarProducto');
 Route::get('/shopAdmin/actualizarProducto', 'ProductController@actualizarProducto');
 Route::post('/procesar_producto_actualizado', 'ProductController@procesar_producto_actualizado');
 
+//SHOPCONTROLLER
+Route::get('/addCart/{id}','ShopController@obtenerId');
+Route::get('/vaciarCarrito','ShopController@vaciarCarrito');
+Route::get('/eliminarProductoCarrito','ShopController@eliminarProductoCarrito');
+
 
 
 //USERCONTROLLER
