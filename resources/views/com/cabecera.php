@@ -1,6 +1,9 @@
+
+
 <nav class="navbar navbar-dark navbar-expand-md text-white bg-dark navigation-clean-button" style="width: 100%;height: 18%;">
-    <div class="container"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
-        </button><a class="navbar-brand" href="/"><img src="assets/img/logo%20(1).png" style="height: 75px;background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);width: 200px;"></a><a class="navbar-brand" href="#"></a>
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="assets/img/logo%20(1).png" style="height: 75px;background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);width: 200px;"></a>
+
         <div class="collapse navbar-collapse" id="navcol-1" style="color: #f2f5f8;">
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item"></li>
@@ -18,15 +21,12 @@
 
                 <span class="d-inline navbar-text actions">
 
-                    <?php
-                    if(session()->has("user") == true){
-                    ?>
+                    <?php if(session()->has("user") == true){ ?>
 
                 <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="usuario" ><?php echo strtoupper(session("username")) ?></a>
-
                 <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="cerrar_session">Cerrar Sesión</a>
-            <?php
-            if(session("username") == "admin" ){?>
+
+            <?php if(session("username") == "admin" ){ ?>
                 <a class="btn btn-light d-inline action-button" role="button" href="shopAdmin"><e class="fa fa-cog"> </a>
             <?php } ?>
 
@@ -48,7 +48,8 @@
                     </ul>
                 </div>
             </article>
-                                    </span>
+
+                </span>
 
         </div>
     </div>
