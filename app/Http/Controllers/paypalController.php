@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Orders;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use PayPal\Api\Amount;
@@ -110,8 +111,11 @@ class paypalController extends Controller
 
     public function listaTransaciones()
     {
+        $orden = Orders::get();
         $transacion = \App\Payment::get();
+
         return view('/listatransaciones')
+            ->with ('id',$orden)
             ->with('payerId', $transacion)
             ->with('amount', $transacion)
             ->with('token', $transacion)

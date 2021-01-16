@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Administración</title>
+    <title>Lista Transaciones</title>
 
     <?php include "com/estilos.php"?>
     <?php include "com/scripts.php"?>
@@ -54,20 +54,20 @@
 
             <?php
             if (isset($transacion)){
-                foreach ($transacion as $ord_id){
+                foreach ($transacion as $transc){
 
 
                                     ?>
                                     <tr>
-                                        <td><?php echo $transacion->id ?></td>
-                                        <td><?php echo $transacion->order_id ?></td>
-                                        <td><?php echo $transacion->payerId ?></td>
-                                        <td><?php echo $transacion->amount ?></td>
-                                        <td><?php echo $transacion->token ?></td>
-                                        <td><?php echo $transacion->paymentId ?></td>
-                                        <td><?php echo $transacion->email ?></td>
+                                        <td><?php echo $transc->id ?></td>
+                                        <td><?php echo $transc->order_id ?></td>
+                                        <td><?php echo $transc->payerId ?></td>
+                                        <td><?php echo $transc->amount ?></td>
+                                        <td><?php echo $transc->token ?></td>
+                                        <td><?php echo $transc->paymentId ?></td>
+                                        <td><?php echo $transc->email ?></td>
 
-
+                                    </tr>
 
 
                 <?php }} ?>
@@ -76,11 +76,7 @@
         </table>
     </article>
 
-
-
-
 </section>
-
 
 <?php include "com/pieDePagina.php"?>
 

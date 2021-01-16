@@ -12,8 +12,13 @@
 </head>
 
 <body style="background: url(&quot;assets/img/intro-bg.jpg&quot;), #c9c9c9;">
+<section>
 
 <?php include "com/cabecera.php"?>
+
+
+    <h4>Bienvenido aquí puede encontrar toda la informacion sobre todas sus compras</h4>
+
 
 <?php
 
@@ -27,14 +32,42 @@
 }
 
 foreach ($ordenes->items() as $orden) {
+    echo '<article class="Usuario">';
+    echo '<div >';
 
-    echo '<p><strong>Nombre Usuario: </strong>' . $userid . '</p>';
-    echo '<p><strong>Total de la compra: </strong>' . $orden->total . '</p>';
-    echo '<p><strong>Estado: </strong>' . $orden->state . '</p>';
+    echo '<p><strong>Nombre Usuario: </strong>' . strtoupper(session("username")). '</p>';
+    echo '<p><strong>Descripcion del producto: </strong> </p>';
+    echo '<p><strong>Paquete: </strong></p>';
+
+
+    echo '</div>';
+    echo '</article>';
+    ?>
+    <table id="example"  class="table table-striped  table-bordered" width="100%" bgcolor="#a9a9a9">
+        <thead>
+        <tr>
+
+            <th>Total de la compra</th>
+            <th>Estado</th>
+            <th>date</th>
+
+        </tr>
+        </thead>
+        <tbody>
+<tr>
+    <td><?php echo  $orden->total ?></td>
+<td><?php echo $orden->state ?></td>
+<td><?php echo $orden->created_at ?></td>
+
+</tr>
+        <tbody>
+    </table>
+    <?php
+
 }
 
 ?>
-
+</section>
 </body>
 <?php include "com/pieDePagina.php"?>
 
