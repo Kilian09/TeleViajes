@@ -52,7 +52,7 @@ if (isset($products, $escolares)){
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
-                                </ul>
+                                </ul><div class="rating"><?php echo $escolar->description?> </div>
                                 <div class="price"><?php echo $escolar->price?>€ </div>
 
                             </div>
@@ -106,6 +106,7 @@ if (isset($products, $escolares)){
                             <li class="fa fa-star"></li>
                             <li class="fa fa-star"></li>
                         </ul>
+                        </ul><div class="rating"><?php echo $escolar->description?> </div>
                         <div class="price"><?php echo $escolar->price?>€</div>
                     </div>
                 </div>

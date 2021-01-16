@@ -64,7 +64,7 @@
 
                 <div class="col-sm-6 col-md-4">
                     <div class="box">
-                        <div class="box-img"><img src="assets/img/esqui.jpg" alt="Montañismo" style="text-align: center;"></div>
+                        <div class="box-img"><img src="assets/img/montaña 1.jpg" alt="Montañismo" style="text-align: center;"></div>
                         <div class="box-content">
                             <h4 class="title"><?php echo $activity->name ?></h4>
                             <p class="description"><?php echo $activity->description ?>. Por <?php echo $activity->price?>. <?php echo $activity->date?>. Quedan <?php echo $activity->stock?> plazas libres.</p>
@@ -98,7 +98,7 @@
 
                                     <div class="col-sm-6 col-md-4">
                                         <div class="box">
-                                            <div class="box-img"><img src="assets/img/esqui.jpg" alt="Montañismo" style="text-align: center;"></div>
+                                            <div class="box-img"><img src="assets/img/paracaidismo.jpg" alt="Montañismo" style="text-align: center;"></div>
                                             <div class="box-content">
                                                 <h4 class="title"><?php echo $activity->name ?></h4>
                                                 <p class="description"><?php echo $activity->description ?>. Por <?php echo $activity->price?>. <?php echo $activity->date?>. Quedan <?php echo $activity->stock?> plazas libres.</p>

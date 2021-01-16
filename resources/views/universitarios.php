@@ -40,14 +40,17 @@
                  ?>
 
                 <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/ultra.jpg" width="2000" alt="alt text here">
+                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/ultra.jpg"  alt="alt text here">
 
                         <form method="get" action="/addCart/<?php echo $product->id ?>">
                         <figcaption class="figure-caption"><?php echo $universitario->name ?>
+
                            <button class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></button>
+                            <p class="figure-caption"><?php echo $universitario->description ?></p>
                             <input type="number" name="amount" value="1" min="1">
                         </figcaption>
                         </form>
+
 
                     </figure>
                 </div>
