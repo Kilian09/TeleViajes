@@ -16,43 +16,40 @@
                 <li class="nav-item"><a class="nav-link" href="contacto" style="color: var(--light);">Contactos</a></li>
             </ul>
 
-
                 <span class="d-inline navbar-text actions">
-                    <article class="container">
-        <div class="dropdown-container">
-                <button class="btn btn-primary dropdown-toggle btn-sm ml-1" data-toggle="dropdown" type="button" aria-expanded="true">
-                <span class="badge badge-pill badge-light">5</span>
-                <i class="fa fa-shopping-cart mx-2"></i>Total<span class="caret"></span>
-            </button>
-                <ul role="menu" class="dropdown-menu" style="left:auto;">
-                <li class="p-2 text-nowrap text-right">
-                    <span class="badge badge-pill badge-warning align-text-top mr-1 mt-1"></span>
-   <a href="#" class="badge badge-danger text-white">-</a></li>
-            </ul>
-        </div>
-
-    </article>
-
 
                     <?php
                     if(session()->has("user") == true){
                     ?>
 
-                <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="usuario"><?php echo strtoupper(session("username")) ?></a>
+                <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="usuario" ><?php echo strtoupper(session("username")) ?></a>
 
                 <a class="btn btn-light d-inline action-button" id="rojo" role="button" href="cerrar_session">Cerrar Sesión</a>
             <?php
             if(session("username") == "admin" ){?>
                 <a class="btn btn-light d-inline action-button" role="button" href="shopAdmin"><e class="fa fa-cog"> </a>
             <?php } ?>
-                </span>
 
             <?php }else{  ?>
-                <span>
                     <a class="btn btn-light d-inline action-button" role="button" href="login" >Iniciar Sesión</a>
                     <a class="btn btn-light d-inline action-button" role="button" href="register">Registrarse</a>
-                </span>
             <?php } ?>
+
+            <article class="container" style="margin-top: 1em; text-align: center">
+                <div class="dropdown-container">
+                    <button class="btn btn-primary dropdown-toggle btn-sm ml-1" data-toggle="dropdown" type="button" aria-expanded="true">
+                        <span class="badge badge-pill badge-light">5</span>
+                        <i class="fa fa-shopping-cart mx-2"></i>Total<span class="caret"></span>
+                    </button>
+                    <ul role="menu" class="dropdown-menu" style="left:auto;">
+                        <li class="p-2 text-nowrap text-right">
+                            <span class="badge badge-pill badge-warning align-text-top mr-1 mt-1"></span>
+                            <a href="#" class="badge badge-danger text-white">-</a></li>
+                    </ul>
+                </div>
+            </article>
+                                    </span>
+
         </div>
     </div>
 </nav>
