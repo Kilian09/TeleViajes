@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="jumbotron pulse animated hero-photography carousel-hero" style="background: url(&quot;assets/img/el-origen-de-las-auroras-boreales-183012-1.jpg&quot;) center / cover;">
+                    <div class="jumbotron pulse animated hero-photography carousel-hero" style="background: url(&quot;assets/img/aurora4.jpg&quot;) center / cover;">
                         <h1 class="hero-title" style="display: block">Paquetes</h1>
                         <p class="hero-subtitle" style="font-size: 20px;">Gran cantidad de viajes con temáticas variadas para todos los gustos y todas las edades.</p>
                         <p><a class="btn btn-primary hero-button plat" role="button" href="paquetes">ver paquetes</a></p>
