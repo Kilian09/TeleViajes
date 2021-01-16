@@ -61,7 +61,7 @@ if (session()->has('product_id') == true) {
                 <div class="dropdown-container">
                     <button class="btn btn-primary dropdown-toggle btn-sm ml-1" data-toggle="dropdown" type="button" aria-expanded="true">
                         <span class="badge badge-pill badge-light"><?php echo session('cantidadTotal') ?></span>
-                        <i class="fa fa-shopping-cart mx-2"></i><?php echo session('total') ?><span class="caret"></span>
+                        <i class="fa fa-shopping-cart mx-2"></i><?php echo session('total') ?>€<span class="caret"></span>
                     </button>
                        <?php if(session('carrito') == null){
                        //Crear  carrito
@@ -75,7 +75,7 @@ if (session()->has('product_id') == true) {
                          <?php echo "El carrito está vacío";  ?>
                     </ul>
 
-                       <?php } else if(session('carrito')!=null && count(session()->all()) > 3){
+                       <?php } else if(session('carrito')!=null){
                        $data = session()->all();
                        print_r($data);
 
@@ -87,8 +87,8 @@ if (session()->has('product_id') == true) {
                 if(substr($key,0,5) == 'PROD_') {
                 $prodID = substr($key,5);
                 $producto = \App\Products::where('id',$prodID)->get();
-                $paquete = \App\Paquetes::where('id_product',$prodID)->get();
-                $cruceros = \App\Cruceros::where('id_product',$prodID)->get();
+
+
                 ?>
                                <table>
                                 <tbody>
@@ -98,17 +98,23 @@ if (session()->has('product_id') == true) {
 
                     <?php
                     if($producto[0]['type'] == "Paquetes") {
+
+                    $paquete = \App\Paquetes::where('id_product',$prodID)->get();
+
                     echo $paquete[0]['name'];
                     ?>
                             </tr>
                               <tr>
                                 <?php
                                 }else if($producto[0]['type'] == "Cruceros"){
+
+                                    $cruceros = \App\Cruceros::where('id_product',$prodID)->get();
+
                                     echo $cruceros[0]['name'];
                                 }
                                 ?>
                                    </tr>
-                        <form method="get" action="eliminarProductoCarrito">
+                        <form method="get" action="eliminarProductoCarrito/<?php echo $prodID ?>">
                     <button type="submit"  class="badge badge-danger text-white">-</button></li>
                         </form>
                          </tbody>
@@ -119,15 +125,18 @@ if (session()->has('product_id') == true) {
 
 <tfoot>
 
-                                   <tr> <th><hr><form method='get' action='vaciarCarrito'>
+                                   <tr>
+                                       <th>
+                                           <hr><form method='get' action='vaciarCarrito'>
                     <input type='submit' name='Vaciar' value='Vaciar Carrito'>
                    </form>
                           </th>
                                        <?php if(session()->has("user") == true){ ?>
-                    <th><hr><form method='get' action=''>
+                    <th>
+                        <hr><form method='get' action=''>
                     <input type='submit' name='checkoutPaypal' value='Checkout Paypal'>
                    </form>
-                                       </th>
+                    </th>
 
                                        <?php } ?>
                                    </tr>

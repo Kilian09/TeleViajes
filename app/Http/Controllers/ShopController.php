@@ -35,15 +35,6 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                $stock = $paquete[0]['stock'];
-
-                $stockResultante = $stock - $amount;
-
-                if ($stock < $stockResultante) {
-
-                }
-
-
                 return redirect('/paquetes');
 
             } else if ($producto[0]['type'] == "Cruceros") {
@@ -70,7 +61,7 @@ class ShopController extends Controller
     {
         $data = session()->all();
 
-        session()->forget(['total', 'cantidadTotal','totalAnterior','cantidadAnterior', 'carrito']);
+        session()->forget(['total', 'totalAnterior', 'cantidadTotal', 'cantidadAnterior', 'carrito']);
 
 
         foreach ($data as $key => $valor) {
@@ -83,19 +74,54 @@ class ShopController extends Controller
     }
 
 
-    public function eliminarProductoCarrito(){
-        $data = session()->all();
+    public function eliminarProductoCarrito($id)
+    {
+        $producto = Products::where('id', $id)->get();
 
-        session()->forget(['total','totalAnterior','carrito']);
-        session()->flush();
+        $paquete = Paquetes::where('id_product', $producto[0]['id'])->get();
 
-        foreach ($data as $key => $valor){
-            if($key[0] == 'P'){
-                session()->forget($key);
-            }
+        $crucero = Cruceros::where('id_product', $producto[0]['id'])->get();
+
+
+        if ($producto[0]['type'] == "Paquetes") {
+
+            session(['amountProducto' => session('PROD_' . $id)]);
+
+            session()->forget('PROD_' . $id);
+
+            $totalPrice = session('total');
+            $precioARestar = session('amountProducto') * $paquete[0]['price'];
+            $result = $totalPrice - $precioARestar;
+            session(['totalAnterior' => $result]);
+            session(['total' => $result]);
+
+            $cantidadFinal = session('cantidadTotal');
+            $result = $cantidadFinal - session('amountProducto');
+            session(['cantidadAnterior' => $result]);
+            session(['cantidadTotal' => $result]);
+
+            return redirect('/paquetes');
+
+        }else  if ($producto[0]['type'] == "Cruceros") {
+
+            session(['amountProducto' => session('PROD_' . $id)]);
+
+            session()->forget('PROD_' . $id);
+
+            $totalPrice = session('total');
+            $precioARestar = session('amountProducto') * $crucero[0]['price'];
+            $result = $totalPrice - $precioARestar;
+            session(['totalAnterior' => $result]);
+            session(['total' => $result]);
+
+            $cantidadFinal = session('cantidadTotal');
+
+            $result = $cantidadFinal - session('amountProducto');
+            session(['cantidadAnterior' => $result]);
+            session(['cantidadTotal' => $result]);
+
+            return redirect('/cruceros');
         }
-
-        return redirect('/');
     }
 
 }
