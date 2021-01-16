@@ -95,13 +95,12 @@ if (session()->has('product_id') == true) {
                                <tr>
                     <span class="badge badge-pill badge-warning align-text-top mr-1 mt-1"><?php echo $valor ?></span>
 
-                    <?php
-                    if($producto[0]['type'] == "Paquetes") {
+                                <?php
+                                if($producto[0]['type'] == "Paquetes") {
+                                    $paquete = \App\Paquetes::where('id_product',$prodID)->get();
 
-                    $paquete = \App\Paquetes::where('id_product',$prodID)->get();
-
-                    echo $paquete[0]['name'];
-                    ?>
+                                     echo $paquete[0]['name'];
+                                ?>
                             </tr>
                               <tr>
                                 <?php
@@ -110,6 +109,66 @@ if (session()->has('product_id') == true) {
                                     $cruceros = \App\Cruceros::where('id_product',$prodID)->get();
 
                                     echo $cruceros[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Actividades"){
+
+                                    $actividades = \App\Actividades::where('id_product',$prodID)->get();
+
+                                    echo $actividades[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Escolares"){
+
+                                    $escolares = \App\Escolares::where('id_product',$prodID)->get();
+
+                                    echo $escolares[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Universitarios"){
+
+                                    $universitarios = \App\Universitarios::where('id_product',$prodID)->get();
+
+                                    echo $universitarios[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Vuelos"){
+
+                                    $vuelos = \App\Vuelos::where('id_product',$prodID)->get();
+
+                                    echo $vuelos[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Ancianos"){
+
+                                    $ancianos = \App\Ancianos::where('id_product',$prodID)->get();
+
+                                    echo $ancianos[0]['name'];
+
+                                ?>
+                                   </tr>
+                              <tr>
+                                <?php
+                                }else if($producto[0]['type'] == "Familia"){
+
+                                    $familia = \App\Familia::where('id_product',$prodID)->get();
+
+                                    echo $familia[0]['name'];
                                 }
                                 ?>
                                    </tr>

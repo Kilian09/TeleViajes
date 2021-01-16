@@ -25,42 +25,36 @@
         <div id="box-1">
             <h1 style="background: url(&quot;assets/img/tomorrowland.jpg&quot;) center;">LAS MEJORES FIESTAS</h1>
         </div>
+
+
+
         <section class="text-center" style="margin-top: 20px;">
             <div class="d-flex flex-row multiple-item-slider">
+
+                <?php
+                if (isset($products, $universitarios)){
+                foreach ($products as $product){
+                if($product->type == "Universitarios"){
+                foreach ($universitarios as $universitario){
+                if($product->id == $universitario->id_product) {
+                 ?>
+
                 <div class="justify-content-center spacer-slider">
                     <figure class="figure"><img class="img-fluid figure-img" src="assets/img/ultra.jpg" width="2000" alt="alt text here">
-                        <figcaption class="figure-caption">Ultra  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
+                        <form method="get" action="/addCart/<?php echo $product->id ?>">
+                        <figcaption class="figure-caption"><?php echo $universitario->name ?>
+                            <input type="number" name="amount" value="1">
+                           <button class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></button>
+                        </figcaption>
+                        </form>
 
                     </figure>
                 </div>
-                <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img mx-auto d-block" src="assets/img/arenasound.jpg" width="1700" alt="alt text here">
-                        <figcaption class="figure-caption">Arenal  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
-                    </figure>
-                </div>
-                <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/tomorrowland2.jpg" width="2000" alt="alt text here">
-                        <figcaption class="figure-caption">Tomorrowland  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
-                    </figure>
-                </div>
-                <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/sunblast.jpg" width="1900" alt="alt text here">
-                        <figcaption class="figure-caption">Sunblast  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
-                    </figure>
-                </div>
-                <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/ritmosmundo.jpg" width="2000" alt="alt text here">
-                        <figcaption class="figure-caption">Ritmos del mundo  <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
-                    </figure>
-                </div>
-
-                <div class="justify-content-center spacer-slider">
-                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/madcool.jpg" width="2000" alt="alt text here">
-                        <figcaption class="figure-caption">Mad Cool <a href="#"><i class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></i></a> </figcaption>
-                    </figure>
-                </div>
-
+                <?php }}}}} ?>
         </section>
+
+
+
         <div class="carousel slide" data-ride="carousel" data-interval="10000" id="carousel-t">
             <div class="carousel-inner">
                 <div class="carousel-item active">
