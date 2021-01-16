@@ -39,7 +39,7 @@ Route::get('/cruceros', 'ProductController@listaCruceros');
 Route::get('/actividades', 'ProductController@listaActividades');
 Route::get('/escolares', 'ProductController@listaEscolares');
 Route::get('/universitarios', 'ProductController@listaUniversitarios');
-Route::get('/vuelos', 'ProductController@listaVuelos');
+Route::get('/', 'ProductController@listaVuelos');
 Route::get('/ancianos', 'ProductController@listaAncianos');
 Route::get('/familia', 'ProductController@listaFamilias');
 
