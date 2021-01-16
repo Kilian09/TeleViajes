@@ -48,7 +48,7 @@ class ProductController extends Controller
 
 
     public function addProducto(){
-        if (isset($_POST["type"], $_POST["name"], $_POST["description"], $_POST["subtype"], $_POST["price"], $_POST["stock"])) {
+        if (isset($_POST["type"], $_POST["name"], $_POST["description"], $_POST["subtype"], $_POST["price"], $_POST["stock"],$_POST["date"])) {
 
             $type = $_POST["type"];
 
@@ -69,7 +69,7 @@ class ProductController extends Controller
             $productType[2] = $_POST["subtype"];
             $productType[3] = $_POST["price"];
             $productType[4] = $_POST["stock"];
-
+            $productType[5] = $_POST["date"];
             if($productsData[1] == "Paquetes"){
                 $paquete = new Paquetes();
             } else{
@@ -82,7 +82,7 @@ class ProductController extends Controller
             $paquete->type = $productType[2];
             $paquete->price = $productType[3];
             $paquete->stock = $productType[4];
-
+            $paquete->date = $productType[5];
             $paquete->save();
 
             return redirect('/shopAdmin')->with('exito','Se ha añadido el producto ' . $_POST['name']);
@@ -134,6 +134,10 @@ class ProductController extends Controller
             $producto->save();
             return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $producto->nombreProducto . ' correctamente');
         }
+    }
+    public function getnumProduct() {
+        $getnumProduct = count(Products::all());
+        return $getnumProduct;
     }
 
 }

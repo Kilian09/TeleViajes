@@ -18,14 +18,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('/contacto', function () {
-    return view('contacto');
-});
-
-
-//AJAX
-Route::get("/numero_productos", "userController@numero_productos");
-
 
 //REDIRECCIONAMIENTO DE VISTAS A USERCONTROLLER
 Route::get('/login', 'userController@login');
@@ -39,22 +31,29 @@ Route::get('/escolares', 'userController@escolares');
 Route::get('/familia', 'userController@familia');
 
 
-//USERCONTROLLER
-Route::post('/procesar_login', 'userController@procesar_login');
-Route::post('/procesar_registro', 'userController@procesar_registro');
-Route::post('/procesar_contacto', 'userController@procesar_contacto');
-Route::get("/cerrar_session","UserController@cerrar_session");
 
-//PRODUCTCONTROLLER
-Route::get('/shopAdmin', 'ProductController@listaProductos');
+//REDIRECCIONAMIENTO DE VISTAS A PRODUCTCONTROLLER
 Route::get('/crearProducto', 'ProductController@crearProducto');
 Route::post('/addProducto', 'ProductController@addProducto');
-Route::get('/shopAdmin/eliminarProducto', 'ProductController@eliminarProducto');
-Route::get('/paquetes', 'ProductController@listaPaquetes');
+Route::get('/shopAdmin', 'ProductController@listaProductos');
+
+Route::get('/getnumProduct', 'ProductController@getnumProduct');
 
 
+
+
+
+//PROCESADO DE FORMULARIOS
+Route::post('/procesar_login', 'userController@procesar_login');
+Route::post('/procesar_registro', 'userController@procesar_registro');
+
+Route::get("/cerrar_session","UserController@cerrar_session");
+
+
+Route::get('/contacto', function () {
+    return view('contacto');
+});
+Route::post('/procesar_contacto', 'userController@procesar_contacto');
 
 //PRODUCTO
-Route::get('/shopAdmin/actualizarProducto', 'ProductController@actualizarProducto');
-Route::post('/procesar_producto_actualizado', 'ProductController@procesar_producto_actualizado');
 

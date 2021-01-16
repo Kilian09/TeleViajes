@@ -14,14 +14,26 @@
 <body>
 
 <?php include "com/cabecera.php"?>
+<script>
+    function get_numProduct() {
+        $('#numProduct').load('getnumProduct');
+        setTimeout(get_numProduct, 3000);
+    }
+</script>
 
 
 <aside>
     <article>
         <h1>Información actualizada en tiempo real:</h1>
         <p>Número de Productos en la tienda:
+            <header>
+                <div id="numProduct">numProduct</div>
+            </header>
+
+
         <p id="products">
             <script>
+                get_numProduct();
                 setTimeout(numero_productos,1000);
             </script>
         </p>
@@ -43,7 +55,7 @@
     </header>
     <article>
         <h1>Lista de Productos </h1>
-        <table>
+        <table id="example"  class="table table-striped  table-bordered" width="100%" bgcolor="#a9a9a9">
             <thead>
             <tr>
                 <th>Id</th>
@@ -51,13 +63,17 @@
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Subtipo</th>
-                <th>Precio</th>
+                <th>Precio €</th>
                 <th>Stock</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                <th>Fecha</th>
+
             </tr>
             </thead>
             <tbody>
+
+
+
+
 
 
         <?php
@@ -74,19 +90,20 @@
             <td><?php echo $paquete->name ?></td>
             <td><?php echo $paquete->description ?></td>
             <td><?php echo $paquete->type ?></td>
-            <td><?php echo $paquete->price ?></td>
+            <td><?php echo $paquete->price ?> €</td>
             <td><?php echo $paquete->stock ?></td>
+            <td><?php echo $paquete->date ?></td>
 
             <form method="get">
                 <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
                 <td>
                     <button class="basura" type="submit" formaction="shopAdmin/actualizarProducto">
-                        <img src="imagenes/editar.png" alt="editar" height="20" width="20">
+                        <img src="assets/img/editar.png" alt="editar" height="30" width="30"> Editar
                     </button>
                 </td>
                 <td>
                     <button class="basura" type="submit" formaction="shopAdmin/eliminarProducto">
-                        <img src="imagenes/basura.png" alt="eliminar" height="20" width="20" >
+                        <img src="assets/img/basura.png" alt="eliminar" height="30" width="30" > Eliminar
                     </button>
                 </td>
             </form>
@@ -97,7 +114,7 @@
         </table>
     </article>
     <article>
-        <a href="crearProducto">Crear Productos</a>
+        <a href="crearProducto" style="border:none;width:151px;height:58px;margin-left:14px;background-color:#4ddb94;color:rgb(255,255,255);margin-top:12px;">Crear Productos</a>
     </article>
 </section>
 

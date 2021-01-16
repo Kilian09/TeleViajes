@@ -37,6 +37,10 @@ if(session('username') == "admin"){
                 <th><input type="number" name="price" class="inputText"></th>
             </tr>
             <tr>
+                <th><label>Fecha </label></th>
+                <th><input type="date" name="date" class="inputText"></th>
+            </tr>
+            <tr>
                 <th><label>Stock: </label></th>
                 <th><input type="number" name="stock"  class="inputText"></th>
             </tr>
