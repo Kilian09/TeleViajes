@@ -116,7 +116,7 @@ class ProductController extends Controller
         $products = Products::get();
         $vuelos = Vuelos::get();
 
-        return view('/vuelos')
+        return view('/index')
             ->with('products', $products)
             ->with('vuelos', $vuelos);
     }
