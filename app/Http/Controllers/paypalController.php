@@ -107,5 +107,17 @@ class paypalController extends Controller
         $status = 'Lo sentimos! El pago a través de PayPal no se pudo realizar.';
         return redirect('/resultPay')->with(compact('status'));
     }
+
+    public function listaTransaciones()
+    {
+        $transacion = \App\Payment::get();
+        return view('/listatransaciones')
+            ->with('payerId', $transacion)
+            ->with('amount', $transacion)
+            ->with('token', $transacion)
+            ->with('paymentId', $transacion)
+            ->with('email', $transacion);
+
+    }
 }
 

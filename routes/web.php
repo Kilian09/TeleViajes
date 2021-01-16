@@ -73,4 +73,9 @@ Route::get('/usuario', function () {
 });
 
 //PRODUCTO
+Route::get('/listatransaciones', function () {
+    return view('listatransaciones');
+});
+
+Route::get('/listatransaciones', 'paypalController@listaTransaciones');
 
