@@ -23,31 +23,31 @@ if(session('username') == "admin"){
             <tr>
                 <p>
                 <th><label>Nombre del producto:</label></th>
-                <th><input type="text" name="name"  class="inputText"> </th>
+                <th><input type="text" name="name"  class="inputText" required> </th>
                 </p>
             </tr>
             <tr>
                 <p>
                 <th><label>Descripción:</label></th>
-                <th><input type="text" name="description"  class="inputText"></th>
+                <th><input type="text" name="description"  class="inputText" required></th>
                 </p>
             </tr>
             <tr>
                 <th><label>Precio del Producto en €: </label></th>
-                <th><input type="number" name="price" class="inputText"></th>
+                <th><input type="number" name="price" class="inputText" required></th>
             </tr>
             <tr>
                 <th><label>Fecha </label></th>
-                <th><input type="text" name="date" class="inputText"></th>
+                <th><input type="text" name="date" class="inputText" required></th>
             </tr>
             <tr>
                 <th><label>Stock: </label></th>
-                <th><input type="number" name="stock"  class="inputText"></th>
+                <th><input type="number" name="stock"  class="inputText" required></th>
             </tr>
             <tr>
                 <th><label>Tipo de Producto: </label></th>
                 <th>
-                    <input type="radio" id="Cruceros" name="type" value="Cruceros">
+                    <input type="radio" id="Cruceros" name="type" value="Cruceros" required>
                     <label for="Cruceros">Cruceros</label>
                     <input type="radio" id="Paquetes" name="type" value="Paquetes">
                     <label for="Paquetes">Paquetes</label><br>
@@ -56,7 +56,7 @@ if(session('username') == "admin"){
             <tr>
                 <th><label>Subtipo de Producto: </label></th>
                 <th>
-                    <input type="radio" id="Popular" name="subtype" value="Popular">
+                    <input type="radio" id="Popular" name="subtype" value="Popular" required>
                     <label for="Popular">Popular</label>
                     <input type="radio" id="Magicos" name="subtype" value="Magicos">
                     <label for="Magicos">Magicos</label><br>
