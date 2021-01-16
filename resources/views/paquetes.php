@@ -35,33 +35,32 @@
 
     <div class="container" style="margin-top: 100px;">
         <h1>Los paquetes más populares</h1>
+
+        <?php
+        if (isset($products, $paquetes)){
+        foreach ($products as $product){
+        if($product->type == "Paquetes"){
+        foreach ($paquetes as $paquete){
+        if($product->id == $paquete->id_product) {
+        if($paquete->type == "Popular"){ ?>
+
+        <form method="get" action="/addCart/<?php echo $product->id ?>">
         <div class="card-group">
             <div class="card"><img class="card-img-top w-100 d-block" src="assets/img/Aurora-boreal-300x200.jpg">
                 <div class="card-body">
-                    <h4 class="card-title" style="color: rgb(34,33,33);">Tour auroras&nbsp; en 3 días para 2 pers.</h4>
-                    <p class="card-text" style="color: rgb(21,21,21);"><br>Experimenta la naturaleza del Ártico mientras persigues este increíble espectáculo de luces en un tour con todo incluido para dos personas.&nbsp;<br>Si quieres aprovechar tu viaje por Islandia con aventuras y excursiones increíbles, no deberías perderte este paquete.<br><br></p>
+                    <h4 class="card-title" style="color: rgb(34,33,33);"><?php echo $paquete->name ?></h4>
+                    <p class="card-text" style="color: rgb(21,21,21);"><?php echo $paquete->description ?></p>
                     <p class="card-text" style="color: rgb(21,21,21);">&nbsp; Del 20.01.2021 al 23.01.2021</p>
-                    <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">Por 400€</p><button class="btn btn-primary border rounded-pill" type="button" style="margin-left: 32%;">¡Reserva ya!</button>
+                    <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">Por <?php echo $paquete->price ?>€</p>
+                    <input type="number" name="amount" value="1">
+                    <button class="btn btn-primary border rounded-pill" type="submit" style="margin-left: 32%;">¡Reserva ya!</button>
                 </div>
             </div>
-            <div class="card" style="margin-left: 0.5%;"><img class="card-img-top w-100 d-block" src="assets/img/pragra%20300x200.webp">
-                <div class="card-body">
-                    <h4 class="card-title" style="color: rgb(34,33,33);">Pragra y Budapest en 5 días para 2 pers.</h4>
-                    <p class="card-text" style="color: rgb(21,21,21);">Déjate seducir por su encanto y por sus innumerables muestras de belleza, palpables en sus monumentos y en sus calles.<br><br>Experimenta la naturaleza del Ártico mientras persigues este increíble espectáculo de luces en un tour con todo incluido para dos personas.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br></p>
-                    <p class="card-text" style="color: rgb(21,21,21);">Del 01.02.2021 al 06.02.2021<br></p>
-                    <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">Por 700€</p><button class="btn btn-primary border rounded-pill" type="button" style="margin-left: 32%;">¡Reserva ya!</button>
-                </div>
-            </div>
-            <div class="card" style="margin-left: 0.5%;"><img class="card-img-top w-100 d-block" src="assets/img/hero-background-travel.jpg">
-                <div class="card-body">
-                    <h4 class="card-title" style="color: rgb(34,33,33);">LONDRES, AMSTERDAM Y BERLIN en 9 DÍAS para 2 pers.<br></h4>
-                    <p class="card-text" style="color: rgb(21,21,21);">Le ofrecemos un paquete turístico donde podrá conocer más a fondo&nbsp;las principales ciudades europeas como Londres y Países Bajos.&nbsp;<br>Podrá&nbsp;visitar la Fábrica-Museo de Diamantes en Ámsterdam, el Memorial del Holocausto y el&nbsp;Museo del muro de Berlín.&nbsp; &nbsp; &nbsp;<br></p>
-                    <p class="card-text" style="color: rgb(21,21,21);">Del 10.02.2021 al 19.02.2021<br></p>
-                    <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">Por 1000€</p><button class="btn btn-primary border rounded-pill" type="button" style="margin-left: 32%;">¡Reserva ya!</button>
-                </div>
             </div>
         </div>
     </div>
+    </form>
+    <?php }else if ($paquete->type == "Magicos"){ ?>
     <div class="container" style="margin-top: 100px;">
         <h1>paquetes TEMÁTICOS</h1>
         <div class="card-group">
@@ -91,6 +90,13 @@
             </div>
         </div>
     </div>
+
+    <?php }
+    }
+    }
+    }
+    }
+    } ?>
 
     <?php include "com/pieDePagina.php"?>
 

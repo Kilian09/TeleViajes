@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Cruceros;
+use App\Paquetes;
+use App\Products;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
