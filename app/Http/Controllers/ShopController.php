@@ -45,7 +45,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/paquetes');
+                return redirect('/paquetes')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
 
             } else if ($producto[0]['type'] == "Cruceros") {
 
@@ -63,7 +63,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/cruceros');
+                return redirect('/cruceros')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
 
             } else if ($producto[0]['type'] == "Actividades") {
 
@@ -81,7 +81,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/actividades');
+                return redirect('/actvidades')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
 
             }else if ($producto[0]['type'] == "Escolares") {
 
@@ -99,7 +99,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/escolares');
+                return redirect('/escolares')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
 
             }else if ($producto[0]['type'] == "Universitarios") {
 
@@ -117,7 +117,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/universitarios');
+                return redirect('/universitarios')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
 
             }else if ($producto[0]['type'] == "Vuelos") {
 
@@ -135,7 +135,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/');
+                return redirect('/')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
 
             }else if ($producto[0]['type'] == "Ancianos") {
 
@@ -153,7 +153,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/ancianos');
+                return redirect('/ancianos')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
 
             }else if ($producto[0]['type'] == "Familia") {
 
@@ -171,7 +171,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/familia');
+                return redirect('/familia')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
             }
 
         }
@@ -190,7 +190,7 @@ class ShopController extends Controller
             }
         }
 
-        return redirect('/');
+        return redirect('/')->with('exito','Se ha vaciado el carrito correctamente.');
     }
 
 
@@ -217,7 +217,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/paquetes');
+            return redirect('/paquetes')->with('exito','Se ha eliminado el producto del carrito.');
 
         }else  if ($producto[0]['type'] == "Cruceros") {
 
@@ -239,7 +239,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/cruceros');
+            return redirect('/cruceros')->with('exito','Se ha eliminado el producto del carrito.');
 
         }else if ($producto[0]['type'] == "Actividades") {
 
@@ -261,7 +261,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/actividades');
+            return redirect('/actividades')->with('exito','Se ha eliminado el producto del carrito.');
 
         }else if ($producto[0]['type'] == "Escolares") {
 
@@ -283,7 +283,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/escolares');
+            return redirect('/escolares')->with('exito','Se ha eliminado el producto del carrito.');
 
         }else if ($producto[0]['type'] == "Universitarios") {
 
@@ -305,7 +305,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/universitarios');
+            return redirect('/universitarios')->with('exito','Se ha eliminado el producto del carrito.');
 
         }else if ($producto[0]['type'] == "Vuelos") {
 
@@ -327,7 +327,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/');
+            return redirect('/')->with('exito','Se ha eliminado el producto del carrito.');
 
         }else if ($producto[0]['type'] == "Ancianos") {
 
@@ -349,7 +349,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/ancianos');
+            return redirect('/ancianos')->with('exito','Se ha eliminado el producto del carrito.');
 
         }else if ($producto[0]['type'] == "Familia") {
 
@@ -371,7 +371,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/familia');
+            return redirect('/familia')->with('exito','Se ha eliminado el producto del carrito.');
         }
     }
 
