@@ -33,6 +33,7 @@
                     <div class="w_shop_105_left_box"><span data-animation="animated fadeInLeft" style="font-family: roboto;"> <?php echo $cruise->price ?>€ <br></span>
                         <h1 class="left-h" data-animation="animated fadeInLeft"><?php echo $cruise->name ?></h1>
                         <p data-animation="animated fadeInLeft"> <?php echo $cruise->description ?>.</p>
+                        <input type="number" name="amount" value="1">
                         <button type="submit" href="#" data-animation="animated fadeInLeft">Comprar</button>
                     </div>
                     <div class="w_shop_105_right_box" data-animation="animated fadeInRight">
