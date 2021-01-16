@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Actividades;
 use App\Cruceros;
+use App\Escolares;
 use App\Paquetes;
 use App\Products;
 use Illuminate\Http\Request;
@@ -36,12 +37,16 @@ class ProductController extends Controller
         $paquetes = Paquetes::get();
         $cruises = Cruceros::get();
         $activities = Actividades::get();
+        $escolares = Escolares::get();
+
 
         return view('/shopAdmin')
             ->with('products', $products)
             ->with('paquetes', $paquetes)
             ->with('cruises', $cruises)
-            ->with('activities', $activities);
+            ->with('activities', $activities)
+            ->with('escolares', $escolares);
+
     }
 
     public function listaPaquetes()
@@ -71,6 +76,15 @@ class ProductController extends Controller
         return view('/actividades')
             ->with('products', $products)
             ->with('activities', $activities);
+    }
+    public function listaEscolares()
+    {
+        $products = Products::get();
+        $escolares = Escolares::get();
+
+        return view('/escolares')
+            ->with('products', $products)
+            ->with('escolares', $escolares);
     }
 
 
@@ -131,6 +145,17 @@ class ProductController extends Controller
                 $activity->stock = $productType[4];
                 $activity->date = $productType[5];
                 $activity->save();
+
+            }elseif ($productsData[1] == "Escolares") {
+                $escolares = new Escolares();
+                $escolares->id_product = $product->id;
+                $escolares->name = $productType[0];
+                $escolares->description = $productType[1];
+                $escolares->type = $productType[2];
+                $escolares->price = $productType[3];
+                $escolares->stock = $productType[4];
+                $escolares->date = $productType[5];
+                $escolares->save();
 
             }else{
                 return redirect('/shopAdmin')->with('error', 'Tipo de Producto no disponible');
@@ -234,6 +259,29 @@ class ProductController extends Controller
                 }
                 $activities->save();
                 return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $activities->name . ' correctamente');
+            }elseif ($_POST['typeProducto'] == 'Escolares') {
+                $escolares = Escolares::where('id_product', $_POST['idProducto'])->first();
+
+                if ($_POST['name'] != "") {
+                    $escolares->name = $_POST['name'];
+                }
+                if ($_POST['description'] != "") {
+                    $escolares->description = $_POST['description'];
+                }
+                if ($_POST['price'] != "") {
+                    $escolares->price = doubleval($_POST['price']);
+                }
+                if ($_POST['date'] != "") {
+                    $escolares->date = $_POST['date'];
+                }
+                if ($_POST['stock'] != "") {
+                    $escolares->stock = $_POST['stock'];
+                }
+                if ($_POST['subtype'] != "") {
+                    $escolares->type = $_POST['subtype'];
+                }
+                $escolares->save();
+                return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $escolares->name . ' correctamente');
             }
         }
     }

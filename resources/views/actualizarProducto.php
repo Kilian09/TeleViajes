@@ -132,11 +132,46 @@ if(isset($id)){
                     <th><input type="text" name="subtype" class="inputText" value="<?php echo $activity->type?>"></th>
                 </tr>
                 </tr>
+
+            <?php  }elseif($tipoControlador == 'Escolares'){
+                $escolares = \App\Escolares::where('id_product', $id)->first(); ?>
+                <tr>
+                    <p>
+                    <th><label>Nombre del producto:</label></th>
+                    <th><input type="text" name="name"  class="inputText" value="<?php echo $escolares->name?>"> </th>
+                    </p>
+                </tr>
+                <tr>
+                    <p>
+                    <th><label>Descripción:</label></th>
+                    <th><input type="text" name="description"  class="inputText" value="<?php echo $escolares->description?>"></th>
+                    </p>
+                </tr>
+                <tr>
+                    <th><label>Precio del Producto en €: </label></th>
+                    <th><input type="number" name="price" class="inputText" value="<?php echo $escolares->price?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Fecha: </label></th>
+                    <th><input type="text" name="date" class="inputText" value="<?php echo $escolares->date?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Stock: </label></th>
+                    <th><input type="number" name="stock"  class="inputText" value="<?php echo $escolares->stock?>"></th>
+                </tr>
+                <tr>
+                <tr>
+                    <th><label>Subtipo de Producto: </label></th>
+                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $escolares->type?>"></th>
+                </tr>
+                </tr>
             <?php }?>
 
 
 
-            <?php    } ?>
+
+
+            <?php }?>
 
             </tbody>
             <tfoot>

@@ -54,6 +54,8 @@ if(session('username') == "admin"){
                     <label for="Paquetes">Paquetes</label><br>
                     <input type="radio" id="Actividades" name="type" value="Actividades">
                     <label for="Actividades">Actividades</label><br>
+                    <input type="radio" id="Escolares" name="type" value="Escolares">
+                    <label for="Escolares">Escolares</label><br>
                 </th>
             </tr>
             <tr>

@@ -169,6 +169,36 @@
                                 <?php }}}} ?>
 
 
+                    <?php if($product->type == "Escolares"){
+                        if (isset($escolares)){
+                            foreach ($escolares as $escolar){
+                                if($product->id == $escolar->id_product) {   ?>
+                                    <tr>
+                                        <td><?php echo $escolar->id_product ?></td>
+                                        <td><?php echo $product->type ?></td>
+                                        <td><?php echo $escolar->name ?></td>
+                                        <td><?php echo $escolar->description ?></td>
+                                        <td><?php echo $escolar->type ?></td>
+                                        <td><?php echo $escolar->price ?> €</td>
+                                        <td><?php echo $escolar->stock ?></td>
+                                        <td><?php echo $escolar->date ?></td>
+
+                                        <form method="get">
+                                            <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
+                                            <td>
+                                                <button class="basura" type="submit" formaction="shopAdmin/actualizarProducto">
+                                                    <img src="assets/img/editar.png" alt="editar" height="30" width="30"> Editar
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <button class="basura" type="submit" formaction="shopAdmin/eliminarProducto">
+                                                    <img src="assets/img/basura.png" alt="eliminar" height="30" width="30" > Eliminar
+                                                </button>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                <?php }}}} ?>
+
                 <?php }} ?>
 
             <tbody>
