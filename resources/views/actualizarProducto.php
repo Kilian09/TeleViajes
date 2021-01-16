@@ -28,6 +28,7 @@ if(isset($id)){
 
     <form method="post" action="procesar_producto_actualizado">
         <?= csrf_field() ?>
+        <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
         <table>
             <tbody>
 
@@ -38,35 +39,26 @@ if(isset($id)){
             <tr>
                 <p>
                 <th><label>Nombre del producto:</label></th>
-                <th><input type="text" name="name"  class="inputText" value="<?php echo $paquete->name?>" required> </th>
+                <th><input type="text" name="name"  class="inputText" value="<?php echo $paquete->name?>"> </th>
                 </p>
             </tr>
             <tr>
                 <p>
                 <th><label>Descripción:</label></th>
-                <th><input type="text" name="description"  class="inputText" value="<?php echo $paquete->description?>" required></th>
+                <th><input type="text" name="description"  class="inputText" value="<?php echo $paquete->description?>"></th>
                 </p>
             </tr>
             <tr>
                 <th><label>Precio del Producto en €: </label></th>
-                <th><input type="number" name="price" class="inputText" value="<?php echo $paquete->price?>" required></th>
+                <th><input type="number" name="price" class="inputText" value="<?php echo $paquete->price?>"></th>
             </tr>
             <tr>
                 <th><label>Fecha: </label></th>
-                <th><input type="text" name="date" class="inputText" value="<?php echo $paquete->date?>" required></th>
+                <th><input type="text" name="date" class="inputText" value="<?php echo $paquete->date?>"></th>
             </tr>
             <tr>
                 <th><label>Stock: </label></th>
-                <th><input type="number" name="stock"  class="inputText" value="<?php echo $paquete->stock?>" required></th>
-            </tr>
-            <tr>
-                <th><label>Tipo de Producto: </label></th>
-                <th>
-                    <input type="radio" id="Cruceros" name="type" value="Cruceros" required>
-                    <label for="Cruceros">Cruceros</label>
-                    <input type="radio" id="Paquetes" name="type" value="Paquetes">
-                    <label for="Paquetes">Paquetes</label><br>
-                </th>
+                <th><input type="number" name="stock"  class="inputText" value="<?php echo $paquete->stock?>"></th>
             </tr>
             <tr>
                 <th><label>Subtipo de Producto: </label></th>

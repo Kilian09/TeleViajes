@@ -42,9 +42,6 @@ Route::get('/crearProducto', 'ProductController@crearProducto');
 Route::post('/addProducto', 'ProductController@addProducto');
 Route::get('/shopAdmin', 'ProductController@listaProductos');
 Route::get('/shopAdmin/eliminarProducto', 'ProductController@eliminarProducto');
-
-
-
 Route::get('/shopAdmin/actualizarProducto', 'ProductController@actualizarProducto');
 Route::post('/procesar_producto_actualizado', 'ProductController@procesar_producto_actualizado');
 

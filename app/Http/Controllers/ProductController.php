@@ -116,23 +116,30 @@ class ProductController extends Controller
      */
     public function procesar_producto_actualizado(){
         if(isset($_POST['idProducto'])) {
-            $product = Products::where('id',$_POST['idProducto'])->first();
 
-            if ($_POST['nombreProducto'] != "") {
-                $product->nombreProducto = $_POST['nombreProducto'];
+            $paquete = Paquetes::where('id_product',$_POST['idProducto'])->first();
+
+            if ($_POST['name'] != "") {
+                $paquete->name = $_POST['name'];
             }
-            if ($_POST['descripcionProducto'] != "") {
-                $product->descripcionProducto = $_POST['descripcionProducto'];
+            if ($_POST['description'] != "") {
+                $paquete->description = $_POST['description'];
             }
-            if ($_POST['precioProducto'] != "") {
-                $product->precioProducto = doubleval($_POST['precioProducto']);
+            if ($_POST['price'] != "") {
+                $paquete->price = doubleval($_POST['price']);
             }
-            if ($_POST['stockProducto'] != "") {
-                $product->stockProducto = doubleval($_POST['stockProducto']);
+            if ($_POST['date'] != "") {
+                $paquete->date = $_POST['date'];
+            }
+            if ($_POST['stock'] != "") {
+                $paquete->stock = $_POST['stock'];
+            }
+            if ($_POST['subtype'] != "") {
+                $paquete->type = $_POST['subtype'];
             }
 
-            $product->save();
-            return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $product->name . ' correctamente');
+            $paquete->save();
+            return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $paquete->name . ' correctamente');
         }
     }
 
