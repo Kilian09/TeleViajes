@@ -54,7 +54,8 @@ Route::get('/addCart/{id}','ShopController@obtenerId');
 Route::get('/vaciarCarrito','ShopController@vaciarCarrito');
 Route::get('/eliminarProductoCarrito/{id}','ShopController@eliminarProductoCarrito');
 
-
+//PAYPALCONTROLLER
+Route::get('/paypal/pay','paypalController@payWithPayPal');
 
 //USERCONTROLLER
 Route::post('/procesar_login', 'userController@procesar_login');

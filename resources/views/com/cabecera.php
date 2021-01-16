@@ -77,7 +77,7 @@ if (session()->has('product_id') == true) {
 
                        <?php } else if(session('carrito')!=null){
                        $data = session()->all();
-                       print_r($data);
+                      // print_r($data);
 
                        ?>
 
@@ -133,7 +133,7 @@ if (session()->has('product_id') == true) {
                           </th>
                                        <?php if(session()->has("user") == true){ ?>
                     <th>
-                        <hr><form method='get' action=''>
+                        <hr><form method='get' action='paypal/pay'>
                     <input type='submit' name='checkoutPaypal' value='Checkout Paypal'>
                    </form>
                     </th>
