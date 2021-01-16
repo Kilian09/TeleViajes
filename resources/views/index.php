@@ -113,7 +113,7 @@
         <div class="carousel slide" data-ride="carousel" id="carousel-1">
             <div class="carousel-inner">
                 <div class="carousel-item">
-                    <div class="jumbotron pulse animated hero-nature carousel-hero" style="background: url(&quot;assets/img/snorkeling-buceo-playa.jpg&quot;) repeat;background-size: contain;">
+                    <div class="jumbotron pulse animated hero-nature carousel-hero" style="background: url(&quot;assets/img/buceo1.jpg&quot;) ;background-size: 1400px;">
                         <h1 class="hero-title" style="display: block">Actividades</h1>
                         <p class="hero-subtitle" style="font-size: 20px;">Actividades de todo tipo y para todos.</p>
                         <p><a class="btn btn-primary hero-button plat" role="button" href="actividades">Ver actividades</a></p>
