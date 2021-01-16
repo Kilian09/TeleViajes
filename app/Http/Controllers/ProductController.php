@@ -136,7 +136,7 @@ class ProductController extends Controller
         $products = Products::get();
         $familias = Familia::get();
 
-        return view('/familias')
+        return view('/familia')
             ->with('products', $products)
             ->with('familias', $familias);
     }
