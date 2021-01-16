@@ -1,7 +1,8 @@
-
+<link rel="stylesheet" href="assets/css/styles.min.css">
 <?php
-session_start();
 
+
+session_start();
 if (session()->has('product_id') == true) {
     if (session()->has('amount') == true) {
 
@@ -80,7 +81,7 @@ if (session()->has('product_id') == true) {
 
                        ?>
 
-  <ul role="menu" class="dropdown-menu" style="left:auto;">
+  <ul role="menu" class="dropdown-menu text-white"  style="left:auto; background-color: #208f8f ">
 
                 <?php foreach ($data as $key => $valor) {
                 if(substr($key,0,5) == 'PROD_') {
@@ -175,6 +176,8 @@ if (session()->has('product_id') == true) {
                         <form method="get" action="eliminarProductoCarrito/<?php echo $prodID ?>">
                     <button type="submit"  class="badge badge-danger text-white">-</button></li>
                         </form>
+
+
                          </tbody>
                         <?php
                         }
@@ -183,19 +186,20 @@ if (session()->has('product_id') == true) {
 
 <tfoot>
 
-                                   <tr>
+                                   <tr><br>
+                                       <th style="padding: 10px">Total de la compra: <?php echo session('total') ?>€</th>
+                                       </tr>
                                        <th>
                                            <hr><form method='get' action='vaciarCarrito'>
-                    <input type='submit' name='Vaciar' value='Vaciar Carrito'>
+                    <input class="botoncarrito" type='submit' name='Vaciar' value='Vaciar Carrito'>
                    </form>
                           </th>
                                        <?php if(session()->has("user") == true){ ?>
                     <th>
                         <hr><form method='get' action='paypal/pay'>
-                    <input type='submit' name='checkoutPaypal' value='Checkout Paypal'>
+                    <input class="botoncarrito"type='submit' name='checkoutPaypal' value='Checkout Paypal'>
                    </form>
                     </th>
-
                                        <?php } ?>
                                    </tr>
                 <?php
