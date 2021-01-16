@@ -100,6 +100,7 @@ if(isset($id)){
                 <th><input type="text" name="subtype" class="inputText" value="<?php echo $cruise->type?>"></th>
             </tr>
             </tr>
+
             <?php }elseif($tipoControlador == 'Actividades'){
                 $activity = \App\Actividades::where('id_product', $id)->first(); ?>
                 <tr>
@@ -165,10 +166,139 @@ if(isset($id)){
                     <th><input type="text" name="subtype" class="inputText" value="<?php echo $escolares->type?>"></th>
                 </tr>
                 </tr>
+
+            <?php  }elseif($tipoControlador == 'Universitarios'){
+                $universitarios = \App\Universitarios::where('id_product', $id)->first(); ?>
+                <tr>
+                    <p>
+                    <th><label>Nombre del producto:</label></th>
+                    <th><input type="text" name="name"  class="inputText" value="<?php echo $universitarios->name?>"> </th>
+                    </p>
+                </tr>
+                <tr>
+                    <p>
+                    <th><label>Descripción:</label></th>
+                    <th><input type="text" name="description"  class="inputText" value="<?php echo $universitarios->description?>"></th>
+                    </p>
+                </tr>
+                <tr>
+                    <th><label>Precio del Producto en €: </label></th>
+                    <th><input type="number" name="price" class="inputText" value="<?php echo $universitarios->price?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Fecha: </label></th>
+                    <th><input type="text" name="date" class="inputText" value="<?php echo $universitarios->date?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Stock: </label></th>
+                    <th><input type="number" name="stock"  class="inputText" value="<?php echo $universitarios->stock?>"></th>
+                </tr>
+                <tr>
+                <tr>
+                    <th><label>Subtipo de Producto: </label></th>
+                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $universitarios->type?>"></th>
+                </tr>
+                </tr>
+
+            <?php  }elseif($tipoControlador == 'Vuelos'){
+                $vuelos = \App\Vuelos::where('id_product', $id)->first(); ?>
+                <tr>
+                    <p>
+                    <th><label>Nombre del producto:</label></th>
+                    <th><input type="text" name="name"  class="inputText" value="<?php echo $vuelos->name?>"> </th>
+                    </p>
+                </tr>
+                <tr>
+                    <p>
+                    <th><label>Descripción:</label></th>
+                    <th><input type="text" name="description"  class="inputText" value="<?php echo $vuelos->description?>"></th>
+                    </p>
+                </tr>
+                <tr>
+                    <th><label>Precio del Producto en €: </label></th>
+                    <th><input type="number" name="price" class="inputText" value="<?php echo $vuelos->price?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Fecha: </label></th>
+                    <th><input type="text" name="date" class="inputText" value="<?php echo $vuelos->date?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Stock: </label></th>
+                    <th><input type="number" name="stock"  class="inputText" value="<?php echo $vuelos->stock?>"></th>
+                </tr>
+                <tr>
+                <tr>
+                    <th><label>Subtipo de Producto: </label></th>
+                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $vuelos->type?>"></th>
+                </tr>
+                </tr>
+
+            <?php  }elseif($tipoControlador == 'Ancianos'){
+                $ancianos = \App\Ancianos::where('id_product', $id)->first(); ?>
+                <tr>
+                    <p>
+                    <th><label>Nombre del producto:</label></th>
+                    <th><input type="text" name="name"  class="inputText" value="<?php echo $ancianos->name?>"> </th>
+                    </p>
+                </tr>
+                <tr>
+                    <p>
+                    <th><label>Descripción:</label></th>
+                    <th><input type="text" name="description"  class="inputText" value="<?php echo $ancianos->description?>"></th>
+                    </p>
+                </tr>
+                <tr>
+                    <th><label>Precio del Producto en €: </label></th>
+                    <th><input type="number" name="price" class="inputText" value="<?php echo $ancianos->price?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Fecha: </label></th>
+                    <th><input type="text" name="date" class="inputText" value="<?php echo $ancianos->date?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Stock: </label></th>
+                    <th><input type="number" name="stock"  class="inputText" value="<?php echo $ancianos->stock?>"></th>
+                </tr>
+                <tr>
+                <tr>
+                    <th><label>Subtipo de Producto: </label></th>
+                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $ancianos->type?>"></th>
+                </tr>
+                </tr>
+
+            <?php  }elseif($tipoControlador == 'Familias'){
+                $familias = \App\Familia::where('id_product', $id)->first(); ?>
+                <tr>
+                    <p>
+                    <th><label>Nombre del producto:</label></th>
+                    <th><input type="text" name="name"  class="inputText" value="<?php echo $familias->name?>"> </th>
+                    </p>
+                </tr>
+                <tr>
+                    <p>
+                    <th><label>Descripción:</label></th>
+                    <th><input type="text" name="description"  class="inputText" value="<?php echo $familias->description?>"></th>
+                    </p>
+                </tr>
+                <tr>
+                    <th><label>Precio del Producto en €: </label></th>
+                    <th><input type="number" name="price" class="inputText" value="<?php echo $familias->price?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Fecha: </label></th>
+                    <th><input type="text" name="date" class="inputText" value="<?php echo $familias->date?>"></th>
+                </tr>
+                <tr>
+                    <th><label>Stock: </label></th>
+                    <th><input type="number" name="stock"  class="inputText" value="<?php echo $familias->stock?>"></th>
+                </tr>
+                <tr>
+                <tr>
+                    <th><label>Subtipo de Producto: </label></th>
+                    <th><input type="text" name="subtype" class="inputText" value="<?php echo $familias->type?>"></th>
+                </tr>
+                </tr>
             <?php }?>
-
-
-
 
 
             <?php }?>
