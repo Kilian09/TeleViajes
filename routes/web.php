@@ -73,6 +73,11 @@ Route::get('/usuario', function () {
 });
 
 //PRODUCTO
+
+
+Route::get('/listaproducto', function () {
+    return view('listaproducto');
+});
 Route::get('/listatransaciones', function () {
     return view('listatransaciones');
 });
