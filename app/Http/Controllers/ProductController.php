@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Actividades;
+use App\Ancianos;
 use App\Cruceros;
 use App\Escolares;
+use App\Familia;
 use App\Paquetes;
 use App\Products;
+use App\Universitarios;
+use App\Vuelos;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -26,6 +30,7 @@ class ProductController extends Controller
         $getnumProduct = count(Products::all());
         return $getnumProduct;
     }
+
     public function get_numTransc() {
 
         return  'Transacciones';
@@ -38,15 +43,21 @@ class ProductController extends Controller
         $cruises = Cruceros::get();
         $activities = Actividades::get();
         $escolares = Escolares::get();
-
+        $universitarios = Universitarios::get();
+        $vuelos = Vuelos::get();
+        $ancianos = Ancianos::get();
+        $familias = Familia::get();
 
         return view('/shopAdmin')
             ->with('products', $products)
             ->with('paquetes', $paquetes)
             ->with('cruises', $cruises)
             ->with('activities', $activities)
-            ->with('escolares', $escolares);
-
+            ->with('escolares', $escolares)
+            ->with('universitarios', $universitarios)
+            ->with('vuelos', $vuelos)
+            ->with('ancianos', $ancianos)
+            ->with('familias', $familias);
     }
 
     public function listaPaquetes()
@@ -77,6 +88,7 @@ class ProductController extends Controller
             ->with('products', $products)
             ->with('activities', $activities);
     }
+
     public function listaEscolares()
     {
         $products = Products::get();
@@ -85,6 +97,46 @@ class ProductController extends Controller
         return view('/escolares')
             ->with('products', $products)
             ->with('escolares', $escolares);
+    }
+
+    public function listaUniversitarios()
+    {
+        $products = Products::get();
+        $universitarios = Universitarios::get();
+
+        return view('/universitarios')
+            ->with('products', $products)
+            ->with('universitarios', $universitarios);
+    }
+
+    public function listaVuelos()
+    {
+        $products = Products::get();
+        $vuelos = Vuelos::get();
+
+        return view('/vuelos')
+            ->with('products', $products)
+            ->with('vuelos', $vuelos);
+    }
+
+    public function listaAncianos()
+    {
+        $products = Products::get();
+        $ancianos = Ancianos::get();
+
+        return view('/ancianos')
+            ->with('products', $products)
+            ->with('ancianos', $ancianos);
+    }
+
+    public function listaFamilias()
+    {
+        $products = Products::get();
+        $familias = Familia::get();
+
+        return view('/familias')
+            ->with('products', $products)
+            ->with('familias', $familias);
     }
 
 
@@ -111,6 +163,7 @@ class ProductController extends Controller
             $productType[3] = $_POST["price"];
             $productType[4] = $_POST["stock"];
             $productType[5] = $_POST["date"];
+
             if($productsData[1] == "Paquetes"){
 
                 $paquete = new Paquetes();
@@ -157,6 +210,49 @@ class ProductController extends Controller
                 $escolares->date = $productType[5];
                 $escolares->save();
 
+            }elseif ($productsData[1] == "Universitarios") {
+                $universitarios = new Universitarios();
+                $universitarios->id_product = $product->id;
+                $universitarios->name = $productType[0];
+                $universitarios->description = $productType[1];
+                $universitarios->type = $productType[2];
+                $universitarios->price = $productType[3];
+                $universitarios->stock = $productType[4];
+                $universitarios->date = $productType[5];
+                $universitarios->save();
+
+            }elseif ($productsData[1] == "Vuelos") {
+                $vuelos = new Vuelos();
+                $vuelos->id_product = $product->id;
+                $vuelos->name = $productType[0];
+                $vuelos->description = $productType[1];
+                $vuelos->type = $productType[2];
+                $vuelos->price = $productType[3];
+                $vuelos->stock = $productType[4];
+                $vuelos->date = $productType[5];
+                $vuelos->save();
+
+            }elseif ($productsData[1] == "Ancianos") {
+                $ancianos = new Ancianos();
+                $ancianos->id_product = $product->id;
+                $ancianos->name = $productType[0];
+                $ancianos->description = $productType[1];
+                $ancianos->type = $productType[2];
+                $ancianos->price = $productType[3];
+                $ancianos->stock = $productType[4];
+                $ancianos->date = $productType[5];
+                $ancianos->save();
+
+            }elseif ($productsData[1] == "Familias") {
+                $familias = new Familia();
+                $familias->id_product = $product->id;
+                $familias->name = $productType[0];
+                $familias->description = $productType[1];
+                $familias->type = $productType[2];
+                $familias->price = $productType[3];
+                $familias->stock = $productType[4];
+                $familias->date = $productType[5];
+                $familias->save();
             }else{
                 return redirect('/shopAdmin')->with('error', 'Tipo de Producto no disponible');
             }
@@ -259,6 +355,7 @@ class ProductController extends Controller
                 }
                 $activities->save();
                 return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $activities->name . ' correctamente');
+
             }elseif ($_POST['typeProducto'] == 'Escolares') {
                 $escolares = Escolares::where('id_product', $_POST['idProducto'])->first();
 
@@ -282,6 +379,102 @@ class ProductController extends Controller
                 }
                 $escolares->save();
                 return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $escolares->name . ' correctamente');
+
+            }elseif ($_POST['typeProducto'] == 'Universitarios') {
+                $universitarios = Universitarios::where('id_product', $_POST['idProducto'])->first();
+
+                if ($_POST['name'] != "") {
+                    $universitarios->name = $_POST['name'];
+                }
+                if ($_POST['description'] != "") {
+                    $universitarios->description = $_POST['description'];
+                }
+                if ($_POST['price'] != "") {
+                    $universitarios->price = doubleval($_POST['price']);
+                }
+                if ($_POST['date'] != "") {
+                    $universitarios->date = $_POST['date'];
+                }
+                if ($_POST['stock'] != "") {
+                    $universitarios->stock = $_POST['stock'];
+                }
+                if ($_POST['subtype'] != "") {
+                    $universitarios->type = $_POST['subtype'];
+                }
+                $universitarios->save();
+                return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $universitarios->name . ' correctamente');
+
+            }elseif ($_POST['typeProducto'] == 'Vuelos') {
+                $vuelos = Vuelos::where('id_product', $_POST['idProducto'])->first();
+
+                if ($_POST['name'] != "") {
+                    $vuelos->name = $_POST['name'];
+                }
+                if ($_POST['description'] != "") {
+                    $vuelos->description = $_POST['description'];
+                }
+                if ($_POST['price'] != "") {
+                    $vuelos->price = doubleval($_POST['price']);
+                }
+                if ($_POST['date'] != "") {
+                    $vuelos->date = $_POST['date'];
+                }
+                if ($_POST['stock'] != "") {
+                    $vuelos->stock = $_POST['stock'];
+                }
+                if ($_POST['subtype'] != "") {
+                    $vuelos->type = $_POST['subtype'];
+                }
+                $vuelos->save();
+                return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $vuelos->name . ' correctamente');
+
+            } elseif ($_POST['typeProducto'] == 'Ancianos') {
+                $ancianos = Ancianos::where('id_product', $_POST['idProducto'])->first();
+
+                if ($_POST['name'] != "") {
+                    $ancianos->name = $_POST['name'];
+                }
+                if ($_POST['description'] != "") {
+                    $ancianos->description = $_POST['description'];
+                }
+                if ($_POST['price'] != "") {
+                    $ancianos->price = doubleval($_POST['price']);
+                }
+                if ($_POST['date'] != "") {
+                    $ancianos->date = $_POST['date'];
+                }
+                if ($_POST['stock'] != "") {
+                    $ancianos->stock = $_POST['stock'];
+                }
+                if ($_POST['subtype'] != "") {
+                    $ancianos->type = $_POST['subtype'];
+                }
+                $ancianos->save();
+                return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $ancianos->name . ' correctamente');
+
+            }elseif ($_POST['typeProducto'] == 'Familias') {
+                $familias = Familia::where('id_product', $_POST['idProducto'])->first();
+
+                if ($_POST['name'] != "") {
+                    $familias->name = $_POST['name'];
+                }
+                if ($_POST['description'] != "") {
+                    $familias->description = $_POST['description'];
+                }
+                if ($_POST['price'] != "") {
+                    $familias->price = doubleval($_POST['price']);
+                }
+                if ($_POST['date'] != "") {
+                    $familias->date = $_POST['date'];
+                }
+                if ($_POST['stock'] != "") {
+                    $familias->stock = $_POST['stock'];
+                }
+                if ($_POST['subtype'] != "") {
+                    $familias->type = $_POST['subtype'];
+                }
+                $familias->save();
+                return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $familias->name . ' correctamente');
             }
         }
     }
