@@ -116,21 +116,21 @@
                     <div class="jumbotron pulse animated hero-nature carousel-hero" style="background: url(&quot;assets/img/snorkeling-buceo-playa.jpg&quot;) repeat;background-size: contain;">
                         <h1 class="hero-title" style="display: block">Actividades</h1>
                         <p class="hero-subtitle" style="font-size: 20px;">Actividades de todo tipo y para todos.</p>
-                        <p><a class="btn btn-primary hero-button plat" role="button" href="#">Ver actividades</a></p>
+                        <p><a class="btn btn-primary hero-button plat" role="button" href="actividades">Ver actividades</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="jumbotron pulse animated hero-photography carousel-hero" style="background: url(&quot;assets/img/el-origen-de-las-auroras-boreales-183012-1.jpg&quot;) center / cover;">
                         <h1 class="hero-title" style="display: block">Paquetes</h1>
                         <p class="hero-subtitle" style="font-size: 20px;">Gran cantidad de viajes con temáticas variadas para todos los gustos y todas las edades.</p>
-                        <p><a class="btn btn-primary hero-button plat" role="button" href="#">ver paquetes</a></p>
+                        <p><a class="btn btn-primary hero-button plat" role="button" href="paquetes">ver paquetes</a></p>
                     </div>
                 </div>
                 <div class="carousel-item active">
                     <div class="jumbotron pulse animated hero-technology carousel-hero" id="carousel" style="background: url(&quot;assets/img/cruce.jpg&quot;) center / auto;">
                         <h1 class="hero-title" style="display: block">Cruceros</h1>
                         <p class="hero-subtitle" style="font-size: 20px;color: var(--dark);">Cruceros por todo el mundo con las compañías más prestigiosas.</p>
-                        <p><a class="btn btn-primary hero-button plat" role="button" href="#">Ver cruceros</a></p>
+                        <p><a class="btn btn-primary hero-button plat" role="button" href="cruceros">Ver cruceros</a></p>
                     </div>
                 </div>
                 <div class="carousel-item">
