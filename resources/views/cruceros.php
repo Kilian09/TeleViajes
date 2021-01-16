@@ -24,52 +24,30 @@
                 <li data-target="#w_shop_105" data-slide-to="1"></li>
                 <li data-target="#w_shop_105" data-slide-to="2"></li>
             </ol>
+            <?php
+            if (isset($products, $cruises)){
+            foreach ($products as $product){
+            if($product->type == "Cruceros"){
+            foreach ($cruises as $cruise){
+            if($product->id == $cruise->id_product) {
+            ?>
+
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active"><img src="assets/img/medi.jpg" alt="w_shop_105_01" height="350" width="500">
                     <div class="w_shop_105_left_box"><span data-animation="animated fadeInLeft" style="font-family: roboto;">535.00€<br></span>
-                        <h1 class="left-h" data-animation="animated fadeInLeft">5 maravillas del mediterráneo</h1>
-                        <p data-animation="animated fadeInLeft">Lorem ipsum dolor sit amet onsectetuer adipiscing elit unc varius facilisis eros in velit quis arcu ornare laoreet urabitur adipiscing luctus massa.</p><a href="#" data-animation="animated fadeInLeft">Comprar</a>
+                        <h1 class="left-h" data-animation="animated fadeInLeft"><?php echo $cruise->name ?></h1>
+                        <p data-animation="animated fadeInLeft"> <?php echo $cruise->description ?>.</p><a href="#" data-animation="animated fadeInLeft">Comprar</a>
                     </div>
                     <div class="w_shop_105_right_box" data-animation="animated fadeInRight">
                         <ul>
-                            <li data-animation="animated fadeInRight">Salida desde barcelona</li>
-                            <li data-animation="animated fadeInRight">5 ciudades</li>
-                            <li data-animation="animated fadeInRight">7 dias</li>
-                            <li data-animation="animated fadeInRight">en semana santa</li>
-                            <li data-animation="animated fadeInRight">ideal para familias</li>
+                            <li data-animation="animated fadeInRight">Fechas: <?php echo $cruise->date ?></li>
+                            <li data-animation="animated fadeInRight">Precio: <?php echo $cruise->price ?></li>
+                            <li data-animation="animated fadeInRight">Disponibles: <?php echo $cruise->stock?></li>
                         </ul>
                     </div>
                 </div>
-                <div class="carousel-item"><img src="assets/img/cruce2.jpg" alt="w_shop_105_02">
-                    <div class="w_shop_105_left_box"><span data-animation="animated fadeInLeft" style="font-family: roboto;">$535.00</span>
-                        <h1 class="left-h" data-animation="animated fadeInLeft">product name and modal number</h1>
-                        <p data-animation="animated fadeInLeft">Lorem ipsum dolor sit amet onsectetuer adipiscing elit unc varius facilisis eros in velit quis arcu ornare laoreet urabitur adipiscing luctus massa.</p><a href="#" data-animation="animated fadeInLeft">order now</a>
-                    </div>
-                    <div class="w_shop_105_right_box" data-animation="animated fadeInRight">
-                        <ul>
-                            <li data-animation="animated fadeInRight">some features</li>
-                            <li data-animation="animated fadeInRight">some other features</li>
-                            <li data-animation="animated fadeInRight">some more features</li>
-                            <li data-animation="animated fadeInRight">other features</li>
-                            <li data-animation="animated fadeInRight">features and features</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="carousel-item"><img src="assets/img/w_shop_105_03.png" alt="w_shop_105_03">
-                    <div class="w_shop_105_left_box"><span data-animation="animated fadeInLeft" style="font-family: roboto;">$535.00</span>
-                        <h1 class="left-h" data-animation="animated fadeInLeft">product name and modal number</h1>
-                        <p data-animation="animated fadeInLeft">Lorem ipsum dolor sit amet onsectetuer adipiscing elit unc varius facilisis eros in velit quis arcu ornare laoreet urabitur adipiscing luctus massa.</p><a href="#" data-animation="animated fadeInLeft">order now</a>
-                    </div>
-                    <div class="w_shop_105_right_box" data-animation="animated fadeInRight">
-                        <ul>
-                            <li data-animation="animated fadeInRight">some features</li>
-                            <li data-animation="animated fadeInRight">some other features</li>
-                            <li data-animation="animated fadeInRight">some more features</li>
-                            <li data-animation="animated fadeInRight">other features</li>
-                            <li data-animation="animated fadeInRight">features and features</li>
-                        </ul>
-                    </div>
-                </div>
+                <?php }}}}} ?>
+
             </div>
         </div>
     </section>
@@ -79,3 +57,34 @@
 </body>
 
 </html>
+<div class="carousel-item"><img src="assets/img/cruce2.jpg" alt="w_shop_105_02">
+    <div class="w_shop_105_left_box"><span data-animation="animated fadeInLeft" style="font-family: roboto;">$535.00</span>
+        <h1 class="left-h" data-animation="animated fadeInLeft">product name and modal number</h1>
+        <p data-animation="animated fadeInLeft">Lorem ipsum dolor sit amet onsectetuer adipiscing elit unc varius facilisis eros in velit quis arcu ornare laoreet urabitur adipiscing luctus massa.</p><a href="#" data-animation="animated fadeInLeft">order now</a>
+    </div>
+    <div class="w_shop_105_right_box" data-animation="animated fadeInRight">
+        <ul>
+            <li data-animation="animated fadeInRight">some features</li>
+            <li data-animation="animated fadeInRight">some other features</li>
+            <li data-animation="animated fadeInRight">some more features</li>
+            <li data-animation="animated fadeInRight">other features</li>
+            <li data-animation="animated fadeInRight">features and features</li>
+        </ul>
+    </div>
+</div>
+
+<div class="carousel-item"><img src="assets/img/w_shop_105_03.png" alt="w_shop_105_03">
+    <div class="w_shop_105_left_box"><span data-animation="animated fadeInLeft" style="font-family: roboto;">$535.00</span>
+        <h1 class="left-h" data-animation="animated fadeInLeft">product name and modal number</h1>
+        <p data-animation="animated fadeInLeft">Lorem ipsum dolor sit amet onsectetuer adipiscing elit unc varius facilisis eros in velit quis arcu ornare laoreet urabitur adipiscing luctus massa.</p><a href="#" data-animation="animated fadeInLeft">order now</a>
+    </div>
+    <div class="w_shop_105_right_box" data-animation="animated fadeInRight">
+        <ul>
+            <li data-animation="animated fadeInRight">some features</li>
+            <li data-animation="animated fadeInRight">some other features</li>
+            <li data-animation="animated fadeInRight">some more features</li>
+            <li data-animation="animated fadeInRight">other features</li>
+            <li data-animation="animated fadeInRight">features and features</li>
+        </ul>
+    </div>
+</div>

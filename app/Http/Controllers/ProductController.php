@@ -50,6 +50,15 @@ class ProductController extends Controller
             ->with('products', $products)
             ->with('paquetes', $paquetes);
     }
+    public function listaCruceros()
+    {
+        $products = Products::get();
+        $cruises = Cruceros::get();
+
+        return view('/cruceros')
+            ->with('products', $products)
+            ->with('cruises', $cruises);
+    }
 
 
     public function addProducto(){
