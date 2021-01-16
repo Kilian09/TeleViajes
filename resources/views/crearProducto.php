@@ -69,8 +69,8 @@ if(session('username') == "admin"){
                     <input type="radio" id="Ancianos" name="type" value="Ancianos">
                     <label for="Ancianos">Ancianos</label><br>
 
-                    <input type="radio" id="Familia" name="type" value="Familia">
-                    <label for="Familia">Familia</label><br>
+                    <input type="radio" id="Familias" name="type" value="Familias">
+                    <label for="Familias">Familias</label><br>
 
                 </th>
             </tr>
