@@ -48,8 +48,9 @@
                 </span>
 
             <?php }else{  ?>
-                <span class="d-inline navbar-text actions"> <a class="d-inline login" href="login" >Iniciar Sesión</a>
-                <a class="btn btn-light d-inline action-button" role="button" href="register">Registrarse</a>
+                <span>
+                    <a class="btn btn-light d-inline action-button" role="button" href="login" >Iniciar Sesión</a>
+                    <a class="btn btn-light d-inline action-button" role="button" href="register">Registrarse</a>
                 </span>
             <?php } ?>
         </div>
