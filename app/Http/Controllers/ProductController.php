@@ -12,7 +12,10 @@ use App\Payment;
 use App\Products;
 use App\Universitarios;
 use App\Vuelos;
+use App\Orders;
+
 use Illuminate\Http\Request;
+use PayPal\Api\Order;
 
 class ProductController extends Controller
 {
@@ -141,6 +144,16 @@ class ProductController extends Controller
         return view('/familia')
             ->with('products', $products)
             ->with('familias', $familias);
+    }
+
+
+    public function datosUsuario()
+    {
+        $id = session('user');
+            $ordenes = Orders::where('user_id', $id)->get();
+
+        return view('/usuario')
+            ->with('orders', $ordenes);
     }
 
 

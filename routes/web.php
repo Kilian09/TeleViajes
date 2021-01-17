@@ -42,6 +42,7 @@ Route::get('/universitarios', 'ProductController@listaUniversitarios');
 Route::get('/', 'ProductController@listaVuelos');
 Route::get('/ancianos', 'ProductController@listaAncianos');
 Route::get('/familia', 'ProductController@listaFamilias');
+Route::get('/usuario', 'ProductController@datosUsuario');
 
 
 
@@ -53,6 +54,7 @@ Route::post('/procesar_producto_actualizado', 'ProductController@procesar_produc
 Route::get('/addCart/{id}','ShopController@obtenerId');
 Route::get('/vaciarCarrito','ShopController@vaciarCarrito');
 Route::get('/eliminarProductoCarrito/{id}','ShopController@eliminarProductoCarrito');
+Route::get('/listatransaciones', 'ShopController@listaTransaciones');
 
 //PAYPALCONTROLLER
 Route::get('/paypal/pay','paypalController@payWithPayPal');
@@ -70,13 +72,7 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-Route::get('/usuario', function () {
-    return view('usuario');
-});
-
-//PRODUCTO
 
 
 
-Route::get('/listatransaciones', 'ShopController@listaTransaciones');
 
