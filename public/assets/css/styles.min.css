@@ -160,11 +160,14 @@
     border-radius: 24px;
 }
 
-
-#derecha article{
-    margin-right: 1em;
-    margin-left: 1em;
+#derecha{
+    display: inline-block;
+    margin-left: 0;
+    width: 75%;
+    float: left;
+    margin-top: 20em;
 }
+
 
 #derecha article h1{
     text-align: left;

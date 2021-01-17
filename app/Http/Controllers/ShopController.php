@@ -169,7 +169,7 @@ class ShopController extends Controller
 
                 return redirect('/ancianos')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
 
-            }else if ($producto[0]['type'] == "Familia") {
+            }else if ($producto[0]['type'] == "Familias") {
 
                 $familia = Familia::where('id_product', $producto[0]['id'])->get();
 
