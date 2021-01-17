@@ -34,7 +34,8 @@ class ProductController extends Controller
 
     public function get_numTransc() {
 
-        return  'Transacciones';
+        $getnumProduct = count(Paquetes::all());
+        return $getnumProduct;
     }
 
 
