@@ -19,8 +19,9 @@
     <ul>
         <li><a class="active" href="shopAdmin">Productos</a></li>
         <li><a href="listatransaciones">Transacciones</a></li>
+        <li><a href="listaOrdenes">Órdenes</a></li>
+        <li><a href="ListaInventario">Inventario de Ventas</a></li>
         <li><a href="crearProducto">Crear Productos</a></li>
-
     </ul>
 </nav>
 

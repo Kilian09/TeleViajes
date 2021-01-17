@@ -17,9 +17,9 @@
 <nav id="vertical">
     <ul>
         <li><a  href="shopAdmin">Productos</a></li>
-        <li><a href="listatransaciones" class="active">Transacciones</a></li>
+        <li><a href="listatransaciones" >Transacciones</a></li>
         <li><a href="listaOrdenes">Órdenes</a></li>
-        <li><a href="ListaInventario">Inventario de Ventas</a></li>
+        <li><a href="ListaInventario" class="active">Inventario de Ventas</a></li>
         <li><a href="crearProducto">Crear Productos</a></li>
     </ul>
 </nav>
@@ -47,45 +47,40 @@
 </aside>
 
 <section class="main">
-    <article>
-        <h1 class="titulo">Listado de Transacciones </h1>
+    <article style="margin-top: 5em">
+        <h1 class="titulo">Inventario de Ventas </h1>
 
         <table id="example" class="table table-striped  table-bordered" width="100%" bgcolor="#a9a9a9"
                style="text-align: center">
             <thead>
             <tr>
-                <th>Id Transacciónn</th>
                 <th>Id Orden</th>
-                <th>Id Cliente</th>
-                <th>Email</th>
-                <th>Id Pago</th>
+                <th>Producto</th>
                 <th>Cantidad</th>
-                <th>Token</th>
                 <th>Fecha</th>
             </tr>
             </thead>
             <tbody>
 
             <?php
-            if (isset($transacciones)){
-            foreach ($transacciones
+            if (isset($ordersDet)){
+            foreach ($ordersDet
 
-            as $transaccion){ ?>
+            as $orderDet){ ?>
             <tr>
-                <td><?php echo $transaccion->id ?></td>
-                <td><?php echo $transaccion->order_id ?></td>
-                <td><?php echo $transaccion->payerId ?></td>
-                <td><?php echo $transaccion->email ?></td>
-                <td><?php echo $transaccion->paymentId ?></td>
-                <td><?php echo $transaccion->amount ?></td>
-                <td><?php echo $transaccion->token ?></td>
-                <td><?php echo $transaccion->created_at ?></td>
+                <td><?php echo $orderDet->order_id ?></td>
+                <td><?php echo $orderDet->product_id ?></td>
+                <td><?php echo $orderDet->amount ?></td>
+                <td><?php echo $orderDet->created_at ?></td>
+
                 <?php }
                 } ?>
 
             <tbody>
         </table>
     </article>
+
+
 </section>
 
 

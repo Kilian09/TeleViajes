@@ -21,8 +21,9 @@ if (session('username') == "admin"){
     <ul>
         <li><a href="shopAdmin">Productos</a></li>
         <li><a href="listatransaciones">Transacciones</a></li>
+        <li><a href="listaOrdenes">Órdenes</a></li>
+        <li><a href="ListaInventario">Inventario de Ventas</a></li>
         <li><a href="crearProducto" class="active">Crear Productos</a></li>
-
     </ul>
 </nav>
 <aside id="derecha">
@@ -123,11 +124,11 @@ if (session('username') == "admin"){
                 <tfoot>
                 <th>
                     <button class="buttonCancelar">
-                        <a href="shopAdmin" class="noDecoration">Cancelar</a>
+                        <a href="shopAdmin" class="noDecoration" class="botonesForm">Cancelar</a>
                     </button>
                 </th>
                 <th>
-                    <button type="submit" value="Editar" class="registrarOLogin">Crear</button>
+                    <button type="submit" value="Editar" class="botonesForm">Crear</button>
                 </th>
 
                 </tfoot>

@@ -22,14 +22,28 @@ class ShopController extends Controller
     public function listaTransaciones()
     {
 
-        $orders = Orders::get();
-        $ordersDet = OrderDetail::get();
         $transacciones = Payment::get();
 
         return view('/listatransaciones')
-            ->with('orders', $orders)
-            ->with('ordersDet', $ordersDet)
             ->with('transacciones', $transacciones);
+
+    }
+
+    public function listaOrdenes()
+    {
+        $orders = Orders::get();
+
+        return view('/listaOrdenes')
+            ->with('orders', $orders);
+
+    }
+
+    public function listaInventario()
+    {
+        $ordersDet = OrderDetail::get();
+
+        return view('/inventarioDeVentas')
+            ->with('ordersDet', $ordersDet);
 
     }
 
@@ -176,7 +190,6 @@ class ShopController extends Controller
                     $stockFamily = $familia[0]['stock'];
 
                     if ($stockFamily < $amount) {
-
                         return redirect('/familias')->with('error', 'No hay suficiente stock');
 
                     } else if ($stockFamily == 0) {
