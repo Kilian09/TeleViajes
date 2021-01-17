@@ -95,7 +95,7 @@ class ShopController extends Controller
                 session(['product_id' => $producto[0]['id']]);
                 session(['amount' => $amount]);
 
-                return redirect('/actvidades')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+                return redirect('/actividades')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
 
             }else if ($producto[0]['type'] == "Escolares") {
 

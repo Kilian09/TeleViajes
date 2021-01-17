@@ -96,7 +96,7 @@
             ?>
                 <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
                     <h3 class="name"><?php echo $vuelo->name ?></h3>
-                    <p class="description"> <?php echo $vuelo->description ?>. Del <?php echo $vuelo->date?>.<br> Por <?php echo $vuelo->price?>€.<br> Quedan <?php echo $vuelo->stock ?> plazas. </p>
+                    <p class="description"> <?php echo $vuelo->description ?>. Del <?php echo $vuelo->date?>.<br> Por <?php echo $vuelo->price?>€. Quedan <?php echo $vuelo->stock ?> plazas. </p>
 
                     <form method="get" action="/addCart/<?php echo $product->id ?>">
                     <input type="number" name="amount" min="1" value="1">

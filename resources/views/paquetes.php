@@ -61,7 +61,7 @@
                                 </div>
                         <?php }else if ($paquete->type == "Magicos"){ ?>
                             <div class="container" style="margin-top: 100px;">
-                                <h1>paquetes TEMÁTICOS</h1>
+                                <h1>Paquetes Temáticos</h1>
                                 <div class="card-group">
                                     <div class="card"><img class="card-img-top w-100 d-block" src="assets/img/disney.jpg" style="  width: 200px; height: 500px;">
                                         <div class="card-body">
