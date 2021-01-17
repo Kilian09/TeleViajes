@@ -130,88 +130,108 @@ class paypalController extends Controller
                     $orderDetail = new OrderDetail();
                     $orderDetail->order_id = $orders->id;
                     $orderDetail->product_id = $prodID;
-                    $orderDetail->amount = session('PROD_'.$prodID);
+                    $orderDetail->amount = session('PROD_' . $prodID);
                     $orderDetail->save();
 
 
-                    if ($producto->type = "Paquetes") {
+                    if ($producto[0]['type'] == "Paquetes") {
 
                         $paquetes = Paquetes::where('id_product', $producto[0]['id'])->get();
 
                         foreach ($paquetes as $paquete) {
 
-                            $paquete->stock = $paquete[0]['stock'];
+                            $result = $paquete->stock - session('PROD_' . $prodID);
+                            $paquete->stock = $result;
                             $paquete->save();
                         }
+
+                    } else if ($producto[0]['type'] == "Cruceros") {
+
+                        $cruceros = Cruceros::where('id_product', $producto[0]['id'])->get();
+
+                        foreach ($cruceros as $crucero) {
+                            $result = $crucero->stock - session('PROD_' . $prodID);
+                            $crucero->stock = $result;
+                            $crucero->save();
+                        }
+                    } else if ($producto[0]['type'] == "Actividades") {
+
+                        $actividades = Actividades::where('id_product', $producto[0]['id'])->get();
+
+                        foreach ($actividades as $actividad) {
+                            $result = $actividad->stock - session('PROD_' . $prodID);
+                            $actividad->stock = $result;
+                            $actividad->save();
+
+                        }
+                    } else if ($producto[0]['type'] == "Escolares") {
+
+                        $escolares = Escolares::where('id_product', $producto[0]['id'])->get();
+
+                        foreach ($escolares as $escolar) {
+                            $result = $escolar->stock - session('PROD_' . $prodID);
+                            $escolar->stock = $result;
+                            $escolar->save();
+                        }
+                        }else if ($producto[0]['type'] == "Universitarios") {
+
+                        $universitarios = Universitarios::where('id_product', $producto[0]['id'])->get();
+
+                        foreach ($universitarios as $universitario) {
+                            $result = $universitario->stock - session('PROD_' . $prodID);
+                            $universitario->stock = $result;
+                            $universitario->save();
+                        }
+                    } else if ($producto[0]['type'] == "Vuelos") {
+
+                        $vuelos = Vuelos::where('id_product', $producto[0]['id'])->get();
+
+                        foreach ($vuelos as $vuelo) {
+                            $result = $vuelo->stock - session('PROD_' . $prodID);
+                            $vuelo->stock = $result;
+                            $vuelo->save();
+                        }
+
+                        } else if ($producto[0]['type'] == "Ancianos") {
+
+                        $ancianos = Ancianos::where('id_product', $producto[0]['id'])->get();
+
+                        foreach ($ancianos as $anciano) {
+                            $result = $anciano->stock - session('PROD_' . $prodID);
+                            $anciano->stock = $result;
+                            $anciano->save();
                     }
 
-                    /*
-                    else if ($producto[0]['type'] = "Cruceros") {
+                        } else if ($producto[0]['type'] = "Familia") {
 
-                        $cruceros = Cruceros::where('id_product', $prodID)->get();
+                    $familias = Familia::where('id_product', $producto[0]['id'])->get();
 
-                        $stockFinal = $cruceros[0]['stock'] - session('PROD_'.$prodID);
-                        $cruceros->stock = $stockFinal;
-                        $cruceros->save();
-
-                    }else if ($producto[0]['type'] = "Actividades") {
-
-                        $actividades = Actividades::where('id_product', $prodID)->get();
-
-                        $stockFinal = $actividades[0]['stock'] - session('PROD_'.$prodID);
-                        $actividades->stock = $stockFinal;
-                        $actividades->save();
-
-                    }else if ($producto[0]['type'] = "Escolares") {
-
-                        $escolares = Escolares::where('id_product', $prodID)->get();
-
-                        $stockFinal = $escolares[0]['stock'] - session('PROD_'.$prodID);
-                        $escolares->stock = $stockFinal;
-                        $escolares->save();
-
-                    }else if ($producto[0]['type'] = "Universitarios") {
-
-                        $universitarios = Universitarios::where('id_product', $prodID)->get();
-
-                        $stockFinal = $universitarios[0]['stock'] - session('PROD_'.$prodID);
-                        $universitarios->stock = $stockFinal;
-                        $universitarios->save();
-
-                    }else if ($producto[0]['type'] = "Vuelos") {
-
-                        $vuelos = Vuelos::where('id_product', $prodID)->get();
-
-                        $stockFinal = $vuelos[0]['stock'] - session('PROD_'.$prodID);
-                        $vuelos->stock = $stockFinal;
-                        $vuelos->save();
-
-                    }else if ($producto[0]['type'] = "Ancianos") {
-
-                        $ancianos = Ancianos::where('id_product', $prodID)->get();
-
-                        $stockFinal = $ancianos[0]['stock'] - session('PROD_'.$prodID);
-                        $ancianos->stock = $stockFinal;
-                        $ancianos->save();
-
-                    }else if ($producto[0]['type'] = "Familia") {
-
-                        $familia = Familia::where('id_product', $prodID)->get();
-
-                        $stockFinal = $familia[0]['stock'] - session('PROD_'.$prodID);
-                        $familia->stock = $stockFinal;
-                        $familia->save();
+                        foreach ($familias as $familia) {
+                            $result = $familia->stock - session('PROD_' . $prodID);
+                            $familia->stock = $result;
+                            $familia->save();
+                }
 
                     }
-*/
 
+                }
 
+            }
+
+            $data = session()->all();
+
+            session()->forget(['total', 'totalAnterior', 'cantidadTotal', 'cantidadAnterior', 'carrito']);
+
+            foreach ($data as $key => $valor) {
+                if ($key[0] == 'P') {
+                    session()->forget($key);
                 }
             }
+
                     $status = 'Gracias! El pago a través de PayPal se ha ralizado correctamente.';
                     return redirect('/')->with('exito', $status);
-                }
 
+        }
                 $status = 'Lo sentimos! El pago a través de PayPal no se pudo realizar.';
                 return redirect('/')->with('error', $status);
             }
