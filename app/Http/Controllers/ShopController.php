@@ -7,7 +7,10 @@ use App\Ancianos;
 use App\Cruceros;
 use App\Escolares;
 use App\Familia;
+use App\OrderDetail;
+use App\Orders;
 use App\Paquetes;
+use App\Payment;
 use App\Products;
 use App\Universitarios;
 use App\Vuelos;
@@ -18,7 +21,18 @@ class ShopController extends Controller
 
     public function listaTransaciones()
     {
-        return view('/listatransaciones');
+
+        $orders = Orders::get();
+        $ordersDet = OrderDetail::get();
+
+        $transacciones = Payment::get();
+
+
+        return view('/listatransaciones')
+            ->with('orders',$orders)
+            ->with('ordersDet',$ordersDet)
+            ->with('transacciones', $transacciones);
+
     }
 
     public function obtenerId($id)

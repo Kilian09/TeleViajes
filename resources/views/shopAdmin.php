@@ -51,7 +51,7 @@
 
         <h1 class="titulo">Lista de Productos </h1>
 
-            <table id="example"  class="table table-striped  table-bordered" width="100%" bgcolor="#a9a9a9">
+            <table id="example"  class="table table-striped  table-bordered" width="100%" bgcolor="#a9a9a9" style="text-align: center">
             <thead>
             <tr>
                 <th>Id</th>
