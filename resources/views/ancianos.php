@@ -28,7 +28,7 @@
                             <div class="time-container left">
                                 <div class="time-content" style="background: url(&quot;assets/img/roma.jpg&quot;) bottom / cover;">
                                     <h2 class="text-right" style="color: var(--dark);"><?php echo $anciano->date ?></h2>
-                                    <p class="text-right" style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $anciano->nombre ?>.<br></p>
+                                    <p class="text-right" style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $anciano->name ?>.<br></p>
                                     <p><?php echo $anciano->description?>. Por solo <?php echo $anciano->price ?>. <?php echo $anciano->stock ?> plazas libres. <br></p>
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
@@ -42,7 +42,7 @@
                             <div class="time-container right">
                                 <div class="time-content" style="background: url(&quot;assets/img/roma.jpg&quot;) bottom / cover;">
                                     <h2 class="text-right" style="color: var(--dark);"><?php echo $anciano->date ?></h2>
-                                    <p class="text-right" style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $anciano->nombre ?>.<br></p>
+                                    <p class="text-right" style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $anciano->name ?>.<br></p>
                                     <p><?php echo $anciano->description?>. Por solo <?php echo $anciano->price ?>. <?php echo $anciano->stock ?> plazas libres. <br></p>
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
