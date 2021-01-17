@@ -86,7 +86,7 @@
                         </div>
                         <div class="col-sm-6 col-md-12 col-lg-6">
                             <h2 class="h4"><i class="fa fa-user"></i> Nuestra página</h2>
-                            <div><span>www.PONER UNA DIRECCION.com</span></div>
+                            <div><span>televiajes.test</span></div>
                             <hr class="d-sm-none d-md-block d-lg-none">
                         </div>
                         <div class="col-sm-6 col-md-12 col-lg-6">

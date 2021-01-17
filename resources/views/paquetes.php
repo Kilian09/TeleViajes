@@ -103,7 +103,7 @@
                                         <h4 class="card-title"
                                             style="color: rgb(34,33,33);"><?php echo $paquete->name ?></h4>
                                         <p class="card-text"
-                                           style="color: rgb(21,21,21);"><?php echo $paquete->description ?>></p>
+                                           style="color: rgb(21,21,21);"><?php echo $paquete->description ?></p>
                                         <p class="text-left card-text"
                                            style="color: rgb(21,21,21);"><?php echo $paquete->date ?></p>
                                         <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">

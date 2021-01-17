@@ -105,8 +105,8 @@
                         foreach ($vuelos as $vuelo) {
                             if ($product->id == $vuelo->id_product) {
                                 ?>
-                                <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid"
-                                                                                     src="assets/img/<?php echo $vuelo->name ?>.jpg" alt="<?php echo $vuelo->name ?>"></a>
+                                <div class="col-sm-6 col-md-4 item"><img class="img-fluid"
+                                                                                     src="assets/img/<?php echo $vuelo->name ?>.jpg" alt="<?php echo $vuelo->name ?>">
                                     <h3 class="name"><?php echo $vuelo->name ?></h3>
                                     <p class="description"> <?php echo $vuelo->description ?>.
                                         Del <?php echo $vuelo->date ?>.<br> Desde <?php echo $vuelo->price ?>€.
@@ -153,7 +153,7 @@
             </div>
             <div class="carousel-item active">
                 <div class="jumbotron pulse animated hero-technology carousel-hero" id="carousel"
-                     style="background: url(&quot;assets/img/cruce.jpg&quot;) center / auto;">
+                     style="background: url(&quot;assets/img/Crucero Noruega.jpg&quot;) center / auto;">
                     <h1 class="hero-title" style="display: block">Cruceros</h1>
                     <p class="hero-subtitle" style="font-size: 20px;color: var(--dark);">Cruceros por todo el mundo con
                         las compañías más prestigiosas.</p>

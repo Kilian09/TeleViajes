@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/contacto', function () {
+    return view('contacto');
+});
 
 //REDIRECCIONAMIENTO DE VISTAS A USERCONTROLLER
 Route::get('/login', 'userController@login');
@@ -68,9 +71,7 @@ Route::post('/procesar_contacto', 'userController@procesar_contacto');
 
 
 
-Route::get('/contacto', function () {
-    return view('contacto');
-});
+
 
 
 
