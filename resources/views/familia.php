@@ -32,8 +32,8 @@
                                     <p class="text-right"
                                        style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $familia->name ?>
                                         .<br></p>
-                                    <p><?php echo $familia->description ?>. Por solo <?php echo $familia->price ?>
-                                        . <?php echo $familia->stock ?> plazas libres. <br></p>
+                                    <p><?php echo $familia->description ?>. Desde solo <?php echo $familia->price ?>
+                                        €. <?php echo $familia->stock ?> plazas libres. <br></p>
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
                                         <input type="number" name="amount" value="1" min="1">
@@ -52,8 +52,8 @@
                                     <p class="text-right"
                                        style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $familia->name ?>
                                         .<br></p>
-                                    <p><?php echo $familia->description ?>. Por solo <?php echo $familia->price ?>
-                                        . <?php echo $familia->stock ?> plazas libres. <br></p>
+                                    <p><?php echo $familia->description ?>. Desde solo <?php echo $familia->price ?>
+                                        €. <?php echo $familia->stock ?> plazas libres. <br></p>
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
                                         <input type="number" name="amount" value="1" min="1">

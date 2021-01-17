@@ -48,12 +48,11 @@
 
                                                 <button class="fa fa-shopping-cart"
                                                         style="text-align: right;font-size: 20px;"></button>
-                                                <p class="figure-caption"><?php echo $universitario->description ?></p>
+                                                <p class="figure-caption">Desde solo <?php echo $universitario->price ?>
+                                                    €</p>
                                                 <input type="number" name="amount" value="1" min="1">
                                             </figcaption>
                                         </form>
-
-
                                     </figure>
                                 </div>
                             <?php }

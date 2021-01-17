@@ -35,7 +35,7 @@
                                         <div class="box-content">
                                             <h4 class="title"><?php echo $activity->name ?></h4>
                                             <p class="description"><?php echo $activity->description ?>.
-                                                Por <?php echo $activity->price ?>€ . <?php echo $activity->date ?>.
+                                                Desde <?php echo $activity->price ?>€. <?php echo $activity->date ?>.
                                                 Quedan <?php echo $activity->stock ?> plazas libres.</p>
                                             <ul class="social-links" style="text-align: center;">
 
@@ -78,7 +78,7 @@
                                         <div class="box-content">
                                             <h4 class="title"><?php echo $activity->name ?></h4>
                                             <p class="description"><?php echo $activity->description ?>.
-                                                Por <?php echo $activity->price ?>. <?php echo $activity->date ?>.
+                                                Desde <?php echo $activity->price ?>€. <?php echo $activity->date ?>.
                                                 Quedan <?php echo $activity->stock ?> plazas libres.</p>
                                             <ul class="social-links" style="text-align: center;">
 
@@ -123,7 +123,7 @@
                                         <div class="box-content">
                                             <h4 class="title"><?php echo $activity->name ?></h4>
                                             <p class="description"><?php echo $activity->description ?>.
-                                                Por <?php echo $activity->price ?>. <?php echo $activity->date ?>.
+                                                Desde <?php echo $activity->price ?>. <?php echo $activity->date ?>€.
                                                 Quedan <?php echo $activity->stock ?> plazas libres.</p>
                                             <ul class="social-links" style="text-align: center;">
 

@@ -168,6 +168,28 @@ class ShopController extends Controller
             session(['product_id' => $producto[0]['id']]);
             session(['amount' => $amount]);
 
+            if (session()->has('product_id') == true) {
+                if (session()->has('amount') == true) {
+
+                    //Añadir producto al carrito
+                    if (session('PROD_' . session('product_id')) != null) {
+                        $cantidad = session('PROD_' . session('product_id')) + session('amount');
+                        session(['PROD_' . session('product_id') => $cantidad]);
+
+                        session(['amountProducto' => session('PROD_' . session('product_id'))]);
+
+                        session()->forget(['product_id', 'amount']);
+
+                    } else
+                        session(['PROD_' . session('product_id') => session('amount')]);
+
+                    session(['amountProducto' => session('PROD_' . session('product_id'))]);
+
+                    session()->forget(['product_id', 'amount']);
+
+                }
+
+            }
 
             // Para ir a cada una de las vista dependiendo del tipo de product.
             switch ($tipoDeProducto) {

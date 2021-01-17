@@ -109,7 +109,7 @@
                                                                                      src="assets/img/desk.jpg"></a>
                                     <h3 class="name"><?php echo $vuelo->name ?></h3>
                                     <p class="description"> <?php echo $vuelo->description ?>.
-                                        Del <?php echo $vuelo->date ?>.<br> Por <?php echo $vuelo->price ?>€.
+                                        Del <?php echo $vuelo->date ?>.<br> Desde <?php echo $vuelo->price ?>€.
                                         Quedan <?php echo $vuelo->stock ?> plazas. </p>
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">

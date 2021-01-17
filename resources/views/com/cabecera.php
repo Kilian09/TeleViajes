@@ -1,30 +1,6 @@
 <?php
-
-
 session_start();
-if (session()->has('product_id') == true) {
-    if (session()->has('amount') == true) {
 
-        //Añadir producto al carrito
-        if (session('PROD_' . session('product_id')) != null) {
-            $cantidad = session('PROD_' . session('product_id')) + session('amount');
-            session(['PROD_' . session('product_id') => $cantidad]);
-
-            session(['amountProducto' => session('PROD_' . session('product_id'))]);
-
-            session()->forget(['product_id', 'amount']);
-
-
-        } else
-            session(['PROD_' . session('product_id') => session('amount')]);
-
-        session(['amountProducto' => session('PROD_' . session('product_id'))]);
-
-        session()->forget(['product_id', 'amount']);
-
-    }
-
-}
 ?>
 <nav class="navbar navbar-dark navbar-expand-md text-white bg-dark navigation-clean-button"
      style="width: 100%;height: 18%;">
@@ -100,7 +76,6 @@ if (session()->has('product_id') == true) {
                 if (substr($key, 0, 5) == 'PROD_') {
                 $prodID = substr($key, 5);
                 $producto = \App\Products::where('id', $prodID)->get();
-
 
                 ?>
                                <table>
