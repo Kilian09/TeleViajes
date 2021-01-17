@@ -26,7 +26,9 @@ if(session('username') == "admin"){
     </ul>
 </nav>
 <aside id="derecha">
-    <p>  Información actualizada en tiempo real:</p>
+
+    <article>
+    <h1>  Información actualizada en tiempo real:</h1>
 
     <p> Productos:
     <p id="products">
@@ -37,7 +39,8 @@ if(session('username') == "admin"){
     </p>
     </p>
 
-    <p>Ventas:
+
+    <p id="ajax"> Ventas:
     <p id="numTransc">
         <script>
             get_numTransc();
@@ -45,6 +48,8 @@ if(session('username') == "admin"){
         </script>
     </p>
     </p>
+
+    </article>
 </aside>
 
 <section class="main">
