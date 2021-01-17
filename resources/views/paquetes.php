@@ -50,7 +50,7 @@
                             if ($paquete->type == "Popular") { ?>
 
                                 <div class="card" style="margin: 1em; border: black 3px; border">
-                                    <img class="card-img-top w-100 d-block" src="assets/img/aurora4.jpg" style="  width: 200px; height: 500px;">
+                                    <img class="card-img-top w-100 d-block" src="assets/img/<?php echo $paquete->name ?>.jpg" alt="<?php echo $paquete->name ?>" style="  width: 200px; height: 500px;">
                                     <div class="card-body">
                                         <h4 class="card-title"
                                             style="color: rgb(34,33,33);"><?php echo $paquete->name ?></h4>
@@ -97,7 +97,7 @@
                         if ($product->id == $paquete->id_product) {
                             if ($paquete->type == "Magicos") { ?>
                                 <div class="card" style="margin: 1em; border: black 3px; border">
-                                    <img class="card-img-top w-100 d-block" src="assets/img/disney.jpg"
+                                    <img class="card-img-top w-100 d-block" src="assets/img/<?php echo $paquete->name ?>.jpg" alt="<?php echo $paquete->name ?>"
                                                        style="  width: 200px; height: 500px;">
                                     <div class="card-body">
                                         <h4 class="card-title"

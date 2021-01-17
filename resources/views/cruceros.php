@@ -31,7 +31,7 @@
 
                             <div class="carousel-inner" role="listbox" style="margin-top: 2em">
                                 <div class="carousel-item active">
-                                    <img src="assets/img/medi.jpg" alt="w_shop_105_01" height="350" width="500">
+                                    <img src="assets/img/<?php echo $cruise->name ?>.jpg" alt="<?php echo $cruise->name ?>" height="350" width="500">
                                     <div class="w_shop_105_left_box"><span data-animation="animated fadeInLeft"
                                                                            style="font-family: roboto;"> <?php echo $cruise->price ?>€ <br></span>
                                         <h1 class="left-h"

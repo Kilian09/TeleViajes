@@ -33,8 +33,8 @@
                                     <div class="col-md-3 col-sm-6">
                                         <div class="product-grid7">
                                             <div class="product-image7">
-                                                <img class="pic-1" src="assets/img/amsterdam.jpg">
-                                                <img class="pic-2" src="assets/img/barriorojo.jpg">
+                                                <img class="pic-1" src="assets/img/<?php echo $escolar->name ?>.jpg" alt="<?php echo $escolar->name ?>">
+                                                <img class="pic-2" src="assets/img/<?php echo $escolar->name ?>2.jpg" alt="2">
                                                 <ul class="social">
 
                                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
@@ -94,8 +94,8 @@
                                         <div class="col-md-3 col-sm-6">
                                             <div class="product-grid7">
                                                 <div class="product-image7">
-                                                    <img class="pic-1" src="assets/img/amsterdam.jpg">
-                                                    <img class="pic-2" src="assets/img/barriorojo.jpg">
+                                                    <img class="pic-1" src="assets/img/<?php echo $escolar->name ?>.jpg">
+                                                    <img class="pic-2" src="assets/img/<?php echo $escolar->name ?>2.jpg">
 
                                                     <ul class="social">
 

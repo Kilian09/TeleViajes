@@ -27,7 +27,7 @@
                             ?>
                             <div class="time-container left">
                                 <div class="time-content"
-                                     style="background: url(&quot;assets/img/roma.jpg&quot;) bottom / cover;">
+                                     style="background: url(&quot;assets/img/<?php echo $familia->name ?>.jpg&quot;) bottom / cover;">
                                     <h2 class="text-right" style="color: var(--dark);"><?php echo $familia->date ?></h2>
                                     <p class="text-right"
                                        style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $familia->name ?>
@@ -47,7 +47,7 @@
                             ?>
                             <div class="time-container right">
                                 <div class="time-content"
-                                     style="background: url(&quot;assets/img/roma.jpg&quot;) bottom / cover;">
+                                     style="background: url(&quot;assets/img/<?php echo $familia->name ?>.jpg&quot;) bottom / cover;">
                                     <h2 class="text-right" style="color: var(--dark);"><?php echo $familia->date ?></h2>
                                     <p class="text-right"
                                        style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $familia->name ?>

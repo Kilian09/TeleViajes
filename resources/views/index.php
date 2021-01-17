@@ -106,7 +106,7 @@
                             if ($product->id == $vuelo->id_product) {
                                 ?>
                                 <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid"
-                                                                                     src="assets/img/desk.jpg"></a>
+                                                                                     src="assets/img/<?php echo $vuelo->name ?>.jpg" alt="<?php echo $vuelo->name ?>"></a>
                                     <h3 class="name"><?php echo $vuelo->name ?></h3>
                                     <p class="description"> <?php echo $vuelo->description ?>.
                                         Del <?php echo $vuelo->date ?>.<br> Desde <?php echo $vuelo->price ?>€.

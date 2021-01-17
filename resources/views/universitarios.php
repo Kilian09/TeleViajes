@@ -40,8 +40,8 @@
                                 ?>
 
                                 <div class="justify-content-center spacer-slider">
-                                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/ultra.jpg"
-                                                                alt="alt text here">
+                                    <figure class="figure"><img class="img-fluid figure-img" src="assets/img/<?php echo $universitario->name ?>.jpg"
+                                                                alt="<?php echo $universitario->name ?>">
 
                                         <form method="get" action="/addCart/<?php echo $product->id ?>">
                                             <figcaption class="figure-caption"><?php echo $universitario->name ?>

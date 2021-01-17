@@ -30,7 +30,7 @@
 
                                 <div class="col-sm-6 col-md-4">
                                     <div class="box">
-                                        <div class="box-img"><img src="assets/img/esqui.jpg" alt="Montañismo"
+                                        <div class="box-img"><img src="assets/img/<?php echo $activity->name ?>.jpg" alt="<?php echo $activity->name ?>"
                                                                   style="text-align: center;"></div>
                                         <div class="box-content">
                                             <h4 class="title"><?php echo $activity->name ?></h4>
@@ -73,7 +73,7 @@
 
                                 <div class="col-sm-6 col-md-4">
                                     <div class="box">
-                                        <div class="box-img"><img src="assets/img/montaña 1.jpg" alt="Montañismo"
+                                        <div class="box-img"><img src="assets/img/<?php echo $activity->name ?>.jpg" alt="<?php echo $activity->name ?>"
                                                                   style="text-align: center;"></div>
                                         <div class="box-content">
                                             <h4 class="title"><?php echo $activity->name ?></h4>
@@ -118,7 +118,7 @@
 
                                 <div class="col-sm-6 col-md-4">
                                     <div class="box">
-                                        <div class="box-img"><img src="assets/img/paracaidismo.jpg" alt="Montañismo"
+                                        <div class="box-img"><img src="assets/img/<?php echo $activity->name ?>.jpg" alt="<?php echo $activity->name ?>"
                                                                   style="text-align: center;"></div>
                                         <div class="box-content">
                                             <h4 class="title"><?php echo $activity->name ?></h4>
