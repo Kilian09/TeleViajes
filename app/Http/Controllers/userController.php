@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\ContactForm;
 use App\Paquetes;
 use App\Products;
@@ -11,33 +12,48 @@ use Illuminate\Http\Request;
 
 class userController extends Controller
 {
-    public function login(){
+    public function login()
+    {
         return view('/login');
     }
 
-    public function register(){
+    public function register()
+    {
         return view('/register');
     }
-    public function cruceros(){
+
+    public function cruceros()
+    {
         return view('/cruceros');
     }
 
-    public function actividades(){
+    public function actividades()
+    {
         return view('/actividades');
     }
-    public function universitarios(){
+
+    public function universitarios()
+    {
         return view('/universitarios');
     }
-    public function ancianos(){
+
+    public function ancianos()
+    {
         return view('/ancianos');
     }
-    public function escolares(){
+
+    public function escolares()
+    {
         return view('/escolares');
     }
-    public function familia(){
+
+    public function familia()
+    {
         return view('/familia');
     }
-    public function paquetes(){
+
+    public function paquetes()
+    {
         return view('/paquetes');
     }
 
@@ -47,7 +63,7 @@ class userController extends Controller
      */
     public function procesar_registro()
     {
-        if (isset($_POST["nombreDeUsuario"],$_POST["nombre"],$_POST["apellidos"], $_POST["email"],
+        if (isset($_POST["nombreDeUsuario"], $_POST["nombre"], $_POST["apellidos"], $_POST["email"],
             $_POST["contra1"], $_POST["contra2"])) {
 
             $nombreDeUsuario = $_POST["nombreDeUsuario"];
@@ -62,22 +78,22 @@ class userController extends Controller
                 if (User::where('email', $email)->exists() && User::where('nombreDeUsuario', $nombreDeUsuario)->exists()) {
                     return view('register', ['emailExistente' => true], ['nombreDeUsuarioExistente' => true]);
                 } else {
-                        //insertar en BD usando clase Eloquent
-                        $datos = array();
-                        $datos[0] = $nombreDeUsuario;
-                        $datos[1] = $nombre;
-                        $datos[2] = $apellidos;
-                        $datos[3] = $email;
-                        $datos[4] = md5($contra1);
-                        $datos[5] = md5($contra2);
+                    //insertar en BD usando clase Eloquent
+                    $datos = array();
+                    $datos[0] = $nombreDeUsuario;
+                    $datos[1] = $nombre;
+                    $datos[2] = $apellidos;
+                    $datos[3] = $email;
+                    $datos[4] = md5($contra1);
+                    $datos[5] = md5($contra2);
 
-                        $usuario = new User(); //nombre del modelo User() que hace referencia a la tabla user
-                        $usuario->nombreDeUsuario = $datos[0];
-                        $usuario->nombre = $datos[1];
-                        $usuario->apellidos = $datos[2];
-                        $usuario->email = $datos[3];
-                        $usuario->password = $datos[4];
-                        $usuario->save();
+                    $usuario = new User(); //nombre del modelo User() que hace referencia a la tabla user
+                    $usuario->nombreDeUsuario = $datos[0];
+                    $usuario->nombre = $datos[1];
+                    $usuario->apellidos = $datos[2];
+                    $usuario->email = $datos[3];
+                    $usuario->password = $datos[4];
+                    $usuario->save();
                 }
             } else {
                 return view('register', ['contraseñaIncorrecta' => true]);
@@ -133,7 +149,7 @@ class userController extends Controller
 
     public function cerrar_session()
     {
-        session()->forget(['user', 'nombre','username']);  //elimina las sesiones
+        session()->forget(['user', 'nombre', 'username']);  //elimina las sesiones
         session()->flush();                     //elimina todos los datos de la sesion
         return view('index');
     }
@@ -141,7 +157,8 @@ class userController extends Controller
     /**
      * Comprobar
      */
-    public function procesar_contacto(){
+    public function procesar_contacto()
+    {
         if (isset($_POST["nombre"], $_POST["email"], $_POST["telefono"], $_POST["comentario"])) {
 
             $nombre = $_POST["nombre"];
@@ -149,28 +166,27 @@ class userController extends Controller
             $telefono = $_POST["telefono"];
             $comentario = $_POST["comentario"];
 
-                //revisar si el usuario esta registrado
+            //revisar si el usuario esta registrado
 
 
-                $datos = array();
-                $datos[0] = $nombre;
-                $datos[1] = $email;
-                $datos[2] = $telefono;
-                $datos[3] = $comentario;
+            $datos = array();
+            $datos[0] = $nombre;
+            $datos[1] = $email;
+            $datos[2] = $telefono;
+            $datos[3] = $comentario;
 
-                $contacto = new ContactForm(); //nombre del modelo ContactForm() que hace referencia a la tabla contact_form
+            $contacto = new ContactForm(); //nombre del modelo ContactForm() que hace referencia a la tabla contact_form
 
-                $contacto->nombre = $datos[0];
-                $contacto->email = $datos[1];
-                $contacto->telefono = $datos[2];
-                $contacto->comentario = $datos[3];
-                $contacto->save();
+            $contacto->nombre = $datos[0];
+            $contacto->email = $datos[1];
+            $contacto->telefono = $datos[2];
+            $contacto->comentario = $datos[3];
+            $contacto->save();
 
 
         }
         return redirect()->to("/contacto");
     }
-
 
 
 }

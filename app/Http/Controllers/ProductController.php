@@ -26,17 +26,20 @@ class ProductController extends Controller
     }
 
 
-    public function shopAdmin(){
+    public function shopAdmin()
+    {
 
         return view('/shopAdmin');
     }
 
-    public function numero_productos() {
+    public function numero_productos()
+    {
         $getnumProduct = count(Products::all());
         return $getnumProduct;
     }
 
-    public function get_numTransc() {
+    public function get_numTransc()
+    {
 
         $getnumProduct = count(Payment::all());
         return $getnumProduct;
@@ -76,6 +79,7 @@ class ProductController extends Controller
             ->with('products', $products)
             ->with('paquetes', $paquetes);
     }
+
     public function listaCruceros()
     {
         $products = Products::get();
@@ -150,15 +154,16 @@ class ProductController extends Controller
     public function datosUsuario()
     {
         $id = session('user');
-            $ordenes = Orders::where('user_id', $id)->get();
+        $ordenes = Orders::where('user_id', $id)->get();
 
         return view('/usuario')
             ->with('orders', $ordenes);
     }
 
 
-    public function addProducto(){
-        if (isset($_POST["type"], $_POST["name"], $_POST["description"], $_POST["subtype"], $_POST["price"], $_POST["stock"],$_POST["date"])) {
+    public function addProducto()
+    {
+        if (isset($_POST["type"], $_POST["name"], $_POST["description"], $_POST["subtype"], $_POST["price"], $_POST["stock"], $_POST["date"])) {
 
             $type = $_POST["type"];
 
@@ -181,7 +186,7 @@ class ProductController extends Controller
             $productType[4] = $_POST["stock"];
             $productType[5] = $_POST["date"];
 
-            if($productsData[1] == "Paquetes"){
+            if ($productsData[1] == "Paquetes") {
 
                 $paquete = new Paquetes();
                 $paquete->id_product = $product->id;
@@ -193,7 +198,7 @@ class ProductController extends Controller
                 $paquete->date = $productType[5];
                 $paquete->save();
 
-            }elseif($productsData[1] == "Cruceros") {
+            } elseif ($productsData[1] == "Cruceros") {
 
                 $cruise = new Cruceros();
                 $cruise->id_product = $product->id;
@@ -205,7 +210,7 @@ class ProductController extends Controller
                 $cruise->date = $productType[5];
                 $cruise->save();
 
-            }elseif ($productsData[1] == "Actividades") {
+            } elseif ($productsData[1] == "Actividades") {
                 $activity = new Actividades();
                 $activity->id_product = $product->id;
                 $activity->name = $productType[0];
@@ -216,7 +221,7 @@ class ProductController extends Controller
                 $activity->date = $productType[5];
                 $activity->save();
 
-            }elseif ($productsData[1] == "Escolares") {
+            } elseif ($productsData[1] == "Escolares") {
                 $escolares = new Escolares();
                 $escolares->id_product = $product->id;
                 $escolares->name = $productType[0];
@@ -227,7 +232,7 @@ class ProductController extends Controller
                 $escolares->date = $productType[5];
                 $escolares->save();
 
-            }elseif ($productsData[1] == "Universitarios") {
+            } elseif ($productsData[1] == "Universitarios") {
                 $universitarios = new Universitarios();
                 $universitarios->id_product = $product->id;
                 $universitarios->name = $productType[0];
@@ -238,7 +243,7 @@ class ProductController extends Controller
                 $universitarios->date = $productType[5];
                 $universitarios->save();
 
-            }elseif ($productsData[1] == "Vuelos") {
+            } elseif ($productsData[1] == "Vuelos") {
                 $vuelos = new Vuelos();
                 $vuelos->id_product = $product->id;
                 $vuelos->name = $productType[0];
@@ -249,7 +254,7 @@ class ProductController extends Controller
                 $vuelos->date = $productType[5];
                 $vuelos->save();
 
-            }elseif ($productsData[1] == "Ancianos") {
+            } elseif ($productsData[1] == "Ancianos") {
                 $ancianos = new Ancianos();
                 $ancianos->id_product = $product->id;
                 $ancianos->name = $productType[0];
@@ -260,7 +265,7 @@ class ProductController extends Controller
                 $ancianos->date = $productType[5];
                 $ancianos->save();
 
-            }elseif ($productsData[1] == "Familias") {
+            } elseif ($productsData[1] == "Familias") {
                 $familias = new Familia();
                 $familias->id_product = $product->id;
                 $familias->name = $productType[0];
@@ -270,13 +275,13 @@ class ProductController extends Controller
                 $familias->stock = $productType[4];
                 $familias->date = $productType[5];
                 $familias->save();
-            }else{
+            } else {
                 return redirect('/shopAdmin')->with('error', 'Tipo de Producto no disponible');
             }
 
-            return redirect('/shopAdmin')->with('exito','Se ha añadido el producto ' . $_POST['name']);
-        }else{
-            return redirect('/shopAdmin')->with('error','No se ha añadido el producto ' . $_POST['name']);
+            return redirect('/shopAdmin')->with('exito', 'Se ha añadido el producto ' . $_POST['name']);
+        } else {
+            return redirect('/shopAdmin')->with('error', 'No se ha añadido el producto ' . $_POST['name']);
         }
     }
 
@@ -285,7 +290,7 @@ class ProductController extends Controller
         if (isset($_GET['idProducto'])) {
             Products::where('id', $_GET['idProducto'])->first()->delete();
 
-            return redirect('/shopAdmin')->with('exito','Se ha eliminado el producto correctamente');
+            return redirect('/shopAdmin')->with('exito', 'Se ha eliminado el producto correctamente');
         }
     }
 
@@ -297,10 +302,11 @@ class ProductController extends Controller
     }
 
 
-    public function procesar_producto_actualizado(){
-        if(isset($_POST['idProducto'],$_POST['typeProducto'])) {
+    public function procesar_producto_actualizado()
+    {
+        if (isset($_POST['idProducto'], $_POST['typeProducto'])) {
 
-            if($_POST['typeProducto'] == 'Paquetes') {
+            if ($_POST['typeProducto'] == 'Paquetes') {
                 $paquete = Paquetes::where('id_product', $_POST['idProducto'])->first();
 
                 if ($_POST['name'] != "") {
@@ -322,10 +328,10 @@ class ProductController extends Controller
                     $paquete->type = $_POST['subtype'];
                 }
                 $paquete->save();
-                return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $paquete->name . ' correctamente');
+                return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $paquete->name . ' correctamente');
 
 
-            }elseif ($_POST['typeProducto'] == 'Cruceros'){
+            } elseif ($_POST['typeProducto'] == 'Cruceros') {
                 $cruise = Cruceros::where('id_product', $_POST['idProducto'])->first();
 
                 if ($_POST['name'] != "") {
@@ -347,9 +353,9 @@ class ProductController extends Controller
                     $cruise->type = $_POST['subtype'];
                 }
                 $cruise->save();
-                return redirect('/shopAdmin')->with('exito','Se ha editado el producto ' . $cruise->name . ' correctamente');
+                return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $cruise->name . ' correctamente');
 
-            }elseif ($_POST['typeProducto'] == 'Actividades') {
+            } elseif ($_POST['typeProducto'] == 'Actividades') {
                 $activities = Actividades::where('id_product', $_POST['idProducto'])->first();
 
                 if ($_POST['name'] != "") {
@@ -373,7 +379,7 @@ class ProductController extends Controller
                 $activities->save();
                 return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $activities->name . ' correctamente');
 
-            }elseif ($_POST['typeProducto'] == 'Escolares') {
+            } elseif ($_POST['typeProducto'] == 'Escolares') {
                 $escolares = Escolares::where('id_product', $_POST['idProducto'])->first();
 
                 if ($_POST['name'] != "") {
@@ -397,7 +403,7 @@ class ProductController extends Controller
                 $escolares->save();
                 return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $escolares->name . ' correctamente');
 
-            }elseif ($_POST['typeProducto'] == 'Universitarios') {
+            } elseif ($_POST['typeProducto'] == 'Universitarios') {
                 $universitarios = Universitarios::where('id_product', $_POST['idProducto'])->first();
 
                 if ($_POST['name'] != "") {
@@ -421,7 +427,7 @@ class ProductController extends Controller
                 $universitarios->save();
                 return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $universitarios->name . ' correctamente');
 
-            }elseif ($_POST['typeProducto'] == 'Vuelos') {
+            } elseif ($_POST['typeProducto'] == 'Vuelos') {
                 $vuelos = Vuelos::where('id_product', $_POST['idProducto'])->first();
 
                 if ($_POST['name'] != "") {
@@ -469,7 +475,7 @@ class ProductController extends Controller
                 $ancianos->save();
                 return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $ancianos->name . ' correctamente');
 
-            }elseif ($_POST['typeProducto'] == 'Familias') {
+            } elseif ($_POST['typeProducto'] == 'Familias') {
                 $familias = Familia::where('id_product', $_POST['idProducto'])->first();
 
                 if ($_POST['name'] != "") {
