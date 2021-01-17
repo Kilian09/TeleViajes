@@ -404,26 +404,26 @@ class ProductController extends Controller
 
                     $escolares = Escolares::where('id_product', $_POST['idProducto'])->first();
 
-                    if ($_POST['name'] != "") {
-                        $escolares->name = $_POST['name'];
-                    }
-                    if ($_POST['description'] != "") {
-                        $escolares->description = $_POST['description'];
-                    }
-                    if ($_POST['price'] != "") {
-                        $escolares->price = doubleval($_POST['price']);
-                    }
-                    if ($_POST['date'] != "") {
-                        $escolares->date = $_POST['date'];
-                    }
-                    if ($_POST['stock'] != "") {
-                        $escolares->stock = $_POST['stock'];
-                    }
-                    if ($_POST['subtype'] != "") {
-                        $escolares->type = $_POST['subtype'];
-                    }
-                    $escolares->save();
-                    return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $escolares->name . ' correctamente');
+                if ($_POST['name'] != "") {
+                    $escolares->name = $_POST['name'];
+                }
+                if ($_POST['description'] != "") {
+                    $escolares->description = $_POST['description'];
+                }
+                if ($_POST['price'] != "") {
+                    $escolares->price = doubleval($_POST['price']);
+                }
+                if ($_POST['date'] != "") {
+                    $escolares->date = $_POST['date'];
+                }
+                if ($_POST['stock'] != "") {
+                    $escolares->stock = $_POST['stock'];
+                }
+                if ($_POST['subtype'] != "") {
+                    $escolares->type = $_POST['subtype'];
+                }
+                $escolares->save();
+                return redirect('/shopAdmin')->with('exito', 'Se ha editado el producto ' . $escolares->name . ' correctamente');
 
                 case "Universitarios":
 

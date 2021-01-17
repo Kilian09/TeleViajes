@@ -18,11 +18,9 @@ Route::get('/', function () {
 });
 
 
-
 //REDIRECCIONAMIENTO DE VISTAS A USERCONTROLLER
 Route::get('/login', 'userController@login');
 Route::get('/register', 'userController@register');
-
 
 
 //PRODUCTCONTROLLER AJAX
@@ -45,27 +43,25 @@ Route::get('/familia', 'ProductController@listaFamilias');
 Route::get('/usuario', 'ProductController@datosUsuario');
 
 
-
 Route::get('/shopAdmin/eliminarProducto', 'ProductController@eliminarProducto');
 Route::get('/shopAdmin/actualizarProducto', 'ProductController@actualizarProducto');
 Route::post('/procesar_producto_actualizado', 'ProductController@procesar_producto_actualizado');
 
 //SHOPCONTROLLER
-Route::get('/addCart/{id}','ShopController@addCart');
-Route::get('/vaciarCarrito','ShopController@vaciarCarrito');
-Route::get('/eliminarProductoCarrito/{id}','ShopController@eliminarProductoCarrito');
+Route::get('/addCart/{id}', 'ShopController@addCart');
+Route::get('/vaciarCarrito', 'ShopController@vaciarCarrito');
+Route::get('/eliminarProductoCarrito/{id}', 'ShopController@eliminarProductoCarrito');
 Route::get('/listatransaciones', 'ShopController@listaTransaciones');
 
 //PAYPALCONTROLLER
-Route::get('/paypal/pay','paypalController@payWithPayPal');
-Route::get('/paypal/status','paypalController@payPalStatus');
+Route::get('/paypal/pay', 'paypalController@payWithPayPal');
+Route::get('/paypal/status', 'paypalController@payPalStatus');
 
 //USERCONTROLLER
 Route::post('/procesar_login', 'userController@procesar_login');
 Route::post('/procesar_registro', 'userController@procesar_registro');
-Route::get("/cerrar_session","UserController@cerrar_session");
+Route::get("/cerrar_session", "UserController@cerrar_session");
 Route::post('/procesar_contacto', 'userController@procesar_contacto');
-
 
 
 Route::get('/contacto', function () {

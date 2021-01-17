@@ -1,12 +1,9 @@
-
-
-
-
-
 <footer style="margin: 0;">
     <div class="row">
         <div class="col-sm-6 col-md-4 text-center footer-navigation">
-            <h3><img src="assets/img/logo%20(1).png" style="height: 75px;background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);width: 200px;"></h3>
+            <h3><img src="assets/img/logo%20(1).png"
+                     style="height: 75px;background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);width: 200px;">
+            </h3>
             <p class="links"><a href="#">Inicio</a><strong> · </strong><a href="#"></a><a href="#">Contacto</a></p>
             <p class="company-name">TeleViajes © 2020</p>
         </div>
@@ -18,7 +15,7 @@
                 <p class="footer-center-info email text-left">+34 630 267876&nbsp;</p>
             </div>
             <div><i class="fa fa-envelope footer-contacts-icon"></i>
-                <p> <a href="#" target="_blank">televiajes@ulpgc.com</a></p>
+                <p><a href="#" target="_blank">televiajes@ulpgc.com</a></p>
             </div>
         </div>
         <div class="clearfix"></div>
