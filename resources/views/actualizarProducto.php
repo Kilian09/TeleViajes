@@ -342,12 +342,11 @@ $tipoControlador = $product->type;
                 </tbody>
                 <tfoot id="btns">
                 <th>
-                    <button class="buttonCancelar">
-                        <a href="shopAdmin" class="noDecoration">Cancelar</a>
-                    </button>
+                    <button  type="reset" onclick="window.location.href='shopAdmin'" id="botonesUno">Cancelar</button>
                 </th>
+                <th></th>
                 <th>
-                    <button type="submit" value="Editar" class="registrarOLogin">Editar</button>
+                    <button type="submit" value="Editar" id="botonesdos">Crear</button>
                 </th>
                 </tfoot>
 
