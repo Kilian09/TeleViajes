@@ -5730,9 +5730,19 @@ button.swiper-pagination-bullet {
 }
 
 .main {
-    margin-top: 3em;
+    margin-top: 15em;
     margin-left: 13em;
     margin-right: 13em;
+}
+
+.botonesForm{
+    text-decoration: none;
+    color: white;
+    padding: 1em 2em 1em 2em;
+    text-align: center;
+    border: 1px solid white;
+    background: none;
+    margin-right: 15em;
 }
 
 .fondo {
