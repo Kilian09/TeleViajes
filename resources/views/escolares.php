@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>TELEVIAJES 2</title>
+    <title>Escolares</title>
 
     <?php include "com/estilos.php"?>
     <?php include "com/scripts.php"?>
@@ -17,17 +17,16 @@
 
 <div class="shopping-grid">
     <div class="container">
-        <h3 class="" align="center">Viajes de Invierno</h3>
-        <?php
-        if (isset($products, $escolares)){
-        foreach ($products as $product){
-        if($product->type == "Escolares"){
-        foreach ($escolares as $escolar){
-        if($product->id == $escolar->id_product) {
-        if($escolar->type == "Invierno"){?>
+        <h3 align="center">Viajes de Invierno</h3>
         <div class="row">
 
-
+<?php
+if (isset($products, $escolares)){
+    foreach ($products as $product){
+        if($product->type == "Escolares"){
+            foreach ($escolares as $escolar){
+                if($product->id == $escolar->id_product) {
+                    if($escolar->type == "Invierno"){?>
 
 
                     <div class="col-md-3 col-sm-6">
@@ -38,9 +37,8 @@
                                 <ul class="social">
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
+                                        <button type="submit"><i class="fa fa-shopping-cart"></i></button>
                                         <input type="hidden" name="amount" value="1" min="1">
-                                        <li><button type="submit"><i class="fa fa-shopping-cart"></i></button></li>
-
                                     </form>
 
                                 </ul>
@@ -48,7 +46,7 @@
                             </div>
 
                             <div class="product-content">
-                                <h3 class="title"><a href="#"><?php echo $escolar->name ?></a></h3>
+                                <h3 class="title"><?php echo $escolar->name ?></h3>
                                 <ul class="rating">
                                     <li class="fa fa-star"></li>
                                     <li class="fa fa-star"></li>
@@ -62,10 +60,9 @@
                     </div>
 
 
-
+<?php }}}}}} ?>
 
         </div>
-        <?php }}}}}} ?>
     </div>
 </div>
 
@@ -73,17 +70,16 @@
 
 <div class="shopping-grid">
     <div class="container">
-        <h3 class="" align="center">Viajes de Fin de Curso</h3>
-        <?php
-        if (isset($products, $escolares)){
+        <h3 align="center">Viajes de Fin de Curso</h3>
+        <div class="row">
+            <?php
+            if (isset($products, $escolares)){
             foreach ($products as $product){
-                if($product->type == "Escolares"){
-                    foreach ($escolares as $escolar){
-                        if($product->id == $escolar->id_product)
-                            if($escolar->type == "Verano"){{
-                                ?>
-
-                                <div class="row">
+            if($product->type == "Escolares"){
+            foreach ($escolares as $escolar){
+            if($product->id == $escolar->id_product)
+                if($escolar->type == "Verano"){{
+                ?>
 
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid7">
@@ -94,16 +90,15 @@
                         <ul class="social">
 
                             <form method="get" action="/addCart/<?php echo $product->id ?>">
+                                <button type="submit"><i class="fa fa-shopping-cart"></i></button>
                                 <input type="hidden" name="amount" value="1" min="1">
-                                <li><button type="submit"><i class="fa fa-shopping-cart"></i></button></li>
-
                             </form>
 
                         </ul>
                         <span class="product-new-label">New</span>
                     </div>
                     <div class="product-content">
-                        <h3 class="title"><a href="#"><?php echo $escolar->name ?></a></h3>
+                        <h3 class="title"><?php echo $escolar->name ?></h3>
                         <ul class="rating">
                             <li class="fa fa-star"></li>
                             <li class="fa fa-star"></li>
@@ -117,10 +112,9 @@
                 </div>
             </div>
 
+            <?php }}}}}} ?>
 
         </div>
-        <?php }}}}}} ?>
-
     </div>
 </div>
 

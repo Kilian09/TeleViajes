@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>TELEVIAJES 2</title>
+    <title>Ancianos</title>
 
     <?php include "com/estilos.php"?>
     <?php include "com/scripts.php"?>
@@ -33,7 +33,7 @@
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
                                         <input type="number" name="amount" value="1" min="1">
-                                        <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
+                                        <button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button>
                                     </form>
 
                                 </div>
@@ -47,7 +47,7 @@
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
                                         <input type="number" name="amount" value="1" min="1">
-                                        <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
+                                        <button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button>
                                     </form>
 
                                 </div>
@@ -56,8 +56,11 @@
 
                         <?php }}}}}} ?>
 
+
 </div>
 
 <?php include "com/pieDePagina.php"?>
+
+</body>
 
 </html>
