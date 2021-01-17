@@ -80,11 +80,7 @@
 }
 
 
-#derecha{
-    float: right;
-    width: 10em;
-    margin-top: 3em;
-}
+
 #vertical{
     float: left;
     width: 10em;
@@ -179,3 +175,4 @@
     text-align: left;
     font-weight: bold;
 }
+
