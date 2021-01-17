@@ -29,7 +29,7 @@ if (session('username') == "admin"){
 <aside id="derecha">
 
     <article>
-        <h1> Información actualizada en tiempo real:</h1>
+        <p> Información actualizada en tiempo real:</p>
 
         <p> Productos:
         <p id="products">
