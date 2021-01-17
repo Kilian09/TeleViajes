@@ -38,7 +38,7 @@
 
                             <form method="get" action="/addCart/<?php echo $product->id ?>">
                                 <input type="number" name="amount" value="1" min="1">
-                            <li><button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button></li>
+                            <button type="submit"><i class="fa fa-shopping-cart" style="font-size: 30px;"></i></button>
                             </form>
 
                         </ul>
