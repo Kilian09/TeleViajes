@@ -28,7 +28,7 @@
                             <div class="time-container left">
                                 <div class="time-content" style="background: url(&quot;assets/img/roma.jpg&quot;) bottom / cover;">
                                     <h2 class="text-right" style="color: var(--dark);"><?php echo $familia->date ?></h2>
-                                    <p class="text-right" style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $familia->nombre ?>.<br></p>
+                                    <p class="text-right" style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $familia->name ?>.<br></p>
                                     <p><?php echo $familia->description?>. Por solo <?php echo $familia->price ?>. <?php echo $familia->stock ?> plazas libres. <br></p>
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
@@ -42,7 +42,7 @@
                             <div class="time-container right">
                                 <div class="time-content" style="background: url(&quot;assets/img/roma.jpg&quot;) bottom / cover;">
                                     <h2 class="text-right" style="color: var(--dark);"><?php echo $familia->date ?></h2>
-                                    <p class="text-right" style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $familia->nombre ?>.<br></p>
+                                    <p class="text-right" style="color: var(--danger);text-align: left;font-family: Cabin, sans-serif;font-size: 18px;height: 32px;"><?php echo $familia->name ?>.<br></p>
                                     <p><?php echo $familia->description?>. Por solo <?php echo $familia->price ?>. <?php echo $familia->stock ?> plazas libres. <br></p>
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">

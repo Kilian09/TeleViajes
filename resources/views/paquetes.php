@@ -48,8 +48,8 @@
                                             <p class="card-text" style="color: rgb(21,21,21);"><?php echo $paquete->description ?></p>
                                             <p class="card-text" style="color: rgb(21,21,21);">&nbsp; <?php echo $paquete->date ?></p>
                                             <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">Por <?php echo $paquete->price ?>€</p>
-                                            <form method="get" action="/addCart/<?php echo $product->id ?>">
 
+                                            <form method="get" action="/addCart/<?php echo $product->id ?>">
                                             <input type="number" name="amount" value="1" min="1">
                                             <button class="btn btn-primary border rounded-pill" type="submit" style="margin-left: 32%;">¡Reserva ya!</button>
                                             </form>
@@ -59,9 +59,9 @@
                                 </div>
                                 </div>
                                 </div>
-                        <?php }else if ($paquete->type == "Magicos"){ ?>
                             <div class="container" style="margin-top: 100px;">
                                 <h1>Paquetes Temáticos</h1>
+    <?php }else{ ?>
                                 <div class="card-group">
                                     <div class="card"><img class="card-img-top w-100 d-block" src="assets/img/disney.jpg" style="  width: 200px; height: 500px;">
                                         <div class="card-body">

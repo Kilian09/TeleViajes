@@ -50,7 +50,7 @@ Route::get('/shopAdmin/actualizarProducto', 'ProductController@actualizarProduct
 Route::post('/procesar_producto_actualizado', 'ProductController@procesar_producto_actualizado');
 
 //SHOPCONTROLLER
-Route::get('/addCart/{id}','ShopController@obtenerId');
+Route::get('/addCart/{id}','ShopController@addCart');
 Route::get('/vaciarCarrito','ShopController@vaciarCarrito');
 Route::get('/eliminarProductoCarrito/{id}','ShopController@eliminarProductoCarrito');
 

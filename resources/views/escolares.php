@@ -18,15 +18,16 @@
 <div class="shopping-grid">
     <div class="container">
         <h3 class="" align="center">Viajes de Invierno</h3>
+        <?php
+        if (isset($products, $escolares)){
+        foreach ($products as $product){
+        if($product->type == "Escolares"){
+        foreach ($escolares as $escolar){
+        if($product->id == $escolar->id_product) {
+        if($escolar->type == "Invierno"){?>
         <div class="row">
 
-<?php
-if (isset($products, $escolares)){
-    foreach ($products as $product){
-        if($product->type == "Escolares"){
-            foreach ($escolares as $escolar){
-                if($product->id == $escolar->id_product) {
-                    if($escolar->type == "Invierno"){?>
+
 
 
                     <div class="col-md-3 col-sm-6">
@@ -37,8 +38,9 @@ if (isset($products, $escolares)){
                                 <ul class="social">
 
                                     <form method="get" action="/addCart/<?php echo $product->id ?>">
-                                        <li><button type="submit"><i class="fa fa-shopping-cart"></i></button></li>
                                         <input type="hidden" name="amount" value="1" min="1">
+                                        <li><button type="submit"><i class="fa fa-shopping-cart"></i></button></li>
+
                                     </form>
 
                                 </ul>
@@ -60,9 +62,10 @@ if (isset($products, $escolares)){
                     </div>
 
 
-<?php }}}}}} ?>
+
 
         </div>
+        <?php }}}}}} ?>
     </div>
 </div>
 
@@ -71,15 +74,16 @@ if (isset($products, $escolares)){
 <div class="shopping-grid">
     <div class="container">
         <h3 class="" align="center">Viajes de Fin de Curso</h3>
-        <div class="row">
-            <?php
-            if (isset($products, $escolares)){
+        <?php
+        if (isset($products, $escolares)){
             foreach ($products as $product){
-            if($product->type == "Escolares"){
-            foreach ($escolares as $escolar){
-            if($product->id == $escolar->id_product)
-                if($escolar->type == "Verano"){{
-                ?>
+                if($product->type == "Escolares"){
+                    foreach ($escolares as $escolar){
+                        if($product->id == $escolar->id_product)
+                            if($escolar->type == "Verano"){{
+                                ?>
+
+                                <div class="row">
 
             <div class="col-md-3 col-sm-6">
                 <div class="product-grid7">
@@ -90,8 +94,9 @@ if (isset($products, $escolares)){
                         <ul class="social">
 
                             <form method="get" action="/addCart/<?php echo $product->id ?>">
-                                <li><button type="submit"><i class="fa fa-shopping-cart"></i></button></li>
                                 <input type="hidden" name="amount" value="1" min="1">
+                                <li><button type="submit"><i class="fa fa-shopping-cart"></i></button></li>
+
                             </form>
 
                         </ul>
@@ -112,9 +117,10 @@ if (isset($products, $escolares)){
                 </div>
             </div>
 
-            <?php }}}}}} ?>
 
         </div>
+        <?php }}}}}} ?>
+
     </div>
 </div>
 

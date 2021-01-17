@@ -24,168 +24,178 @@ class ShopController extends Controller
 
         $orders = Orders::get();
         $ordersDet = OrderDetail::get();
-
         $transacciones = Payment::get();
 
 
         return view('/listatransaciones')
-            ->with('orders',$orders)
-            ->with('ordersDet',$ordersDet)
+            ->with('orders', $orders)
+            ->with('ordersDet', $ordersDet)
             ->with('transacciones', $transacciones);
 
     }
 
-    public function obtenerId($id)
+    public function addCart($id)
     {
         if (isset($_GET["amount"])) {
             $amount = $_GET["amount"];
 
             $producto = Products::where('id', $id)->get();
 
+            $tipoDeProducto = $producto[0]['type'];
 
-            if ($producto[0]['type'] == "Paquetes") {
+            switch ($tipoDeProducto) {
 
-                $paquete = Paquetes::where('id_product', $producto[0]['id'])->get();
+                case "Paquetes":
 
-                $totalPrice = ($amount * $paquete[0]['price']);
-                $result = $totalPrice + session('totalAnterior');
-                session(['totalAnterior' => $result]);
-                session(['total' => $result]);
+                    $paquete = Paquetes::where('id_product', $producto[0]['id'])->get();
 
-                $cantidadFinal = $amount + session('cantidadAnterior');
-                session(['cantidadAnterior' => $cantidadFinal]);
-                session(['cantidadTotal' => $cantidadFinal]);
+                    if ($paquete[0]['stock'] < $_GET["amount"]) {
 
-                session(['product_id' => $producto[0]['id']]);
-                session(['amount' => $amount]);
+                        return redirect('/paquetes')->with('error', 'No hay suficiente stock');
 
-                return redirect('/paquetes')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+                    } else {
+                        $totalPrice = ($amount * $paquete[0]['price']);
+                        break;
+                    }
 
-            } else if ($producto[0]['type'] == "Cruceros") {
 
-                $crucero = Cruceros::where('id_product', $producto[0]['id'])->get();
+                case "Cruceros":
 
-                $totalPrice = ($amount * $crucero[0]['price']);
-                $result = $totalPrice + session('totalAnterior');
-                session(['totalAnterior' => $result]);
-                session(['total' => $result]);
+                    $crucero = Cruceros::where('id_product', $producto[0]['id'])->get();
 
-                $cantidadFinal = $amount + session('cantidadAnterior');
-                session(['cantidadAnterior' => $cantidadFinal]);
-                session(['cantidadTotal' => $cantidadFinal]);
+                    if ($crucero[0]['stock'] < $_GET["amount"]) {
 
-                session(['product_id' => $producto[0]['id']]);
-                session(['amount' => $amount]);
+                        return redirect('/cruceros')->with('error', 'No hay suficiente stock');
 
-                return redirect('/cruceros')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+                    } else {
+                        $totalPrice = ($amount * $crucero[0]['price']);
+                        break;
+                    }
 
-            } else if ($producto[0]['type'] == "Actividades") {
 
-                $actividades = Actividades::where('id_product', $producto[0]['id'])->get();
+                case "Actividades" :
 
-                $totalPrice = ($amount * $actividades[0]['price']);
-                $result = $totalPrice + session('totalAnterior');
-                session(['totalAnterior' => $result]);
-                session(['total' => $result]);
+                    $actividad = Actividades::where('id_product', $producto[0]['id'])->get();
 
-                $cantidadFinal = $amount + session('cantidadAnterior');
-                session(['cantidadAnterior' => $cantidadFinal]);
-                session(['cantidadTotal' => $cantidadFinal]);
+                    if ($actividad[0]['stock'] < $_GET["amount"]) {
 
-                session(['product_id' => $producto[0]['id']]);
-                session(['amount' => $amount]);
+                        return redirect('/actividades')->with('error', 'No hay suficiente stock');
 
-                return redirect('/actividades')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+                    } else {
+                        $totalPrice = ($amount * $actividad[0]['price']);
+                        break;
+                    }
 
-            }else if ($producto[0]['type'] == "Escolares") {
 
-                $escolares = Escolares::where('id_product', $producto[0]['id'])->get();
+                case "Escolares":
 
-                $totalPrice = ($amount * $escolares[0]['price']);
-                $result = $totalPrice + session('totalAnterior');
-                session(['totalAnterior' => $result]);
-                session(['total' => $result]);
+                    $escolar = Escolares::where('id_product', $producto[0]['id'])->get();
 
-                $cantidadFinal = $amount + session('cantidadAnterior');
-                session(['cantidadAnterior' => $cantidadFinal]);
-                session(['cantidadTotal' => $cantidadFinal]);
+                    if ($escolar[0]['stock'] < $_GET["amount"]) {
 
-                session(['product_id' => $producto[0]['id']]);
-                session(['amount' => $amount]);
+                        return redirect('/escolares')->with('error', 'No hay suficiente stock');
 
-                return redirect('/escolares')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+                    } else {
+                        $totalPrice = ($amount * $escolar[0]['price']);
+                        break;
+                    }
 
-            }else if ($producto[0]['type'] == "Universitarios") {
 
-                $universitarios = Universitarios::where('id_product', $producto[0]['id'])->get();
+                case "Universitarios" :
 
-                $totalPrice = ($amount * $universitarios[0]['price']);
-                $result = $totalPrice + session('totalAnterior');
-                session(['totalAnterior' => $result]);
-                session(['total' => $result]);
+                    $universitario = Universitarios::where('id_product', $producto[0]['id'])->get();
 
-                $cantidadFinal = $amount + session('cantidadAnterior');
-                session(['cantidadAnterior' => $cantidadFinal]);
-                session(['cantidadTotal' => $cantidadFinal]);
+                    if ($universitario[0]['stock'] < $_GET["amount"]) {
 
-                session(['product_id' => $producto[0]['id']]);
-                session(['amount' => $amount]);
+                        return redirect('/universitarios')->with('error', 'No hay suficiente stock');
 
-                return redirect('/universitarios')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+                    } else {
+                        $totalPrice = ($amount * $universitario[0]['price']);
+                        break;
+                    }
 
-            }else if ($producto[0]['type'] == "Vuelos") {
 
-                $vuelos = Vuelos::where('id_product', $producto[0]['id'])->get();
+                case "Vuelos" :
 
-                $totalPrice = ($amount * $vuelos[0]['price']);
-                $result = $totalPrice + session('totalAnterior');
-                session(['totalAnterior' => $result]);
-                session(['total' => $result]);
+                    $vuelo = Vuelos::where('id_product', $producto[0]['id'])->get();
 
-                $cantidadFinal = $amount + session('cantidadAnterior');
-                session(['cantidadAnterior' => $cantidadFinal]);
-                session(['cantidadTotal' => $cantidadFinal]);
+                    if ($vuelo[0]['stock'] < $_GET["amount"]) {
 
-                session(['product_id' => $producto[0]['id']]);
-                session(['amount' => $amount]);
+                        return redirect('/')->with('error', 'No hay suficiente stock');
 
-                return redirect('/')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+                    } else {
+                        $totalPrice = $amount * $vuelo[0]['price'];
+                        break;
+                    }
 
-            }else if ($producto[0]['type'] == "Ancianos") {
 
-                $ancianos = Ancianos::where('id_product', $producto[0]['id'])->get();
+                case "Ancianos" :
 
-                $totalPrice = ($amount * $ancianos[0]['price']);
-                $result = $totalPrice + session('totalAnterior');
-                session(['totalAnterior' => $result]);
-                session(['total' => $result]);
+                    $anciano = Ancianos::where('id_product', $producto[0]['id'])->get();
 
-                $cantidadFinal = $amount + session('cantidadAnterior');
-                session(['cantidadAnterior' => $cantidadFinal]);
-                session(['cantidadTotal' => $cantidadFinal]);
+                    if ($anciano[0]['stock'] < $_GET["amount"]) {
 
-                session(['product_id' => $producto[0]['id']]);
-                session(['amount' => $amount]);
+                        return redirect('/ancianos')->with('error', 'No hay suficiente stock');
 
-                return redirect('/ancianos')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+                    } else {
+                        $totalPrice = $amount * $anciano[0]['price'];
+                        break;
+                    }
 
-            }else if ($producto[0]['type'] == "Familia") {
+                case "Familias":
 
-                $familia = Familia::where('id_product', $producto[0]['id'])->get();
+                    $familia = Familia::where('id_product', $producto[0]['id'])->get();
 
-                $totalPrice = ($amount * $familia[0]['price']);
-                $result = $totalPrice + session('totalAnterior');
-                session(['totalAnterior' => $result]);
-                session(['total' => $result]);
+                    if ($familia[0]['stock'] < $_GET["amount"]) {
 
-                $cantidadFinal = $amount + session('cantidadAnterior');
-                session(['cantidadAnterior' => $cantidadFinal]);
-                session(['cantidadTotal' => $cantidadFinal]);
+                        return redirect('/familias')->with('error', 'No hay suficiente stock');
 
-                session(['product_id' => $producto[0]['id']]);
-                session(['amount' => $amount]);
+                    } else {
+                        $totalPrice = ($amount * $familia[0]['price']);
+                        break;
+                    }
 
-                return redirect('/familia')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+            }
+
+            //Añadida la cantidad totaly el precio total al carrito mediante sesiones.
+            $result = $totalPrice + session('totalAnterior');
+            session(['totalAnterior' => $result]);
+            session(['total' => $result]);
+
+            $cantidadFinal = $amount + session('cantidadAnterior');
+            session(['cantidadAnterior' => $cantidadFinal]);
+            session(['cantidadTotal' => $cantidadFinal]);
+
+            session(['product_id' => $producto[0]['id']]);
+            session(['amount' => $amount]);
+
+
+            // Para ir a cada una de las vista dependiendo del tipo de product.
+            switch ($tipoDeProducto) {
+                case "Paquetes":
+                    return redirect('/paquetes')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+
+                case "Cruceros":
+                    return redirect('/cruceros')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+
+                case "Actividades" :
+                    return redirect('/actividades')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+
+                case "Escolares":
+                    return redirect('/escolares')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+
+                case "Universitarios" :
+                    return redirect('/universitarios')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+
+                case "Vuelos" :
+                    return redirect('/')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+
+                case "Ancianos" :
+                    return redirect('/ancianos')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+
+                case "Familias":
+                    return redirect('/familia')->with('exito', 'Se ha añadido ' . $_GET["amount"] . ' producto(s) al carrito');
+
             }
 
         }
@@ -197,20 +207,22 @@ class ShopController extends Controller
 
         session()->forget(['total', 'totalAnterior', 'cantidadTotal', 'cantidadAnterior', 'carrito']);
 
-
         foreach ($data as $key => $valor) {
             if ($key[0] == 'P') {
                 session()->forget($key);
             }
         }
 
-        return redirect('/')->with('exito','Se ha vaciado el carrito correctamente.');
+        return redirect('/')->with('exito', 'Se ha vaciado el carrito correctamente.');
     }
 
 
     public function eliminarProductoCarrito($id)
     {
         $producto = Products::where('id', $id)->get();
+
+
+
 
         if ($producto[0]['type'] == "Paquetes") {
 
@@ -231,9 +243,9 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/paquetes')->with('exito','Se ha eliminado el producto del carrito.');
+            return redirect('/paquetes')->with('exito', 'Se ha eliminado el producto del carrito.');
 
-        }else  if ($producto[0]['type'] == "Cruceros") {
+        } else if ($producto[0]['type'] == "Cruceros") {
 
             session(['amountProducto' => session('PROD_' . $id)]);
 
@@ -253,9 +265,9 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/cruceros')->with('exito','Se ha eliminado el producto del carrito.');
+            return redirect('/cruceros')->with('exito', 'Se ha eliminado el producto del carrito.');
 
-        }else if ($producto[0]['type'] == "Actividades") {
+        } else if ($producto[0]['type'] == "Actividades") {
 
             session(['amountProducto' => session('PROD_' . $id)]);
 
@@ -275,9 +287,9 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/actividades')->with('exito','Se ha eliminado el producto del carrito.');
+            return redirect('/actividades')->with('exito', 'Se ha eliminado el producto del carrito.');
 
-        }else if ($producto[0]['type'] == "Escolares") {
+        } else if ($producto[0]['type'] == "Escolares") {
 
             session(['amountProducto' => session('PROD_' . $id)]);
 
@@ -297,9 +309,9 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/escolares')->with('exito','Se ha eliminado el producto del carrito.');
+            return redirect('/escolares')->with('exito', 'Se ha eliminado el producto del carrito.');
 
-        }else if ($producto[0]['type'] == "Universitarios") {
+        } else if ($producto[0]['type'] == "Universitarios") {
 
             session(['amountProducto' => session('PROD_' . $id)]);
 
@@ -319,9 +331,9 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/universitarios')->with('exito','Se ha eliminado el producto del carrito.');
+            return redirect('/universitarios')->with('exito', 'Se ha eliminado el producto del carrito.');
 
-        }else if ($producto[0]['type'] == "Vuelos") {
+        } else if ($producto[0]['type'] == "Vuelos") {
 
             session(['amountProducto' => session('PROD_' . $id)]);
 
@@ -341,9 +353,9 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/')->with('exito','Se ha eliminado el producto del carrito.');
+            return redirect('/')->with('exito', 'Se ha eliminado el producto del carrito.');
 
-        }else if ($producto[0]['type'] == "Ancianos") {
+        } else if ($producto[0]['type'] == "Ancianos") {
 
             session(['amountProducto' => session('PROD_' . $id)]);
 
@@ -363,9 +375,9 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/ancianos')->with('exito','Se ha eliminado el producto del carrito.');
+            return redirect('/ancianos')->with('exito', 'Se ha eliminado el producto del carrito.');
 
-        }else if ($producto[0]['type'] == "Familia") {
+        } else if ($producto[0]['type'] == "Familia") {
 
             session(['amountProducto' => session('PROD_' . $id)]);
 
@@ -385,7 +397,7 @@ class ShopController extends Controller
             session(['cantidadAnterior' => $result]);
             session(['cantidadTotal' => $result]);
 
-            return redirect('/familia')->with('exito','Se ha eliminado el producto del carrito.');
+            return redirect('/familia')->with('exito', 'Se ha eliminado el producto del carrito.');
         }
     }
 

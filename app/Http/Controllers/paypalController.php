@@ -125,6 +125,7 @@ class paypalController extends Controller
             foreach ($datos as $producto => $cantidad) {
                 if (substr($producto, 0, 5) == 'PROD_') {
                     $prodID = substr($producto, 5);
+
                     $producto = Products::where('id', $prodID)->get();
 
                     $orderDetail = new OrderDetail();
@@ -133,88 +134,101 @@ class paypalController extends Controller
                     $orderDetail->amount = session('PROD_' . $prodID);
                     $orderDetail->save();
 
+                    $productType = $producto[0]['type'];
 
-                    if ($producto[0]['type'] == "Paquetes") {
+                    switch ($productType) {
 
-                        $paquetes = Paquetes::where('id_product', $producto[0]['id'])->get();
+                        case "Paquetes";
 
-                        foreach ($paquetes as $paquete) {
+                            $paquetes = Paquetes::where('id_product', $producto[0]['id'])->get();
 
-                            $result = $paquete->stock - session('PROD_' . $prodID);
-                            $paquete->stock = $result;
-                            $paquete->save();
-                        }
+                            foreach ($paquetes as $paquete) {
+                                $result = $paquete->stock - session('PROD_' . $prodID);
+                                $paquete->stock = $result;
+                                $paquete->save();
+                            }
+                            break;
 
-                    } else if ($producto[0]['type'] == "Cruceros") {
+                        case "Cruceros":
 
-                        $cruceros = Cruceros::where('id_product', $producto[0]['id'])->get();
+                            $cruceros = Cruceros::where('id_product', $producto[0]['id'])->get();
 
-                        foreach ($cruceros as $crucero) {
-                            $result = $crucero->stock - session('PROD_' . $prodID);
-                            $crucero->stock = $result;
-                            $crucero->save();
-                        }
-                    } else if ($producto[0]['type'] == "Actividades") {
+                            foreach ($cruceros as $crucero) {
+                                $result = $crucero->stock - session('PROD_' . $prodID);
+                                $crucero->stock = $result;
+                                $crucero->save();
+                            }
+                            break;
 
-                        $actividades = Actividades::where('id_product', $producto[0]['id'])->get();
+                        case  "Actividades":
 
-                        foreach ($actividades as $actividad) {
-                            $result = $actividad->stock - session('PROD_' . $prodID);
-                            $actividad->stock = $result;
-                            $actividad->save();
+                            $actividades = Actividades::where('id_product', $producto[0]['id'])->get();
 
-                        }
-                    } else if ($producto[0]['type'] == "Escolares") {
+                            foreach ($actividades as $actividad) {
+                                $result = $actividad->stock - session('PROD_' . $prodID);
+                                $actividad->stock = $result;
+                                $actividad->save();
+                            }
+                            break;
 
-                        $escolares = Escolares::where('id_product', $producto[0]['id'])->get();
+                        case"Escolares":
 
-                        foreach ($escolares as $escolar) {
-                            $result = $escolar->stock - session('PROD_' . $prodID);
-                            $escolar->stock = $result;
-                            $escolar->save();
-                        }
-                        }else if ($producto[0]['type'] == "Universitarios") {
+                            $escolares = Escolares::where('id_product', $producto[0]['id'])->get();
 
-                        $universitarios = Universitarios::where('id_product', $producto[0]['id'])->get();
+                            foreach ($escolares as $escolar) {
+                                $result = $escolar->stock - session('PROD_' . $prodID);
+                                $escolar->stock = $result;
+                                $escolar->save();
+                            }
+                            break;
 
-                        foreach ($universitarios as $universitario) {
-                            $result = $universitario->stock - session('PROD_' . $prodID);
-                            $universitario->stock = $result;
-                            $universitario->save();
-                        }
-                    } else if ($producto[0]['type'] == "Vuelos") {
+                        case "Universitarios":
 
-                        $vuelos = Vuelos::where('id_product', $producto[0]['id'])->get();
+                            $universitarios = Universitarios::where('id_product', $producto[0]['id'])->get();
 
-                        foreach ($vuelos as $vuelo) {
-                            $result = $vuelo->stock - session('PROD_' . $prodID);
-                            $vuelo->stock = $result;
-                            $vuelo->save();
-                        }
+                            foreach ($universitarios as $universitario) {
+                                $result = $universitario->stock - session('PROD_' . $prodID);
+                                $universitario->stock = $result;
+                                $universitario->save();
+                            }
+                            break;
 
-                        } else if ($producto[0]['type'] == "Ancianos") {
+                        case "Vuelos":
 
-                        $ancianos = Ancianos::where('id_product', $producto[0]['id'])->get();
+                            $vuelos = Vuelos::where('id_product', $producto[0]['id'])->get();
 
-                        foreach ($ancianos as $anciano) {
-                            $result = $anciano->stock - session('PROD_' . $prodID);
-                            $anciano->stock = $result;
-                            $anciano->save();
+                            foreach ($vuelos as $vuelo) {
+                                $result = $vuelo->stock - session('PROD_' . $prodID);
+                                $vuelo->stock = $result;
+                                $vuelo->save();
+                            }
+                            break;
+
+                        case "Ancianos":
+
+                            $ancianos = Ancianos::where('id_product', $producto[0]['id'])->get();
+
+                            foreach ($ancianos as $anciano) {
+                                $result = $anciano->stock - session('PROD_' . $prodID);
+                                $anciano->stock = $result;
+                                $anciano->save();
+                            }
+                            break;
+
+                        case "Familia":
+
+                            $familias = Familia::where('id_product', $producto[0]['id'])->get();
+
+                            foreach ($familias as $familia) {
+                                $result = $familia->stock - session('PROD_' . $prodID);
+                                $familia->stock = $result;
+                                $familia->save();
+                            }
+                            break;
+
                     }
-
-                        } else if ($producto[0]['type'] = "Familia") {
-
-                    $familias = Familia::where('id_product', $producto[0]['id'])->get();
-
-                        foreach ($familias as $familia) {
-                            $result = $familia->stock - session('PROD_' . $prodID);
-                            $familia->stock = $result;
-                            $familia->save();
                 }
 
-                    }
-
-                }
 
             }
 
@@ -228,16 +242,18 @@ class paypalController extends Controller
                 }
             }
 
-                    $status = 'Gracias! El pago a través de PayPal se ha ralizado correctamente.';
-                    return redirect('/')->with('exito', $status);
-
+            $status = 'Gracias! El pago a través de PayPal se ha ralizado correctamente.';
+            return redirect('/')->with('exito', $status);
         }
-                $status = 'Lo sentimos! El pago a través de PayPal no se pudo realizar.';
-                return redirect('/')->with('error', $status);
-            }
+        $status = 'Lo sentimos! El pago a través de PayPal no se pudo realizar.';
+        return redirect('/')->with('error', $status);
 
+    }
 
 }
+
+
+
 
 
 

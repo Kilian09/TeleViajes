@@ -80,7 +80,7 @@ if (session()->has('product_id') == true) {
 
                        <?php } else if(session('carrito')!=null){
                        $data = session()->all();
-                      // print_r($data);
+                       //print_r($data);
 
                        ?>
 
@@ -168,7 +168,7 @@ if (session()->has('product_id') == true) {
                                    </tr>
                               <tr>
                                 <?php
-                                }else if($producto[0]['type'] == "Familia"){
+                                }else if($producto[0]['type'] == "Familias"){
 
                                     $familia = \App\Familia::where('id_product',$prodID)->get();
 

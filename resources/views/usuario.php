@@ -35,7 +35,7 @@ foreach ($ordenes->items() as $orden) {
     echo '<article class="Usuario">';
     echo '<div >';
     echo '<p>Nombre Usuario: ' . strtoupper(session("username")). '</p>';
-    echo '<p>Descripcion del producto:  </p>';
+    echo '<p>Descripcion del producto: order-> </p>';
     echo '<p>Paquete: </p>';
 
 
