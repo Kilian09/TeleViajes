@@ -103,7 +103,7 @@
         } ?>
     </div>
 </div>
-
+<br><br><br><br><br>
 <div class="container" style="padding-top: 30px;">
     <h1>las actividades más salvajes</h1>
     <div class="row">
@@ -148,6 +148,7 @@
         } ?>
     </div>
 </div>
+<br>
 
 <?php include "com/pieDePagina.php" ?>
 
