@@ -8,6 +8,7 @@ use App\Cruceros;
 use App\Escolares;
 use App\Familia;
 use App\Paquetes;
+use App\Payment;
 use App\Products;
 use App\Universitarios;
 use App\Vuelos;
@@ -34,7 +35,7 @@ class ProductController extends Controller
 
     public function get_numTransc() {
 
-        $getnumProduct = count(Paquetes::all());
+        $getnumProduct = count(Payment::all());
         return $getnumProduct;
     }
 
