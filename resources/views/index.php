@@ -139,7 +139,7 @@
                     <div class="jumbotron pulse animated hero-technology carousel-hero" style="background: url(&quot;assets/img/grupo.jpg&quot;) center;">
                         <h1 class="hero-title" style="display: block">Grupos</h1>
                         <p class="hero-subtitle">Viajes organizados especializados para cada tipo de grupo.&nbsp;</p>
-                        <p><a class="btn btn-primary hero-button plat" role="button" href="#">Ver grupos</a></p>
+                        <p><a class="btn btn-primary hero-button plat" role="button" href="universitarios">Ver grupos</a></p>
                     </div>
                 </div>
             </div>
