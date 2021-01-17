@@ -63,9 +63,7 @@ class userController extends Controller
     }
 
 
-    /**
-     * DONE
-     */
+
     public function procesar_registro()
     {
         if (isset($_POST["nombreDeUsuario"], $_POST["nombre"], $_POST["apellidos"], $_POST["email"],
@@ -115,9 +113,7 @@ class userController extends Controller
         return redirect()->to("/");
     }
 
-    /**
-     *
-     */
+
     public function procesar_login()
     {
         if (isset($_POST["email"], $_POST["password"])) {
@@ -158,9 +154,7 @@ class userController extends Controller
         return view('index');
     }
 
-    /**
-     * Comprobar
-     */
+
     public function procesar_contacto()
     {
         if (isset($_POST["nombre"], $_POST["email"], $_POST["telefono"], $_POST["comentario"])) {
