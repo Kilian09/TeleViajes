@@ -5749,6 +5749,28 @@ button.swiper-pagination-bullet {
 
 }
 
+.centrarHeader{
+    text-align: center;
+}
+
+.articlePrivacidad {
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 0.5em;
+    margin-right: 13em;
+    margin-top: 10px;
+  margin-left: 5em;
+    margin-bottom: 5px;
+}
+
+.articulosCanales{
+    border: 1px solid black;
+    margin-bottom: 1%;
+    margin-left: 20%;
+    width: 60%;
+    background-color: gray;
+}
+
 #botonesUno {
     text-decoration: none;
     color: white;

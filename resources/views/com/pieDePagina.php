@@ -4,7 +4,8 @@
             <h3><img src="assets/img/logo%20(1).png"
                      style="height: 75px;background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);width: 200px;">
             </h3>
-            <p class="links"><a href="#">Inicio</a><strong> · </strong><a href="#"></a><a href="#">Contacto</a></p>
+            <p class="links"><a href="/">Inicio</a><strong> · </strong><a href="contacto">Contacto</a>
+                <strong> · </strong><a href="/privacidad"></a><a href="privacidad">Política de Privacidad</a></p>
             <p class="company-name">TeleViajes © 2020</p>
         </div>
         <div class="col-sm-6 col-md-4 footer-contacts">

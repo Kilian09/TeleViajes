@@ -57,6 +57,11 @@ class userController extends Controller
         return view('/paquetes');
     }
 
+    public function privacidad()
+    {
+        return view('/privacidad');
+    }
+
 
     /**
      * DONE

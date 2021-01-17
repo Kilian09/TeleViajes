@@ -21,6 +21,7 @@ Route::get('/', function () {
 //REDIRECCIONAMIENTO DE VISTAS A USERCONTROLLER
 Route::get('/login', 'userController@login');
 Route::get('/register', 'userController@register');
+Route::get('/privacidad', 'userController@privacidad');
 
 
 //PRODUCTCONTROLLER AJAX
@@ -64,6 +65,7 @@ Route::post('/procesar_login', 'userController@procesar_login');
 Route::post('/procesar_registro', 'userController@procesar_registro');
 Route::get("/cerrar_session", "UserController@cerrar_session");
 Route::post('/procesar_contacto', 'userController@procesar_contacto');
+
 
 
 Route::get('/contacto', function () {
