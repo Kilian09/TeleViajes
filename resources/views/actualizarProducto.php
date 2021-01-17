@@ -10,7 +10,7 @@
     <?php include "com/scripts.php"?>
 
 </head>
-<body>
+<body class="fondo">
 
 <?php include "com/cabecera.php"; ?>
 
@@ -21,12 +21,15 @@ if(isset($id)){
     $tipoControlador = $product->type;
 ?>
 
-<section>
-<header class="encabezado">
-    <p>Actualice el producto de tipo: <?php echo $tipoControlador?> </p>
-</header>
+<section class="main">
 
-    <form method="post" action="procesar_producto_actualizado">
+    <article>
+        <h1 class="titulo"> Edite el producto de tipo: <?php echo $tipoControlador?> </h1>
+
+
+
+
+    <form method="post" action="procesar_producto_actualizado" class="form">
         <?= csrf_field() ?>
         <input type="hidden" name="idProducto" value="<?php echo $product->id ?>">
         <input type="hidden" name="typeProducto" value="<?php echo $product->type ?>">
@@ -304,15 +307,17 @@ if(isset($id)){
             <?php }?>
 
             </tbody>
-            <tfoot>
+            <tfoot id="btns">
             <th>
                 <button class="buttonCancelar" >
                     <a href="shopAdmin" class="noDecoration">Cancelar</a>
                 </button></th>
             <th><button type="submit" value="Editar" class="registrarOLogin">Editar</button></th>
-            </tfoot>
-        </table>
-    </form>
+                </tfoot>
+
+            </table>
+        </form>
+    </article>
 </section>
 <?php include "com/pieDePagina.php"; ?>
 
