@@ -53,9 +53,6 @@ class ShopController extends Controller
                     if ($stockPacket < $amount) {
                         return redirect('/paquetes')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockPacket < session('cantidadTotal')) {
-                        return redirect('/paquetes')->with('error', 'No hay suficiente stock');
-
                     } else if ($stockPacket == 0) {
                         return redirect('/paquetes')->with('error', 'No hay suficiente stock');
 
@@ -74,9 +71,6 @@ class ShopController extends Controller
                     if ($stockCruise < $amount) {
                         return redirect('/cruceros')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockCruise < session('cantidadTotal')) {
-                        return redirect('/cruceros')->with('error', 'No hay suficiente stock');
-
                     } else if ($stockCruise  == 0) {
                         return redirect('/cruceros')->with('error', 'No hay suficiente stock');
 
@@ -92,9 +86,6 @@ class ShopController extends Controller
                     $stockActivity = $actividad[0]['stock'];
 
                     if ($stockActivity < $amount) {
-                        return redirect('/actividades')->with('error', 'No hay suficiente stock');
-
-                    } else if ($stockActivity < session('cantidadTotal')) {
                         return redirect('/actividades')->with('error', 'No hay suficiente stock');
 
                     } else if ($stockActivity == 0) {
@@ -115,9 +106,6 @@ class ShopController extends Controller
 
                         return redirect('/escolares')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockCollege < session('cantidadTotal')) {
-                        return redirect('/escolares')->with('error', 'No hay suficiente stock');
-
                     } else if ($stockCollege == 0) {
                         return redirect('/escolares')->with('error', 'No hay suficiente stock');
 
@@ -136,9 +124,6 @@ class ShopController extends Controller
 
                         return redirect('/universitarios')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockUniversity < session('cantidadTotal')) {
-                        return redirect('/universitarios')->with('error', 'No hay suficiente stock');
-
                     } else if ($stockUniversity == 0) {
                         return redirect('/universitarios')->with('error', 'No hay suficiente stock');
 
@@ -155,9 +140,6 @@ class ShopController extends Controller
 
                     if ($stockFlight < $amount) {
 
-                        return redirect('/')->with('error', 'No hay suficiente stock');
-
-                    } else if ($stockFlight < session('cantidadTotal')) {
                         return redirect('/')->with('error', 'No hay suficiente stock');
 
                     } else if ($stockFlight == 0) {
@@ -179,9 +161,6 @@ class ShopController extends Controller
 
                         return redirect('/ancianos')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockElder < session('cantidadTotal')) {
-                        return redirect('/ancianos')->with('error', 'No hay suficiente stock');
-
                     } else if ($stockElder == 0) {
                         return redirect('/ancianos')->with('error', 'No hay suficiente stock');
 
@@ -198,9 +177,6 @@ class ShopController extends Controller
 
                     if ($stockFamily < $amount) {
 
-                        return redirect('/familias')->with('error', 'No hay suficiente stock');
-
-                    } else if ($stockFamily < session('cantidadTotal')) {
                         return redirect('/familias')->with('error', 'No hay suficiente stock');
 
                     } else if ($stockFamily == 0) {
