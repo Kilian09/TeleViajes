@@ -48,8 +48,8 @@ if(session('username') == "admin"){
         </script>
     </p>
     </p>
-
     </article>
+
 </aside>
 
 <section class="main">
