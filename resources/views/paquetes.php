@@ -58,7 +58,8 @@
                 <h4 class="card-title" style="color: rgb(34,33,33);"><?php echo $paquete->name ?></h4>
                 <p class="card-text" style="color: rgb(21,21,21);"><?php echo $paquete->description ?></p>
                 <p class="card-text" style="color: rgb(21,21,21);">&nbsp; <?php echo $paquete->date ?></p>
-                <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">Desde <?php echo $paquete->price ?>
+                <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">
+                    Desde <?php echo $paquete->price ?>
                     €</p>
 
                 <form method="get" action="/addCart/<?php echo $product->id ?>">
@@ -83,7 +84,8 @@
                 <h4 class="card-title" style="color: rgb(34,33,33);"><?php echo $paquete->name ?></h4>
                 <p class="card-text" style="color: rgb(21,21,21);"><?php echo $paquete->description ?>></p>
                 <p class="text-left card-text" style="color: rgb(21,21,21);"><?php echo $paquete->date ?></p>
-                <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">Desde <?php echo $paquete->price ?>
+                <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">
+                    Desde <?php echo $paquete->price ?>
                     €</p>
                 <form method="get" action="/addCart/<?php echo $product->id ?>">
                     <input type="number" name="amount" value="1" min="1">

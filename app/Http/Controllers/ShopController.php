@@ -48,95 +48,120 @@ class ShopController extends Controller
 
                     $paquete = Paquetes::where('id_product', $producto[0]['id'])->get();
 
-                    if ($paquete[0]['stock'] < $_GET["amount"]) {
+                    $stockPacket = $paquete[0]['stock'];
 
+                    if ($stockPacket < $amount) {
                         return redirect('/paquetes')->with('error', 'No hay suficiente stock');
 
-                    } else {
+                    } else if ($stockPacket < session('cantidadTotal') ){
+                        return redirect('/paquetes')->with('error', 'No hay suficiente stock');
+                    }else{
                         $totalPrice = ($amount * $paquete[0]['price']);
                         break;
                     }
-
 
                 case "Cruceros":
 
                     $crucero = Cruceros::where('id_product', $producto[0]['id'])->get();
 
-                    if ($crucero[0]['stock'] < $_GET["amount"]) {
+                    $stockCruise = $crucero[0]['stock'];
 
+                    if ($stockCruise < $amount) {
                         return redirect('/cruceros')->with('error', 'No hay suficiente stock');
 
-                    } else {
+                    } else if ($stockCruise < session('cantidadTotal') ){
+                        return redirect('/cruceros')->with('error', 'No hay suficiente stock');
+
+                    }else{
                         $totalPrice = ($amount * $crucero[0]['price']);
                         break;
                     }
-
 
                 case "Actividades" :
 
                     $actividad = Actividades::where('id_product', $producto[0]['id'])->get();
 
-                    if ($actividad[0]['stock'] < $_GET["amount"]) {
+                    $stockActivity = $actividad[0]['stock'];
 
+                    if ( $stockActivity < $amount) {
                         return redirect('/actividades')->with('error', 'No hay suficiente stock');
 
-                    } else {
+                    } else if ($stockActivity < session('cantidadTotal') ){
+                        return redirect('/actividades')->with('error', 'No hay suficiente stock');
+
+                    }else{
                         $totalPrice = ($amount * $actividad[0]['price']);
                         break;
                     }
-
 
                 case "Escolares":
 
                     $escolar = Escolares::where('id_product', $producto[0]['id'])->get();
 
-                    if ($escolar[0]['stock'] < $_GET["amount"]) {
+                    $stockCollege = $escolar[0]['stock'];
+
+                    if ( $stockCollege < $amount) {
 
                         return redirect('/escolares')->with('error', 'No hay suficiente stock');
 
-                    } else {
+                    } else if ($stockCollege < session('cantidadTotal') ){
+                        return redirect('/escolares')->with('error', 'No hay suficiente stock');
+
+                    }else{
                         $totalPrice = ($amount * $escolar[0]['price']);
                         break;
                     }
-
 
                 case "Universitarios" :
 
                     $universitario = Universitarios::where('id_product', $producto[0]['id'])->get();
 
-                    if ($universitario[0]['stock'] < $_GET["amount"]) {
+                    $stockUniversity = $universitario[0]['stock'];
+
+                    if ($stockUniversity < $amount) {
 
                         return redirect('/universitarios')->with('error', 'No hay suficiente stock');
 
-                    } else {
+                    } else if ($stockUniversity < session('cantidadTotal') ){
+                        return redirect('/universitarios')->with('error', 'No hay suficiente stock');
+
+                    }else{
                         $totalPrice = ($amount * $universitario[0]['price']);
                         break;
                     }
-
 
                 case "Vuelos" :
 
                     $vuelo = Vuelos::where('id_product', $producto[0]['id'])->get();
 
-                    if ($vuelo[0]['stock'] < $_GET["amount"]) {
+                    $stockFlight = $vuelo[0]['stock'];
+
+                    if ($stockFlight < $amount) {
 
                         return redirect('/')->with('error', 'No hay suficiente stock');
 
-                    } else {
+                    } else if ($stockFlight < session('cantidadTotal') ){
+                        return redirect('/')->with('error', 'No hay suficiente stock');
+
+                    }else{
                         $totalPrice = $amount * $vuelo[0]['price'];
                         break;
                     }
-
 
                 case "Ancianos" :
 
                     $anciano = Ancianos::where('id_product', $producto[0]['id'])->get();
 
-                    if ($anciano[0]['stock'] < $_GET["amount"]) {
+                    $stockElder = $anciano[0]['stock'];
+
+                    if ($stockElder < $amount) {
 
                         return redirect('/ancianos')->with('error', 'No hay suficiente stock');
 
-                    } else {
+                    } else if ($stockElder < session('cantidadTotal') ){
+                        return redirect('/ancianos')->with('error', 'No hay suficiente stock');
+
+                    }else{
                         $totalPrice = $amount * $anciano[0]['price'];
                         break;
                     }
@@ -145,11 +170,16 @@ class ShopController extends Controller
 
                     $familia = Familia::where('id_product', $producto[0]['id'])->get();
 
-                    if ($familia[0]['stock'] < $_GET["amount"]) {
+                    $stockFamily = $familia[0]['stock']  ;
+
+                    if ($stockFamily < $amount) {
 
                         return redirect('/familias')->with('error', 'No hay suficiente stock');
 
-                    } else {
+                    } else if ($stockFamily < session('cantidadTotal') ){
+                        return redirect('/familias')->with('error', 'No hay suficiente stock');
+
+                    }else{
                         $totalPrice = ($amount * $familia[0]['price']);
                         break;
                     }
