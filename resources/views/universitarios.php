@@ -70,10 +70,10 @@
                                                                                 src="assets/img/test-man.jpg"
                                                                                 width="100">
                     <p class="text-center rating">5&nbsp;<i class="icon ion-star"></i></p>
-                    <p class="text-center" style="color: var(--dark);"><em>"No sabía esquiar, la única nieve estaba en
-                            mi nariz."</em><br></p>
+                    <p class="text-center" style="color: var(--dark);"><em>"Increíble, la mejor experiencia de mi vida.
+                            Repetiré."</em><br></p>
                     <p class="signature" style="color: var(--gray);">Aitor Menta</p>
-                    <p class="text-center date" style="color: var(--gray);">Viaje a la Nieve Abril 2014<br></p>
+                    <p class="text-center date" style="color: var(--gray);">Viaje a la Nieve Abril 2018<br></p>
                 </div>
             </div>
             <div class="carousel-item">
@@ -83,8 +83,8 @@
                     <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
                     <p class="text-center" style="color: var(--gray);"><em>¡El mejor festival de mi vida sin duda
                             repetire!.</em><br></p>
-                    <p class="signature" style="color: var(--gray);">Mery Jane&nbsp;</p>
-                    <p class="text-center date" style="color: var(--gray);">Viaje a Tomorrowland, April&nbsp; 2012<br>
+                    <p class="signature" style="color: var(--gray);">Elba Jonazo&nbsp;</p>
+                    <p class="text-center date" style="color: var(--gray);">Viaje a Tomorrowland, Abril&nbsp; 2016<br>
                     </p>
                 </div>
             </div>
@@ -92,11 +92,11 @@
                 <div class="col-9 text-center mx-auto testimonial-content"><img class="rounded-circle"
                                                                                 src="assets/img/test-man.jpg"
                                                                                 width="100">
-                    <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
-                    <p class="text-center" style="color: var(--gray);"><em>"El agua era tan transparente que no hacia
-                            falta gafas de buceo"</em><br></p>
-                    <p class="signature" style="color: var(--gray);">John D.</p>
-                    <p class="text-center date" style="color: var(--gray);">Viajo a Cancún, April 21, 2016<br></p>
+                    <p class="text-center rating">4&nbsp;<i class="fa fa-star"></i></p>
+                    <p class="text-center" style="color: var(--gray);"><em>"El mejor festival de Canarias en la mejor
+                            isla de Canarias"</em><br></p>
+                    <p class="signature" style="color: var(--gray);">Elson Brero</p>
+                    <p class="text-center date" style="color: var(--gray);">Sunblast Festival, Mayo, 2019<br></p>
                 </div>
             </div>
             <div class="carousel-item">
@@ -105,8 +105,8 @@
                                                                                             width="100">
                     <p class="text-center rating">5&nbsp;<i class="fa fa-star"></i></p>
                     <p class="text-center" style="color: var(--gray);"><em>"El mejor clima del mundo"</em><br></p>
-                    <p class="signature" style="color: var(--gray);">Jane D.</p>
-                    <p class="text-center date" style="color: var(--gray);">Viajo a Canarias, Junio 21, 2014<br></p>
+                    <p class="signature" style="color: var(--gray);">Elsa Pato</p>
+                    <p class="text-center date" style="color: var(--gray);">Viaje a Canarias, Junio, 2020<br></p>
                 </div>
             </div>
         </div>
