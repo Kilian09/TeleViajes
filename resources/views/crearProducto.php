@@ -123,12 +123,11 @@ if (session('username') == "admin"){
                 </tbody>
                 <tfoot>
                 <th>
-                    <button class="buttonCancelar">
-                        <a href="shopAdmin" class="noDecoration" class="botonesForm">Cancelar</a>
-                    </button>
+                    <button  type="reset" onclick="window.location.href='shopAdmin'" id="botonesUno">Cancelar</button>
                 </th>
+                <th></th>
                 <th>
-                    <button type="submit" value="Editar" class="botonesForm">Crear</button>
+                    <button type="submit" value="Editar" id="botonesdos">Crear</button>
                 </th>
 
                 </tfoot>
