@@ -31,7 +31,7 @@
         <div class="container">
             <div class="intro">
                 <h2 class="text-center">ORGANIZA TU VIAJE</h2>
-                <p class="text-center">Nunc luctus in metus eget fringilla. Aliquam sed justo ligula. Vestibulum nibh erat, pellentesque ut laoreet vitae.</p>
+                <p class="text-center">Agencia de Viajes Online. Las mejores ofertas de viajes: vuelos low-cost, actividades, cruceros, paquetes baratos... Reserva Vacaciones y Viajes en TeleViajes.</p>
             </div>
             <div class="row justify-content-center features">
 
@@ -57,33 +57,33 @@
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
                     <div class="box"><i class="fa fa-map-marker icon"></i>
                         <h3 class="name">A cualquier lugar</h3>
-                        <p >En caso de que nuestras ofertas no se ajusten a tus gustos, buscaremos tu destino ideal.</p><a class="learn-more" href="contacto">Contáctanos »</a>
+                        <p >En caso de que nuestras ofertas no se ajusten a tus gustos, buscaremos tu destino ideal.</p><a class="learn-more" href="contacto">Contáctenos »</a>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
                     <div class="box"><i class="fa fa-list-alt icon"></i>
                         <h3 class="name">Máxima Flexibilidad </h3>
-                        <p>En caso de que nuestras ofertas no se ajusten a su calendario, buscaremos una solución.</p><a class="learn-more" href="contacto">Contáctanos »</a>
+                        <p>En caso de que nuestras ofertas no se ajusten a su calendario, buscaremos una solución.</p><a class="learn-more" href="contacto">Contáctenos »</a>
                     </div>
                 </div>
 
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
                     <div class="box"><i class="fa fa-phone icon"></i>
                         <h3 class="name">24/7</h3>
-                        <p>Nuestro equipo estará pendiente de usted en caso de cualquier incidencia.</p><a class="learn-more" href="contacto">Contáctanos »</a>
+                        <p>Nuestro equipo estará pendiente de usted en caso de cualquier incidencia.</p><a class="learn-more" href="contacto">Contáctenos »</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div data-bs-parallax-bg="true" style="height:500px;background-image:url(https://unsplash.it/1800/900?image=1051);background-position:center;background-size:cover;"></div>
+    <div data-bs-parallax-bg="true" style="height:500px;background-image:url(&quot;assets/img/para.jpg&quot;);background-position:center;background-size:cover;"></div>
 
     <div class="article-list" id="novedadesIndex">
         <div class="container">
             <div class="intro">
                 <h2 class="text-center" style="font-size: 30px;text-align: center;color: var(--danger);">Vuelos Calientes</h2>
-                <p class="text-center">Recopilatorio de los vuelos mas económicos actualmente.</p>
+                <p class="text-center">Recopilatorio de los vuelos más económicos actualmente.</p>
             </div>
             <div class="row articles">
 
@@ -96,7 +96,7 @@
             ?>
                 <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/desk.jpg"></a>
                     <h3 class="name"><?php echo $vuelo->name ?></h3>
-                    <p class="description"><?php echo $vuelo->description ?>. Desde <?php echo $vuelo->date?>. Por <?php echo $vuelo->price?>. Quedan <?php echo $vuelo->stock ?> plazas. </p>
+                    <p class="description"> <?php echo $vuelo->description ?>. Del <?php echo $vuelo->date?>.<br> Por <?php echo $vuelo->price?>€.<br> Quedan <?php echo $vuelo->stock ?> plazas. </p>
 
                     <form method="get" action="/addCart/<?php echo $product->id ?>">
                     <input type="number" name="amount" min="1" value="1">
