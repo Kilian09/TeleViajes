@@ -28,14 +28,15 @@
     </article>
     <details  class="articlePrivacidad">
         <summary class="centrarHeader" >Responsable</summary>
-        <h3 >
-            <bold>Televiajes</bold>
-        </h3>
+        <br>
+        <h3 ><bold>Televiajes</bold></h3>
+
         <p> Tafira Baja, Las Palmas de Gran Canaria, España </p>
         <p>Teléfono de contacto: +34 630 267876 </p>
     </details>
     <details  class="articlePrivacidad">
         <summary class="centrarHeader" >¿Dónde se utilizan esos datos?</summary>
+        <br>
         <p>Utilizaremos tus datos solamente para acceder a la pagina web a través del formulario login</p>
         <p>Televiajes asegura la confidencialidad de los datos aportados y garantiza que, en ningún caso, serán cedidos
             para ningún otro uso sin mediar consentimiento
@@ -47,6 +48,7 @@
         <summary class="centrarHeader" >
             ¿Dispones del consentimiento de los usuarios?
         </summary>
+        <br>
         <p>Los usuarios para registrarse deberan leer y aceptar
             <bold>la polítia de privacidad</bold>
         </p>
@@ -55,6 +57,7 @@
         <summary class="centrarHeader" >
             ¿Se tratan con fines comerciales?
         </summary>
+        <br>
         <p>Sí, solo utilizaremos los datos de los usuarios para enviar publicidad y promociones por correo
             electrónico</p>
         </details>
@@ -62,6 +65,7 @@
         <summary class="centrarHeader" >
             ¿Se realizan cesiones a terceros o transferencias internacionales?
         </summary>
+        <br>
         <p>No, nuestra página no realizará cesiones a terceros o transferencias internacionales</p>
 
         </details>
