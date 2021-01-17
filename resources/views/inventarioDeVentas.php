@@ -55,7 +55,7 @@
             <thead>
             <tr>
                 <th>Id Orden</th>
-                <th>Producto</th>
+                <th>Id del Producto</th>
                 <th>Cantidad</th>
                 <th>Fecha</th>
             </tr>

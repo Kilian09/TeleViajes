@@ -140,7 +140,6 @@ class userController extends Controller
                     session(['nombre' => $usuario[0]['nombre']]);
                     session(['username' => $usuario[0]['nombreDeUsuario']]);
 
-                    //PODRIAMOS HACER UNA SESION CON EL EMAIL????????????????????????
 
                     return redirect()->to("/");
                 } else {
