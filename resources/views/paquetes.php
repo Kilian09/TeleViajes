@@ -39,75 +39,90 @@
 
 <div class="container" style="margin-top: 100px;">
     <h1>Los paquetes más populares</h1>
-    <?php
-    if (isset($products, $paquetes)){
-    foreach ($products
-
-    as $product){
-    if ($product->type == "Paquetes"){
-    foreach ($paquetes
-
-    as $paquete){
-    if ($product->id == $paquete->id_product) {
-    if ($paquete->type == "Popular"){ ?>
-
     <div class="card-group">
-        <div class="card"><img class="card-img-top w-100 d-block" src="assets/img/aurora4.jpg"
-                               style="  width: 200px; height: 500px;">
-            <div class="card-body">
-                <h4 class="card-title" style="color: rgb(34,33,33);"><?php echo $paquete->name ?></h4>
-                <p class="card-text" style="color: rgb(21,21,21);"><?php echo $paquete->description ?></p>
-                <p class="card-text" style="color: rgb(21,21,21);">&nbsp; <?php echo $paquete->date ?></p>
-                <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">
-                    Desde <?php echo $paquete->price ?>
-                    €</p>
 
-                <form method="get" action="/addCart/<?php echo $product->id ?>">
-                    <input type="number" name="amount" value="1" min="1">
-                    <button class="btn btn-primary border rounded-pill" type="submit" style="margin-left: 32%;">¡Reserva
-                        ya!
-                    </button>
-                </form>
+        <?php
+        if (isset($products, $paquetes)) {
+            foreach ($products as $product) {
+                if ($product->type == "Paquetes") {
+                    foreach ($paquetes as $paquete) {
+                        if ($product->id == $paquete->id_product) {
+                            if ($paquete->type == "Popular") { ?>
 
-            </div>
-        </div>
+                                <div class="card" style="margin: 1em; border: black 3px; border">
+                                    <img class="card-img-top w-100 d-block" src="assets/img/aurora4.jpg" style="  width: 200px; height: 500px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title"
+                                            style="color: rgb(34,33,33);"><?php echo $paquete->name ?></h4>
+                                        <p class="card-text"
+                                           style="color: rgb(21,21,21);"><?php echo $paquete->description ?></p>
+                                        <p class="card-text" style="color: rgb(21,21,21);">
+                                            &nbsp; <?php echo $paquete->date ?></p>
+                                        <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">
+                                            Desde <?php echo $paquete->price ?> €</p>
+
+                                        <form method="get" action="/addCart/<?php echo $product->id ?>" style="text-align: center">
+                                            <input type="number" name="amount" value="1" min="1">
+                                            <button class="fa fa-shopping-cart"
+                                                    style="text-align: right;font-size: 20px;"></button>                                                    style="margin-left: 32%;">¡Reserva ya!
+                                            </button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            <?php }
+                        }
+                    }
+                }
+            }
+        }
+        ?>
+    </div>
+
+</div>
+</div>
+<div class="container" style="margin-top: 100px;">
+    <h1>Paquetes Temáticos</h1>
+    <div class="card-group">
+
+        <?php
+        if (isset($products, $paquetes)) {
+            foreach ($products
+
+                     as $product) {
+                if ($product->type == "Paquetes") {
+                    foreach ($paquetes
+
+                             as $paquete) {
+                        if ($product->id == $paquete->id_product) {
+                            if ($paquete->type == "Magicos") { ?>
+                                <div class="card" style="margin: 1em; border: black 3px; border">
+                                    <img class="card-img-top w-100 d-block" src="assets/img/disney.jpg"
+                                                       style="  width: 200px; height: 500px;">
+                                    <div class="card-body">
+                                        <h4 class="card-title"
+                                            style="color: rgb(34,33,33);"><?php echo $paquete->name ?></h4>
+                                        <p class="card-text"
+                                           style="color: rgb(21,21,21);"><?php echo $paquete->description ?>></p>
+                                        <p class="text-left card-text"
+                                           style="color: rgb(21,21,21);"><?php echo $paquete->date ?></p>
+                                        <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">
+                                            Desde <?php echo $paquete->price ?>
+                                            €</p>
+                                        <form method="get" action="/addCart/<?php echo $product->id ?>" style="text-align: center">
+                                            <input type="number" name="amount" value="1" min="1" style="display: inline-block">
+                                            <button class="fa fa-shopping-cart" style="text-align: right;font-size: 20px;"></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            <?php }
+                        }
+                    }
+                }
+            }
+        } ?>
     </div>
 </div>
-    </div>
-<div class="container" style="margin-top: 100px;">
-<h1>Paquetes Temáticos</h1>
-<?php } else { ?>
-    <div class="card-group">
-        <div class="card"><img class="card-img-top w-100 d-block" src="assets/img/disney.jpg"
-                               style="  width: 200px; height: 500px;">
-            <div class="card-body">
-                <h4 class="card-title" style="color: rgb(34,33,33);"><?php echo $paquete->name ?></h4>
-                <p class="card-text" style="color: rgb(21,21,21);"><?php echo $paquete->description ?>></p>
-                <p class="text-left card-text" style="color: rgb(21,21,21);"><?php echo $paquete->date ?></p>
-                <p class="text-center bg-info card-text" style="color: rgb(21,21,21);">
-                    Desde <?php echo $paquete->price ?>
-                    €</p>
-                <form method="get" action="/addCart/<?php echo $product->id ?>">
-                    <input type="number" name="amount" value="1" min="1">
-                    <br>
-                    <p></p>
-                    <button class="btn btn-primary border rounded-pill" type="submit" style="margin-left: 32%;">¡Reserva
-                        ya!
-                    </button>
-                </form>
-            </div>
-
-
-        </div>
-    </div>
-    </div>
-
-<?php }
-}
-}
-}
-}
-} ?>
 
 
 <?php include "com/pieDePagina.php" ?>
