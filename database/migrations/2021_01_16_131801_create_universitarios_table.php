@@ -21,7 +21,7 @@ class CreateUniversitariosTable extends Migration
             $table->string('description');
             $table->string('type');
             $table->double('price');
-            $table->double('stock');
+            $table->bigInteger('stock');
             $table->string('date');
             $table->timestamps();
         });

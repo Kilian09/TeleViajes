@@ -53,9 +53,14 @@ class ShopController extends Controller
                     if ($stockPacket < $amount) {
                         return redirect('/paquetes')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockPacket < session('cantidadTotal') ){
+                    } else if ($stockPacket < session('cantidadTotal')) {
                         return redirect('/paquetes')->with('error', 'No hay suficiente stock');
-                    }else{
+
+                    } else if ($stockPacket == 0) {
+                        return redirect('/paquetes')->with('error', 'No hay suficiente stock');
+
+                    } else {
+
                         $totalPrice = ($amount * $paquete[0]['price']);
                         break;
                     }
@@ -69,10 +74,13 @@ class ShopController extends Controller
                     if ($stockCruise < $amount) {
                         return redirect('/cruceros')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockCruise < session('cantidadTotal') ){
+                    } else if ($stockCruise < session('cantidadTotal')) {
                         return redirect('/cruceros')->with('error', 'No hay suficiente stock');
 
-                    }else{
+                    } else if ($stockCruise  == 0) {
+                        return redirect('/cruceros')->with('error', 'No hay suficiente stock');
+
+                    } else {
                         $totalPrice = ($amount * $crucero[0]['price']);
                         break;
                     }
@@ -83,13 +91,16 @@ class ShopController extends Controller
 
                     $stockActivity = $actividad[0]['stock'];
 
-                    if ( $stockActivity < $amount) {
+                    if ($stockActivity < $amount) {
                         return redirect('/actividades')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockActivity < session('cantidadTotal') ){
+                    } else if ($stockActivity < session('cantidadTotal')) {
                         return redirect('/actividades')->with('error', 'No hay suficiente stock');
 
-                    }else{
+                    } else if ($stockActivity == 0) {
+                        return redirect('/actividades')->with('error', 'No hay suficiente stock');
+
+                    } else {
                         $totalPrice = ($amount * $actividad[0]['price']);
                         break;
                     }
@@ -100,14 +111,17 @@ class ShopController extends Controller
 
                     $stockCollege = $escolar[0]['stock'];
 
-                    if ( $stockCollege < $amount) {
+                    if ($stockCollege < $amount) {
 
                         return redirect('/escolares')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockCollege < session('cantidadTotal') ){
+                    } else if ($stockCollege < session('cantidadTotal')) {
                         return redirect('/escolares')->with('error', 'No hay suficiente stock');
 
-                    }else{
+                    } else if ($stockCollege == 0) {
+                        return redirect('/escolares')->with('error', 'No hay suficiente stock');
+
+                    } else {
                         $totalPrice = ($amount * $escolar[0]['price']);
                         break;
                     }
@@ -122,10 +136,13 @@ class ShopController extends Controller
 
                         return redirect('/universitarios')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockUniversity < session('cantidadTotal') ){
+                    } else if ($stockUniversity < session('cantidadTotal')) {
                         return redirect('/universitarios')->with('error', 'No hay suficiente stock');
 
-                    }else{
+                    } else if ($stockUniversity == 0) {
+                        return redirect('/universitarios')->with('error', 'No hay suficiente stock');
+
+                    } else {
                         $totalPrice = ($amount * $universitario[0]['price']);
                         break;
                     }
@@ -140,10 +157,14 @@ class ShopController extends Controller
 
                         return redirect('/')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockFlight < session('cantidadTotal') ){
+                    } else if ($stockFlight < session('cantidadTotal')) {
                         return redirect('/')->with('error', 'No hay suficiente stock');
 
-                    }else{
+                    } else if ($stockFlight == 0) {
+                        return redirect('/')->with('error', 'No hay suficiente stock');
+
+                    } else {
+
                         $totalPrice = $amount * $vuelo[0]['price'];
                         break;
                     }
@@ -158,10 +179,13 @@ class ShopController extends Controller
 
                         return redirect('/ancianos')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockElder < session('cantidadTotal') ){
+                    } else if ($stockElder < session('cantidadTotal')) {
                         return redirect('/ancianos')->with('error', 'No hay suficiente stock');
 
-                    }else{
+                    } else if ($stockElder == 0) {
+                        return redirect('/ancianos')->with('error', 'No hay suficiente stock');
+
+                    } else {
                         $totalPrice = $amount * $anciano[0]['price'];
                         break;
                     }
@@ -170,20 +194,22 @@ class ShopController extends Controller
 
                     $familia = Familia::where('id_product', $producto[0]['id'])->get();
 
-                    $stockFamily = $familia[0]['stock']  ;
+                    $stockFamily = $familia[0]['stock'];
 
                     if ($stockFamily < $amount) {
 
                         return redirect('/familias')->with('error', 'No hay suficiente stock');
 
-                    } else if ($stockFamily < session('cantidadTotal') ){
+                    } else if ($stockFamily < session('cantidadTotal')) {
                         return redirect('/familias')->with('error', 'No hay suficiente stock');
 
-                    }else{
+                    } else if ($stockFamily == 0) {
+                        return redirect('/familias')->with('error', 'No hay suficiente stock');
+
+                    } else {
                         $totalPrice = ($amount * $familia[0]['price']);
                         break;
                     }
-
             }
 
             //Añadida la cantidad totaly el precio total al carrito mediante sesiones.

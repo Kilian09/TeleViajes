@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVuelosTable extends Migration
+class bigIntegerCreateVuelosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -21,7 +21,7 @@ class CreateVuelosTable extends Migration
             $table->string('description');
             $table->string('type');
             $table->double('price');
-            $table->double('stock');
+            $table->bigInteger('stock');
             $table->string('date');
             $table->timestamps();
         });
