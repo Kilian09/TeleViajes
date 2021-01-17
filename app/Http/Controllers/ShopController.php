@@ -26,7 +26,6 @@ class ShopController extends Controller
         $ordersDet = OrderDetail::get();
         $transacciones = Payment::get();
 
-
         return view('/listatransaciones')
             ->with('orders', $orders)
             ->with('ordersDet', $ordersDet)
@@ -201,22 +200,6 @@ class ShopController extends Controller
         }
     }
 
-    public function vaciarCarrito()
-    {
-        $data = session()->all();
-
-        session()->forget(['total', 'totalAnterior', 'cantidadTotal', 'cantidadAnterior', 'carrito']);
-
-        foreach ($data as $key => $valor) {
-            if ($key[0] == 'P') {
-                session()->forget($key);
-            }
-        }
-
-        return redirect('/')->with('exito', 'Se ha vaciado el carrito correctamente.');
-    }
-
-
     public function eliminarProductoCarrito($id)
     {
         $producto = Products::where('id', $id)->get();
@@ -234,7 +217,6 @@ class ShopController extends Controller
 
                 $precioARestar = session('amountProducto') * $paquete[0]['price'];
                 break;
-
 
             case "Cruceros":
                 $crucero = Cruceros::where('id_product', $producto[0]['id'])->get();
@@ -318,6 +300,21 @@ class ShopController extends Controller
 
         }
 
+    }
+
+    public function vaciarCarrito()
+    {
+        $data = session()->all();
+
+        session()->forget(['total', 'totalAnterior', 'cantidadTotal', 'cantidadAnterior', 'carrito']);
+
+        foreach ($data as $key => $valor) {
+            if ($key[0] == 'P') {
+                session()->forget($key);
+            }
+        }
+
+        return redirect('/')->with('exito', 'Se ha vaciado el carrito correctamente.');
     }
 
 }
